@@ -65,7 +65,7 @@ def usable_data(ori, force_fetch=False):
 # No use.
 def fetch_pdbs(data):
     for name in data:
-        print(name, end="...")
+        print name, "...",
         item = data[name]
         pdbfile = "pdbs/%s.pdb" % item["pdb"]
         if os.path.exists(pdbfile):
@@ -84,7 +84,7 @@ def remove_redundant(redundant):
 
 def editconf():
     for each in glob.glob("coors/*.pdb"):
-        cmd = "gmx editconf -d 1.0 -f %s -o gros/%s > /dev/null 2>&1" % (each, each[6:-4])
+        cmd = "gmx editconf -d 1.0 -f %s -o gros/%s > /dev/null 2>&1" % (each, each[6:-6] + each[-6:-4].upper())
         print(cmd)
         os.system(cmd)
 
