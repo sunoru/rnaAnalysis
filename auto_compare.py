@@ -77,7 +77,7 @@ def compare(pdbid):
     dssr_result = get_dssr_result()
 
     print "Comparing %s" % pdbid
-    p = subprocess.Popen(["python2", "../compare.py", "result.dat"], stdin=subprocess.PIPE, stdout=subprocess.PIPE)
+    p = subprocess.Popen(["python2", os.path.join("..", os.path.dirname(__file__), "compare.py"), "result.dat"], stdin=subprocess.PIPE, stdout=subprocess.PIPE)
     for each in dssr_result:
         p.stdin.write(each)
     p.stdin.close()
