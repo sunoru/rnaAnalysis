@@ -176,13 +176,17 @@ def handle_file(fo, filename, i):
     sequence = tmp.split('.')[0]
     with open("gros/%s" % filename) as fi:
         lines = fi.readlines()
+    if lines[0].startswith('0'):
+        rmsd = float(lines[0])
+    else:
+        rmsd = 0.22
 
     fo.write("MODEL%9d\n" % (i + 1))
     fo.write("REMARK {sequence} {bondtype} {iso} {rmsd}\n".format(
         sequence = sequence.upper(),
         bondtype = family[1].upper() + family[1].lower() + family[2].upper() + family[2].lower(),
         iso = "cis" if family[0] == 'c' else "trans",
-        rmsd = 0.3
+        rmsd = rmsd
     ))
     cryst = tuple(map(lambda x: 10 * float(x), lines[-1].split()))
     fo.write("CRYST1%9.3f%9.3f%9.3f  90.00  90.00  90.00 P 1           1\n" % cryst)
