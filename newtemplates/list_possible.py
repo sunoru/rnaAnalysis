@@ -51,7 +51,7 @@ def arange(start, length):
 def check(iso, nuc1, nuc2, edge1, edge2):
     result = []
     edges1 = bond_atoms[nuc1][edge1]
-    edges2 = bond_atoms[nuc2][edge2] if iso == 't' else reversed(bond_atoms[nuc2][edge2])
+    edges2 = bond_atoms[nuc2][edge2] if iso == 'c' else tuple(reversed(bond_atoms[nuc2][edge2]))
 
     i = -len(edges2) + 1
     while i < len(edges1):
@@ -59,9 +59,34 @@ def check(iso, nuc1, nuc2, edge1, edge2):
             length = min(len(edges1) - i, len(edges2))
         else:
             length = min(len(edges1), i + len(edges2))
-        range1 = arange(i, length) if i >= 0 else arange(i + len(edges2) - 1, length)
+        range1 = arange(i, length) if i >= 0 else arange(0, length)
         range2 = arange(0, length) if i >= 0 else arange(-i, length)
         m1, m2 = check_match(edges1, edges2, range1, range2)
+        if m1 is None:
+            assert m2 is None
+            bonds = tuple((edges1[b1][0], edges2[b2][0]) for b1, b2 in izip(range1, range2))
+            result.append((''.join((iso, edge1, edge2, '-', nuc1, nuc2)), bonds))
+        else:
+            assert m2 is not None
+            tmp = []
+            for b1, b2 in izip(range1, range2):
+                if b1 == m1[0]:
+                    assert b2 == m1[1]
+                    break
+                tmp.append((edges1[b1][0], edges2[b2][0]))
+            if tmp:
+                bonds = tuple(tmp)
+                result.append((''.join((iso, edge1, edge2, '-', nuc1, nuc2)), bonds))
+            tmp = []
+            for b1, b2 in izip(reversed(range1), reversed(range2)):
+                if b1 == m2[0]:
+                    assert b2 == m2[1]
+                    break
+                tmp.append((edges1[b1][0], edges2[b2][0]))
+            if tmp:
+                bonds = tuple(tmp)
+                result.append((''.join((iso, edge1, edge2, '-', nuc1, nuc2)), bonds))
+        i += 1
 
     return result
 
@@ -78,7 +103,8 @@ def list_pair(nuc1, nuc2):
 
 
 def print_result(result_list):
-    pass
+    for each in result_list:
+        print each
 
 
 def list_possible():
