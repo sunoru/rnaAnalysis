@@ -113,6 +113,7 @@ resorder = {
     ]
 }
 
+
 def read_residues(lines):
     residues = []
     res = None
@@ -136,15 +137,17 @@ def read_residues(lines):
         l = len(atoms)
         assert l & 1 == 0
         residues.append(residues[0].copy())
-        residues[0]["atoms"] = atoms[:l/2]
-        residues[1]["atoms"] = atoms[l/2:]
+        residues[0]["atoms"] = atoms[:l / 2]
+        residues[1]["atoms"] = atoms[l / 2:]
     return residues
+
 
 def find_atom(atoms, resod):
     for atom in atoms:
         if atom["type"] == resod[0]:
             return atom, resod[1]
-    assert(False)
+    assert (False)
+
 
 def find_connect(residues, name, connects_dict={}):
     assert len(residues) == 2
@@ -153,9 +156,9 @@ def find_connect(residues, name, connects_dict={}):
             for line in fo:
                 tmp = line.split()
                 connects_dict[tmp[0]] = [
-                    (tmp[2*i+1], tmp[2*i+2])
+                    (tmp[2 * i + 1], tmp[2 * i + 2])
                     for i in xrange(len(tmp) / 2)
-                ]
+                    ]
     bonds = connects_dict[name]
     res1, res2 = residues
     for bond in bonds:
@@ -183,10 +186,10 @@ def handle_file(fo, filename, i):
 
     fo.write("MODEL%9d\n" % (i + 1))
     fo.write("REMARK {sequence} {bondtype} {iso} {rmsd}\n".format(
-        sequence = sequence.upper(),
-        bondtype = family[1].upper() + family[1].lower() + family[2].upper() + family[2].lower(),
-        iso = "cis" if family[0] == 'c' else "trans",
-        rmsd = rmsd
+        sequence=sequence.upper(),
+        bondtype=family[1].upper() + family[1].lower() + family[2].upper() + family[2].lower(),
+        iso="cis" if family[0] == 'c' else "trans",
+        rmsd=rmsd
     ))
     cryst = tuple(map(lambda x: 10 * float(x), lines[-1].split()))
     fo.write("CRYST1%9.3f%9.3f%9.3f  90.00  90.00  90.00 P 1           1\n" % cryst)
@@ -194,7 +197,7 @@ def handle_file(fo, filename, i):
     q = 0
     resnum = 0
     for res in residues:
-        assert(len(res["atoms"]) == len(resorder[res["restype"]]))
+        assert (len(res["atoms"]) == len(resorder[res["restype"]]))
         resnum += 1
         res["resnum"] = resnum
         for i in xrange(len(res["atoms"])):
@@ -211,8 +214,8 @@ def handle_file(fo, filename, i):
         fo.write("CONECT %4d %4d\n" % connect)
     fo.write("ENDMDL\n")
 
-def main():
 
+def main():
     coorlist = os.listdir("gros")
     coorlist.sort()
 
@@ -223,8 +226,10 @@ def main():
         handle_file(fo, filename, i)
 
     fo.close()
-    
-#with open("t.pdb", "w") as fo:
+
+
+# with open("t.pdb", "w") as fo:
 #    handle_file(fo, "cWH-GG.gro", 0)
 
-main()
+if __name__ == "__main__":
+    main()

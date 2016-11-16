@@ -1,11 +1,11 @@
-#!/usr/bin/python2
-# coding=utf-8
+#!/usr/bin/python2.7
 
 import os
 import sys
 
 rnatypes = {"A", "U", "C", "G", "RA", "RU", "RC", "RG", "RA5", "RT5", "RU5", "RC5", "RG5", "RA3", "RT3",
-    "RU3", "RC3", "RG3", "RAN", "RTN", "RUN", "RCN", "RGN"}
+            "RU3", "RC3", "RG3", "RAN", "RTN", "RUN", "RCN", "RGN"}
+
 
 def pdb2pdb(pdbid):
     if pdbid.endswith(".pdb"):
@@ -27,11 +27,12 @@ def pdb2pdb(pdbid):
                 if i <= 3 and line.find("P") >= 0:
                     continue
                 if line.find("HN3") >= 0:
-                    continue # really weird.
+                    continue  # really weird.
                 tmp = line.split()
                 if len(tmp) > 3 and tmp[3] in rnatypes:
                     fo.write(line)
     return foname
+
 
 def pdb2gro(pdbname):
     foname = pdbname.replace("pdb", "gro")
@@ -43,10 +44,12 @@ def pdb2gro(pdbname):
     print cmd
     os.system(cmd)
 
+
 def pdb2gmx(pdbid):
     pdbname = pdb2pdb(pdbid)
     pdb2gro(pdbname)
 
-if __name__ == "__pdb2gmx__":
+
+if __name__ == "__main__":
     for each in sys.argv[1:]:
         pdb2gmx(each)

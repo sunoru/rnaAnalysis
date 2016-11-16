@@ -3,11 +3,13 @@
 
 import codecs
 import os
-import requests
 import subprocess
 import sys
 
-import pdb2gmx
+import requests
+
+import prepare.pdb2gmx
+
 
 def writefile(filename):
     return codecs.open(filename, 'w', encoding='UTF-8')
@@ -70,7 +72,7 @@ def compare(pdbid):
     os.chdir(pdbid)
 
     fetch_pdbfile(pdbid)
-    pdb2gmx.pdb2gmx(pdbid)
+    prepare.pdb2gmx.pdb2gmx(pdbid)
     editconf(pdbid)
     analysis(pdbid)
     fetch_dssr_output(pdbid)

@@ -1,5 +1,6 @@
 #!/usr/bin/python2.7
-
+import json
+import os
 from itertools import izip
 
 bond_atoms = {  # No O2' for now.
@@ -48,6 +49,15 @@ def arange(start, length):
     return xrange(start, start + length)
 
 
+def make_data(iso, edge1, edge2, i, mtype, nuc1, nuc2, bonds):
+    return {
+        "type": ''.join((iso, edge1, edge2)),
+        "mtype": "%s%s" % (i, mtype),
+        "recs": nuc1 + nuc2,
+        "bonds": bonds
+    }
+
+
 def check(iso, nuc1, nuc2, edge1, edge2):
     result = []
     edges1 = bond_atoms[nuc1][edge1]
@@ -65,7 +75,7 @@ def check(iso, nuc1, nuc2, edge1, edge2):
         if m1 is None:
             assert m2 is None
             bonds = tuple((edges1[b1][0], edges2[b2][0]) for b1, b2 in izip(range1, range2))
-            result.append((''.join((iso, edge1, edge2, '-', nuc1, nuc2)), bonds))
+            result.append(make_data(iso, edge1, edge2, i + len(edges2) - 1, '', nuc1, nuc2, bonds))
         else:
             assert m2 is not None
             tmp = []
@@ -76,7 +86,7 @@ def check(iso, nuc1, nuc2, edge1, edge2):
                 tmp.append((edges1[b1][0], edges2[b2][0]))
             if tmp:
                 bonds = tuple(tmp)
-                result.append((''.join((iso, edge1, edge2, '-', nuc1, nuc2)), bonds))
+                result.append(make_data(iso, edge1, edge2, i + len(edges2) - 1, 'a', nuc1, nuc2, bonds))
             tmp = []
             for b1, b2 in izip(reversed(range1), reversed(range2)):
                 if b1 == m2[0]:
@@ -85,7 +95,7 @@ def check(iso, nuc1, nuc2, edge1, edge2):
                 tmp.append((edges1[b1][0], edges2[b2][0]))
             if tmp:
                 bonds = tuple(tmp)
-                result.append((''.join((iso, edge1, edge2, '-', nuc1, nuc2)), bonds))
+                result.append(make_data(iso, edge1, edge2, i + len(edges2) - 1, 'b', nuc1, nuc2, bonds))
         i += 1
 
     return result
@@ -102,12 +112,19 @@ def list_pair(nuc1, nuc2):
     return result
 
 
-def print_result(result_list):
-    for each in result_list:
-        print each
+datafile = os.path.join(os.path.dirname(__file__), "../data/new_templates.json")
 
 
-def list_possible():
+def save_data(result_list):
+    with open(datafile, "w") as fo:
+        json.dump(result_list, fo)
+
+
+def list_possible(force=False):
+    if not force and os.path.exists(datafile):
+        with open(datafile) as fi:
+            result_list = json.load(fi)
+        return result_list
     result_list = []
     l = len(nuc_names)
     for i in xrange(l):
@@ -115,12 +132,10 @@ def list_possible():
             nuc1 = nuc_names[i]
             nuc2 = nuc_names[j]
             result_list.extend(list_pair(nuc1, nuc2))
+    save_data(result_list)
     return result_list
 
 
-def main():
-    print_result(list_possible())
-
-
 if __name__ == "__main__":
-    main()
+    for each in list_possible():
+        print each
