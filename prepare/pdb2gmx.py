@@ -16,16 +16,28 @@ def pdb2pdb(pdbid):
     if os.path.exists(foname):
         return foname
     with open(finame) as fi, open(foname, 'w') as fo:
-        i = 0
+        cchain = None
+        cresnum = None
+        i = 3
         for line in fi:
             if line.startswith("ENDMDL"):
                 break
             if line.startswith("ATOM"):
-                i += 1
+                if line[16] == 'B':
+                    continue
+                chain = line[20:22].strip()
+                resnum = line[22:26].strip()
+                if resnum != cresnum:
+                    cresnum = resnum
+                    i = 3
+                if chain != cchain:
+                    cchain = chain
+                    i = 0
+                if i < 3 and line.find('P') >= 0:
+                    i += 1
+                    continue
                 if line.find("HO2'") >= 0:
                     line = line.replace("HO2'", "HO'2")
-                if i <= 3 and line.find("P") >= 0:
-                    continue
                 if line.find("HN3") >= 0:
                     continue  # really weird.
                 tmp = line.split()
@@ -34,15 +46,17 @@ def pdb2pdb(pdbid):
     return foname
 
 
-def pdb2gro(pdbname):
-    foname = pdbname.replace("pdb", "gro")
+def pdb2gro(pdbname, print_cmd=True):
+    foname = pdbname[:-3] + "gro"
     if os.path.exists(foname):
-        return
-    cmd = "gmx pdb2gmx -f %s -ff amber99sb-ildn -water none -o %s >> /dev/null 2>&1" % (
-        pdbname, foname
+        return foname
+    cmd = "gmx pdb2gmx -f %s -ff amber99sb-ildn -water none -p %s -i %s -o %s >> /dev/null 2>&1" % (
+        pdbname, pdbname[:-3] + "top", pdbname[:-3] + "itp", foname
     )
-    print cmd
+    if print_cmd:
+        print cmd
     os.system(cmd)
+    return foname
 
 
 def pdb2gmx(pdbid):

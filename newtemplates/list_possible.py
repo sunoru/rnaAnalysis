@@ -62,7 +62,8 @@ def check(iso, nuc1, nuc2, edge1, edge2):
     result = []
     edges1 = bond_atoms[nuc1][edge1]
     edges2 = bond_atoms[nuc2][edge2] if iso == 'c' else tuple(reversed(bond_atoms[nuc2][edge2]))
-
+    if iso == 't' and nuc1 == 'U' and nuc2 == 'G' and edge1 == 'S' and edge2 == 'W':
+        print 0
     i = -len(edges2) + 1
     while i < len(edges1):
         if i >= 0:
@@ -137,5 +138,5 @@ def list_possible(force=False):
 
 
 if __name__ == "__main__":
-    for each in list_possible():
+    for each in list_possible(True):
         print each
