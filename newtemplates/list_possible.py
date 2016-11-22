@@ -62,10 +62,10 @@ def check(iso, nuc1, nuc2, edge1, edge2):
     result = []
     edges1 = bond_atoms[nuc1][edge1]
     edges2 = bond_atoms[nuc2][edge2] if iso == 'c' else tuple(reversed(bond_atoms[nuc2][edge2]))
-    if iso == 't' and nuc1 == 'U' and nuc2 == 'G' and edge1 == 'S' and edge2 == 'W':
-        print 0
     i = -len(edges2) + 1
     while i < len(edges1):
+        if i > 0 and nuc1 == nuc2 and edge1 == edge2 and iso == 'c':
+            break
         if i >= 0:
             length = min(len(edges1) - i, len(edges2))
         else:
