@@ -32,8 +32,6 @@ def handle_existing(item):
     edata = item["existing_data"]
     units = [unit.split('|') for unit in edata["units"]]
     pdbfile = "pdbs/%s-%s.pdb" % (units[0][0], edata["id"])
-    with open(pdbfile) as fi:
-        fl = fi.readline()
     foname = pdb2gmx.pdb2gro(pdbfile)  # , False)
     if not os.path.exists(foname):
         print foname
@@ -43,20 +41,9 @@ def handle_existing(item):
     with open(finame) as fi:
         fi_raw = fi.readlines()
     new_filename = "new_pdbs/%s.pdb" % new_name
-    ps = []
-    with open("pdbs/%s.pdb" % units[0][0]) as fi:
-        tmp = fi.readlines()
-    i = find_line(tmp, fl, lambda a, b: a[22:] == b[22:])
-    assert i > 0
-    while i > 0:
-        i -= 1
-        if tmp[i][16] == 'B':
-            continue
-        if tmp[i].startswith("ATOM"):
-            ps.append(tmp[i])
-            if len(ps) == 3:
-                break
-    assert ps[2][13] == 'P'
+    if new_name == "cHH-GG-0":
+        pass
+
     fo_raw = []
     fo_raw.append("TITLE     %s\n" % new_name)
     fo_raw.append("REMARK {sequence} {bondtype} {rmsd}\n".format(
@@ -65,11 +52,28 @@ def handle_existing(item):
         rmsd=0.3
     ))
     fo_raw.append(fi_raw[find_line(fi_raw, "CRYST1", lambda a, b: a.startswith(b))])
-    for i in xrange(3):
-        fo_raw.append(change_num(ps[2 - i], i + 1))
     atom_start = find_line(fi_raw, "ATOM", lambda a, b: a.startswith(b))
-    for i in xrange(atom_start, len(fi_raw) - 2):
-        fo_raw.append(change_num(fi_raw[i], i - atom_start + 4))
+    split_point = -1
+    for i in xrange(atom_start + 1, len(fi_raw) - 2):
+        if fi_raw[i - 1][22:26] != fi_raw[i][22:26]:
+            split_point = i
+            break
+    assert split_point >= 0
+    if edata["swap"]:
+        atomnr1 = len(fi_raw) - 2 - split_point
+        for i in xrange(split_point, len(fi_raw) - 2):
+            fo_raw.append(change_num(fi_raw[i], i - split_point + 1))
+        for i in xrange(atom_start, split_point):
+            fo_raw.append(change_num(fi_raw[i], i - atom_start + atomnr1))
+    else:
+        atomnr1 = split_point - atom_start
+        for i in xrange(atom_start, len(fi_raw) - 2):
+            fo_raw.append(fi_raw[i])
+    for bond in item["bonds"]:
+        fo_raw.append("CONECT %4d %4d\n" % tuple(map(
+            lambda raw, atom: int(raw[find_line(raw, atom, lambda a, b: a[12:16].strip() == b)][6:11]),
+            (fo_raw, fo_raw[atomnr1:]), (bond[0], bond[1])
+        )))
 
     with open(new_filename, "w") as fo:
         fo.writelines(fo_raw)

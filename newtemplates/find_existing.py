@@ -28,36 +28,42 @@ def get_coordfile(item, force=False):
     for unit in item["units"]:
         unit_data = unit.split('|')
         obj_res.append((unit_data[2], unit_data[4]))
-    if pdbfile_new == "pdbs/1LNT-tHS-AC.pdb":
-        print 0
     i = 0
-    if obj_res[0][0] != obj_res[1][0]:
-        need_modify = obj_res[0][0]
+    cchain = cresnum = None
+    if obj_res[0][1] == obj_res[1][1]:
+        need_modify = "%4d" % (int(obj_res[1][1]) + 1)
     else:
         need_modify = None
-    if obj_res[0][1] == obj_res[1][1]:
-        if need_modify is None:
-            need_modify = obj_res[0][0]
-        need_modify += "%4d" % (int(obj_res[1][1]) + 1)
-    elif need_modify is not None:
-        need_modify += "%4s" % obj_res[1][1]
+
+    flag = False
+    nswap = False
+
     with open(pdbfile_new, "w") as fo:
         for line in ori:
             chain = line[20:22].strip()
             resnum = line[22:26].strip()
             for ind, each in enumerate(obj_res):
                 if chain == each[0] and resnum == each[1]:
+                    if not flag:
+                        if ind == 1:
+                            nswap = True
+                        flag = True
+                    if resnum != cresnum:
+                        cresnum = resnum
+                        i = 3
+                    if chain != cchain:
+                        cchain = chain
+                        i = 0
                     if i < 3 and line.find('P') >= 0:
                         i += 1
                         continue
                     if ind == 1 and need_modify:
-                        line = line[:21] + need_modify + line[26:]
+                        line = line[:22] + need_modify + line[26:]
                     fo.write(line)
                     break
     if need_modify:
         unit_data = item["units"][1].split('|')
-        unit_data[4] = need_modify[1:].strip()
-        unit_data[2] = need_modify[0]
+        unit_data[4] = need_modify.strip()
         item["units"][1] = '|'.join(unit_data)
     return pdbfile_new
 
@@ -161,10 +167,18 @@ def find_bpdata(possible_list, item, coordfile):
                 best_match = (each, True)
 
     assert best_match is not None
+    if best_match[0].has_key("existing_data"):
+        if set(item["units"]) == set(best_match[0]["existing_data"]["units"]):
+            return
+        if best_score >= best_match[0]["existing_data"]["score"]:
+            print item, best_match
+            return
+        print item, best_match
     best_match[0]["existing_data"] = {
         "id": item["id"],
         "units": item["units"],
-        "swap": best_match[1]
+        "swap": best_match[1],
+        "score": best_score
     }
     print best_match[0]["mtype"], best_score
 
@@ -176,7 +190,6 @@ def main(force=False):
     for family in data:
         for item in data[family]["items"].values():
             if item["pdb"] == "1J8G":
-                print item
                 continue
             if not item["coordinates_exist"] or item["pdb"] == "Modeled":
                 continue
