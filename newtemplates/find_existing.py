@@ -65,7 +65,7 @@ def get_coordfile(item, force=False):
         unit_data = item["units"][1].split('|')
         unit_data[4] = need_modify.strip()
         item["units"][1] = '|'.join(unit_data)
-    return pdbfile_new
+    return pdbfile_new, nswap
 
 
 def find_atom(residue, atomname):
@@ -128,7 +128,7 @@ def calc_score(each, ress, a, b):
     return score
 
 
-def find_bpdata(possible_list, item, coordfile):
+def find_bpdata(possible_list, item, coordfile, nswap):
     print item["id"], "  ",
     family = item["family"].upper()
     family = family[0].lower() + family[1:]
@@ -178,6 +178,7 @@ def find_bpdata(possible_list, item, coordfile):
         "id": item["id"],
         "units": item["units"],
         "swap": best_match[1],
+        "nswap": nswap,
         "score": best_score
     }
     print best_match[0]["mtype"], best_score
@@ -193,8 +194,8 @@ def main(force=False):
                 continue
             if not item["coordinates_exist"] or item["pdb"] == "Modeled":
                 continue
-            coordfile = get_coordfile(item)
-            find_bpdata(possible_list, item, coordfile)
+            coordfile, nswap = get_coordfile(item)
+            find_bpdata(possible_list, item, coordfile, nswap)
     for each in possible_list:
         if not each.has_key("existing_data"):
             each["existing_data"] = None

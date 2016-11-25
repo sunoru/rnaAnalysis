@@ -107,7 +107,7 @@ def list_pair(nuc1, nuc2):
     for iso in {'t', 'c'}:
         for i1, edge1 in enumerate(edge_names):
             for i2, edge2 in enumerate(edge_names):
-                if nuc1 == nuc2 and i2 < i1:
+                if nuc1 == nuc2 and i2 < i1 or i1 == i2 and nuc_names.index(nuc2) < nuc_names.index(nuc1):
                     continue
                 result.extend(check(iso, nuc1, nuc2, edge1, edge2))
     return result
@@ -118,7 +118,7 @@ datafile = os.path.join(os.path.dirname(__file__), "../data/new_templates.json")
 
 def save_data(result_list):
     with open(datafile, "w") as fo:
-        json.dump(result_list, fo)
+        json.dump(result_list, fo, sort_keys=True, indent=4)
 
 
 def list_possible(force=False):
