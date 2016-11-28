@@ -134,10 +134,6 @@
             [
                 "N6", 
                 "N3"
-            ], 
-            [
-                "N1", 
-                "C1'"
             ]
         ], 
         "existing_data": {
@@ -151,7 +147,7 @@
             ]
         }, 
         "handled": true, 
-        "mtype": "1", 
+        "mtype": "1a", 
         "recs": "AA", 
         "swapped": true, 
         "type": "cWS"
@@ -615,12 +611,7 @@
         "type": "cSS"
     }, 
     {
-        "bonds": [
-            [
-                "O2", 
-                "C1'"
-            ]
-        ], 
+        "bonds": [], 
         "existing_data": {
             "id": "cSs-AC", 
             "nswap": true, 
@@ -678,10 +669,6 @@
             [
                 "N4", 
                 "N3"
-            ], 
-            [
-                "N3", 
-                "C1'"
             ]
         ], 
         "existing_data": {
@@ -695,7 +682,7 @@
             ]
         }, 
         "handled": true, 
-        "mtype": "1", 
+        "mtype": "1a", 
         "recs": "CA", 
         "swapped": true, 
         "type": "cWS"
@@ -729,10 +716,6 @@
             [
                 "O2", 
                 "N6"
-            ], 
-            [
-                "C1'", 
-                "N1"
             ]
         ], 
         "existing_data": {
@@ -746,7 +729,7 @@
             ]
         }, 
         "handled": true, 
-        "mtype": "2", 
+        "mtype": "2a", 
         "recs": "CA", 
         "swapped": true, 
         "type": "cSW"
@@ -1403,10 +1386,6 @@
             [
                 "C2", 
                 "O2"
-            ], 
-            [
-                "N3", 
-                "C1'"
             ]
         ], 
         "existing_data": {
@@ -1420,7 +1399,7 @@
             ]
         }, 
         "handled": true, 
-        "mtype": "1", 
+        "mtype": "1a", 
         "recs": "AU", 
         "type": "cSS"
     }, 
@@ -1547,10 +1526,6 @@
             [
                 "O2", 
                 "N6"
-            ], 
-            [
-                "C1'", 
-                "N1"
             ]
         ], 
         "existing_data": {
@@ -1564,7 +1539,7 @@
             ]
         }, 
         "handled": true, 
-        "mtype": "2", 
+        "mtype": "2a", 
         "recs": "UA", 
         "swapped": true, 
         "type": "cSW"
@@ -2321,17 +2296,7 @@
                 "N2"
             ]
         ], 
-        "existing_data": {
-            "id": "cWS-GA", 
-            "nswap": true, 
-            "score": 1.2417228050990072, 
-            "swap": true, 
-            "units": [
-                "2AW7|1|A|G|394", 
-                "2AW7|1|A|A|366"
-            ]
-        }, 
-        "handled": true, 
+        "existing_data": null, 
         "mtype": "1b", 
         "recs": "AG", 
         "type": "cSW"
@@ -2347,7 +2312,17 @@
                 "N1"
             ]
         ], 
-        "existing_data": null, 
+        "existing_data": {
+            "id": "cWS-GA", 
+            "nswap": true, 
+            "score": 1.2417228050990072, 
+            "swap": true, 
+            "units": [
+                "2AW7|1|A|G|394", 
+                "2AW7|1|A|A|366"
+            ]
+        }, 
+        "handled": true, 
         "mtype": "2a", 
         "recs": "AG", 
         "type": "cSW"
@@ -2434,7 +2409,7 @@
                 "N6"
             ], 
             [
-                "C1'", 
+                "O2'", 
                 "N1"
             ]
         ], 
@@ -3061,12 +3036,7 @@
         "type": "cHW"
     }, 
     {
-        "bonds": [
-            [
-                "C1'", 
-                "O2"
-            ]
-        ], 
+        "bonds": [], 
         "existing_data": {
             "id": "cSs-CC", 
             "nswap": false, 
@@ -3100,10 +3070,6 @@
             [
                 "N4", 
                 "O2"
-            ], 
-            [
-                "N3", 
-                "C1'"
             ]
         ], 
         "existing_data": {
@@ -3117,7 +3083,7 @@
             ]
         }, 
         "handled": true, 
-        "mtype": "1", 
+        "mtype": "1a", 
         "recs": "CC", 
         "swapped": true, 
         "type": "cWS"
@@ -3696,10 +3662,6 @@
             [
                 "N4", 
                 "O2"
-            ], 
-            [
-                "N3", 
-                "C1'"
             ]
         ], 
         "existing_data": {
@@ -3713,7 +3675,7 @@
             ]
         }, 
         "handled": true, 
-        "mtype": "1", 
+        "mtype": "1a", 
         "recs": "CU", 
         "type": "cWS"
     }, 
@@ -4382,6 +4344,18 @@
                 "O2"
             ]
         ], 
+        "existing_data": null, 
+        "mtype": "3", 
+        "recs": "GC", 
+        "type": "cWS"
+    }, 
+    {
+        "bonds": [
+            [
+                "N1", 
+                "O2"
+            ]
+        ], 
         "existing_data": {
             "id": "cWS-GC", 
             "nswap": false, 
@@ -4393,22 +4367,10 @@
             ]
         }, 
         "handled": true, 
-        "mtype": "3", 
+        "mtype": "2a", 
         "recs": "GC", 
         "swapped": true, 
         "type": "cWS"
-    }, 
-    {
-        "bonds": [
-            [
-                "O2", 
-                "N1"
-            ]
-        ], 
-        "existing_data": null, 
-        "mtype": "1a", 
-        "recs": "CG", 
-        "type": "cSW"
     }, 
     {
         "bonds": [
@@ -4478,10 +4440,6 @@
             [
                 "N4", 
                 "N3"
-            ], 
-            [
-                "N3", 
-                "C1'"
             ]
         ], 
         "existing_data": {
@@ -4495,7 +4453,7 @@
             ]
         }, 
         "handled": true, 
-        "mtype": "1", 
+        "mtype": "1a", 
         "recs": "CG", 
         "type": "cWS"
     }, 
@@ -5662,6 +5620,18 @@
                 "O2"
             ]
         ], 
+        "existing_data": null, 
+        "mtype": "3", 
+        "recs": "GU", 
+        "type": "cWS"
+    }, 
+    {
+        "bonds": [
+            [
+                "N1", 
+                "O2"
+            ]
+        ], 
         "existing_data": {
             "id": "cWS-GU", 
             "nswap": false, 
@@ -5673,22 +5643,10 @@
             ]
         }, 
         "handled": true, 
-        "mtype": "3", 
+        "mtype": "2a", 
         "recs": "GU", 
         "swapped": true, 
         "type": "cWS"
-    }, 
-    {
-        "bonds": [
-            [
-                "O2", 
-                "N1"
-            ]
-        ], 
-        "existing_data": null, 
-        "mtype": "1a", 
-        "recs": "UG", 
-        "type": "cSW"
     }, 
     {
         "bonds": [
@@ -6470,10 +6428,6 @@
             [
                 "O6", 
                 "N2"
-            ], 
-            [
-                "N1", 
-                "N3"
             ]
         ], 
         "existing_data": {
