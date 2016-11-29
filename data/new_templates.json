@@ -18,29 +18,22 @@
     {
         "bonds": [
             [
-                "N3", 
-                "N6"
+                "N6", 
+                "N3"
             ], 
             [
-                "C1'", 
-                "N7"
+                "N7", 
+                "C1'"
             ]
         ], 
         "existing_data": {
-            "id": "cHS-AA", 
-            "nswap": true, 
-            "score": 0.39230062294950074, 
-            "swap": false, 
-            "units": [
-                "4FNJ|1|A|A|11", 
-                "4FNJ|1|A|A|10"
-            ]
+            "coordfile": "new_coors/cHS-AA.gro", 
+            "score": 0.40861481992785964, 
+            "swap": false
         }, 
-        "handled": true, 
-        "mtype": "3", 
+        "mtype": "1", 
         "recs": "AA", 
-        "swapped": true, 
-        "type": "cSH"
+        "type": "cHS"
     }, 
     {
         "bonds": [
@@ -93,24 +86,21 @@
     {
         "bonds": [
             [
+                "C2", 
+                "N3"
+            ], 
+            [
                 "N3", 
-                "C2"
+                "C1'"
             ]
         ], 
         "existing_data": {
-            "id": "cSs-AA", 
-            "nswap": false, 
-            "score": 1.8196065956514726, 
-            "swap": true, 
-            "units": [
-                "1FJG|1|A|A|946", 
-                "1FJG|1|A|A|1333"
-            ]
+            "coordfile": "new_coors/cSS-AA.gro", 
+            "score": 1.3147247300386149, 
+            "swap": true
         }, 
-        "handled": true, 
-        "mtype": "3a", 
+        "mtype": "1", 
         "recs": "AA", 
-        "swapped": true, 
         "type": "cSS"
     }, 
     {
@@ -132,51 +122,41 @@
     {
         "bonds": [
             [
-                "N6", 
-                "N3"
-            ]
-        ], 
-        "existing_data": {
-            "id": "cWS-AA", 
-            "nswap": false, 
-            "score": 1.3078742604405087, 
-            "swap": true, 
-            "units": [
-                "1J1U|1|B|A|514", 
-                "1J1U|1|B|A|522"
-            ]
-        }, 
-        "handled": true, 
-        "mtype": "1a", 
-        "recs": "AA", 
-        "swapped": true, 
-        "type": "cWS"
-    }, 
-    {
-        "bonds": [
-            [
-                "N1", 
+                "N3", 
                 "N6"
             ], 
             [
-                "C2", 
+                "C1'", 
                 "N1"
             ]
         ], 
         "existing_data": {
-            "id": "cWw-Aa", 
-            "nswap": true, 
-            "score": 0.9523674806163198, 
-            "swap": false, 
-            "units": [
-                "3BNQ|1|B|A|18", 
-                "3BNQ|1|A|A|8"
-            ]
+            "coordfile": "new_coors/cWS-AA.gro", 
+            "score": 1.282854092176583, 
+            "swap": true
         }, 
-        "handled": true, 
         "mtype": "3", 
         "recs": "AA", 
-        "swapped": true, 
+        "type": "cSW"
+    }, 
+    {
+        "bonds": [
+            [
+                "N6", 
+                "N1"
+            ], 
+            [
+                "N1", 
+                "C2"
+            ]
+        ], 
+        "existing_data": {
+            "coordfile": "new_coors/cWW-AA.gro", 
+            "score": 0.74988450644734184, 
+            "swap": false
+        }, 
+        "mtype": "1", 
+        "recs": "AA", 
         "type": "cWW"
     }, 
     {
@@ -191,16 +171,10 @@
             ]
         ], 
         "existing_data": {
-            "id": "tHh-Aa", 
-            "nswap": false, 
-            "score": 0.08298383487578209, 
-            "swap": false, 
-            "units": [
-                "4JRD|1|A|A|2", 
-                "4JRD|1|B|A|1"
-            ]
+            "coordfile": "new_coors/tHH-AA.gro", 
+            "score": 0.086205841987438303, 
+            "swap": false
         }, 
-        "handled": true, 
         "mtype": "1", 
         "recs": "AA", 
         "type": "tHH"
@@ -224,29 +198,22 @@
     {
         "bonds": [
             [
-                "C2", 
-                "N7"
+                "N6", 
+                "N3"
             ], 
             [
-                "N3", 
-                "N6"
+                "N7", 
+                "C2"
             ]
         ], 
         "existing_data": {
-            "id": "tHS-AA", 
-            "nswap": true, 
-            "score": 1.0660558641564513, 
-            "swap": false, 
-            "units": [
-                "1U0B|1|A|A|22", 
-                "1U0B|1|A|A|13"
-            ]
+            "coordfile": "new_coors/tHS-AA.gro", 
+            "score": 0.72526564925221648, 
+            "swap": false
         }, 
-        "handled": true, 
         "mtype": "1", 
         "recs": "AA", 
-        "swapped": true, 
-        "type": "tSH"
+        "type": "tHS"
     }, 
     {
         "bonds": [
@@ -268,28 +235,21 @@
         "bonds": [
             [
                 "N6", 
-                "N7"
+                "N1"
             ], 
             [
-                "N1", 
+                "N7", 
                 "N6"
             ]
         ], 
         "existing_data": {
-            "id": "tWH-AA", 
-            "nswap": false, 
-            "score": 0.13920934279455444, 
-            "swap": true, 
-            "units": [
-                "3LA5|1|A|A|33", 
-                "3LA5|1|A|A|66"
-            ]
+            "coordfile": "new_coors/tWH-AA.gro", 
+            "score": 0.15278731297354331, 
+            "swap": true
         }, 
-        "handled": true, 
         "mtype": "1", 
         "recs": "AA", 
-        "swapped": true, 
-        "type": "tWH"
+        "type": "tHW"
     }, 
     {
         "bonds": [
@@ -319,19 +279,12 @@
             ]
         ], 
         "existing_data": {
-            "id": "tSs-AA", 
-            "nswap": true, 
-            "score": 2.2985771756705464, 
-            "swap": false, 
-            "units": [
-                "3U5F|1|6|A|1300", 
-                "3U5F|1|6|A|1143"
-            ]
+            "coordfile": "new_coors/tSS-AA.gro", 
+            "score": 1.5541529112761576, 
+            "swap": false
         }, 
-        "handled": true, 
         "mtype": "1", 
         "recs": "AA", 
-        "swapped": true, 
         "type": "tSS"
     }, 
     {
@@ -362,16 +315,10 @@
             ]
         ], 
         "existing_data": {
-            "id": "tWS-AA", 
-            "nswap": true, 
-            "score": 1.014829359530942, 
-            "swap": true, 
-            "units": [
-                "1S72|1|0|A|2018", 
-                "1S72|1|0|A|1829"
-            ]
+            "coordfile": "new_coors/tWS-AA.gro", 
+            "score": 0.59855483462289327, 
+            "swap": true
         }, 
-        "handled": true, 
         "mtype": "1", 
         "recs": "AA", 
         "type": "tSW"
@@ -404,16 +351,10 @@
             ]
         ], 
         "existing_data": {
-            "id": "tWW-AA", 
-            "nswap": false, 
-            "score": 0.025977925011293035, 
-            "swap": false, 
-            "units": [
-                "1NUV|1|A|A|25", 
-                "1NUV|1|G|A|26"
-            ]
+            "coordfile": "new_coors/tWW-AA.gro", 
+            "score": 0.075539291050655599, 
+            "swap": false
         }, 
-        "handled": true, 
         "mtype": "1", 
         "recs": "AA", 
         "type": "tWW"
@@ -461,29 +402,22 @@
     {
         "bonds": [
             [
-                "O2", 
-                "N6"
+                "N6", 
+                "O2"
             ], 
             [
-                "C1'", 
-                "N7"
+                "N7", 
+                "C1'"
             ]
         ], 
         "existing_data": {
-            "id": "cHS-AC", 
-            "nswap": true, 
-            "score": 0.1375950332299578, 
-            "swap": false, 
-            "units": [
-                "3U5F|1|6|A|555", 
-                "3U5F|1|6|C|554"
-            ]
+            "coordfile": "new_coors/cHS-AC.gro", 
+            "score": 0.052281039507104499, 
+            "swap": false
         }, 
-        "handled": true, 
-        "mtype": "2", 
-        "recs": "CA", 
-        "swapped": true, 
-        "type": "cSH"
+        "mtype": "1", 
+        "recs": "AC", 
+        "type": "cHS"
     }, 
     {
         "bonds": [
@@ -569,16 +503,10 @@
             ]
         ], 
         "existing_data": {
-            "id": "cHS-CA", 
-            "nswap": true, 
-            "score": 0.3974287302651467, 
-            "swap": true, 
-            "units": [
-                "3GX5|1|A|C|47", 
-                "3GX5|1|A|A|46"
-            ]
+            "coordfile": "new_coors/cHS-CA.gro", 
+            "score": 0.37883018904252141, 
+            "swap": true
         }, 
-        "handled": true, 
         "mtype": "3a", 
         "recs": "AC", 
         "type": "cSH"
@@ -586,46 +514,37 @@
     {
         "bonds": [
             [
-                "O2", 
-                "C2"
+                "C2", 
+                "O2"
             ], 
             [
-                "C1'", 
-                "N3"
+                "N3", 
+                "C1'"
             ]
         ], 
         "existing_data": {
-            "id": "cSs-CA", 
-            "nswap": false, 
-            "score": 1.5297609892117245, 
-            "swap": true, 
-            "units": [
-                "1S72|1|0|C|153", 
-                "1S72|1|0|A|439"
-            ]
+            "coordfile": "new_coors/cSS-CA.gro", 
+            "score": 1.08834329464086, 
+            "swap": true
         }, 
-        "handled": true, 
-        "mtype": "2", 
-        "recs": "CA", 
-        "swapped": true, 
+        "mtype": "1", 
+        "recs": "AC", 
         "type": "cSS"
     }, 
     {
-        "bonds": [], 
-        "existing_data": {
-            "id": "cSs-AC", 
-            "nswap": true, 
-            "score": 2.246827715108543, 
-            "swap": false, 
-            "units": [
-                "3NKB|1|B|A|65", 
-                "3NKB|1|B|C|19"
+        "bonds": [
+            [
+                "C1'", 
+                "O2"
             ]
+        ], 
+        "existing_data": {
+            "coordfile": "new_coors/cSS-AC.gro", 
+            "score": 2.2848578613686747, 
+            "swap": false
         }, 
-        "handled": true, 
-        "mtype": "0", 
-        "recs": "CA", 
-        "swapped": true, 
+        "mtype": "3", 
+        "recs": "AC", 
         "type": "cSS"
     }, 
     {
@@ -667,25 +586,22 @@
     {
         "bonds": [
             [
-                "N4", 
+                "N3", 
+                "N4"
+            ], 
+            [
+                "C1'", 
                 "N3"
             ]
         ], 
         "existing_data": {
-            "id": "cWS-CA", 
-            "nswap": false, 
-            "score": 1.5097105918844975, 
-            "swap": true, 
-            "units": [
-                "2OE5|1|A|C|1409", 
-                "2OE5|1|B|A|1492"
-            ]
+            "coordfile": "new_coors/cWS-CA.gro", 
+            "score": 1.5181584585178283, 
+            "swap": true
         }, 
-        "handled": true, 
-        "mtype": "1a", 
-        "recs": "CA", 
-        "swapped": true, 
-        "type": "cWS"
+        "mtype": "3", 
+        "recs": "AC", 
+        "type": "cSW"
     }, 
     {
         "bonds": [
@@ -714,25 +630,22 @@
     {
         "bonds": [
             [
-                "O2", 
-                "N6"
+                "N6", 
+                "O2"
+            ], 
+            [
+                "N1", 
+                "C1'"
             ]
         ], 
         "existing_data": {
-            "id": "cWS-AC", 
-            "nswap": true, 
-            "score": 1.0448328979509145, 
-            "swap": false, 
-            "units": [
-                "1L2X|1|A|A|25", 
-                "1L2X|1|A|C|14"
-            ]
+            "coordfile": "new_coors/cWS-AC.gro", 
+            "score": 1.0469815974861774, 
+            "swap": false
         }, 
-        "handled": true, 
-        "mtype": "2a", 
-        "recs": "CA", 
-        "swapped": true, 
-        "type": "cSW"
+        "mtype": "1", 
+        "recs": "AC", 
+        "type": "cWS"
     }, 
     {
         "bonds": [
@@ -761,24 +674,17 @@
     {
         "bonds": [
             [
-                "N3", 
-                "N6"
+                "N6", 
+                "N3"
             ]
         ], 
         "existing_data": {
-            "id": "cWW-CA", 
-            "nswap": false, 
-            "score": 15.036799046996578, 
-            "swap": true, 
-            "units": [
-                "1KFO|1|A|C|7", 
-                "1KFO|2|A|A|12||||8_555"
-            ]
+            "coordfile": "new_coors/cWW-AC.gro", 
+            "score": -0.067800716016406692, 
+            "swap": false
         }, 
-        "handled": true, 
-        "mtype": "3a", 
-        "recs": "CA", 
-        "swapped": true, 
+        "mtype": "1a", 
+        "recs": "AC", 
         "type": "cWW"
     }, 
     {
@@ -812,24 +718,17 @@
     {
         "bonds": [
             [
-                "N4", 
-                "N7"
+                "N7", 
+                "N4"
             ]
         ], 
         "existing_data": {
-            "id": "tHH-AC", 
-            "nswap": true, 
-            "score": 1.158694044291861, 
-            "swap": false, 
-            "units": [
-                "1S72|1|0|A|507", 
-                "1S72|1|0|C|483"
-            ]
+            "coordfile": "new_coors/tHH-AC.gro", 
+            "score": 1.2233309848879577, 
+            "swap": false
         }, 
-        "handled": true, 
-        "mtype": "1a", 
-        "recs": "CA", 
-        "swapped": true, 
+        "mtype": "1b", 
+        "recs": "AC", 
         "type": "tHH"
     }, 
     {
@@ -847,25 +746,18 @@
     {
         "bonds": [
             [
-                "O2", 
-                "N6"
+                "N6", 
+                "O2"
             ]
         ], 
         "existing_data": {
-            "id": "tHS-AC", 
-            "nswap": true, 
-            "score": 0.5617449248089788, 
-            "swap": false, 
-            "units": [
-                "1LNT|1|B|A|20", 
-                "1LNT|1|A|C|5"
-            ]
+            "coordfile": "new_coors/tHS-AC.gro", 
+            "score": 0.56179460270617287, 
+            "swap": false
         }, 
-        "handled": true, 
         "mtype": "0", 
-        "recs": "CA", 
-        "swapped": true, 
-        "type": "tSH"
+        "recs": "AC", 
+        "type": "tHS"
     }, 
     {
         "bonds": [
@@ -895,16 +787,10 @@
             ]
         ], 
         "existing_data": {
-            "id": "tWH-CA", 
-            "nswap": true, 
-            "score": 0.02283062993663565, 
-            "swap": true, 
-            "units": [
-                "1LNT|1|B|C|19", 
-                "1LNT|1|A|A|6"
-            ]
+            "coordfile": "new_coors/tWH-CA.gro", 
+            "score": 0.0097426174488479678, 
+            "swap": true
         }, 
-        "handled": true, 
         "mtype": "1", 
         "recs": "AC", 
         "type": "tHW"
@@ -948,25 +834,18 @@
     {
         "bonds": [
             [
-                "N4", 
-                "N3"
+                "N3", 
+                "N4"
             ]
         ], 
         "existing_data": {
-            "id": "tHS-CA", 
-            "nswap": false, 
-            "score": 0.213274893053657, 
-            "swap": true, 
-            "units": [
-                "1S72|1|0|C|1768", 
-                "1S72|1|0|A|1775"
-            ]
+            "coordfile": "new_coors/tHS-CA.gro", 
+            "score": 0.15748169407272172, 
+            "swap": true
         }, 
-        "handled": true, 
-        "mtype": "1a", 
-        "recs": "CA", 
-        "swapped": true, 
-        "type": "tHS"
+        "mtype": "1b", 
+        "recs": "AC", 
+        "type": "tSH"
     }, 
     {
         "bonds": [
@@ -983,24 +862,17 @@
     {
         "bonds": [
             [
-                "O2", 
-                "C2"
+                "C2", 
+                "O2"
             ]
         ], 
         "existing_data": {
-            "id": "tSs-AC", 
-            "nswap": true, 
-            "score": 0.9991520347790752, 
-            "swap": false, 
-            "units": [
-                "2GDI|1|X|A|84", 
-                "2GDI|1|X|C|50"
-            ]
+            "coordfile": "new_coors/tSS-AC.gro", 
+            "score": 0.37780044055546691, 
+            "swap": false
         }, 
-        "handled": true, 
         "mtype": "0", 
-        "recs": "CA", 
-        "swapped": true, 
+        "recs": "AC", 
         "type": "tSS"
     }, 
     {
@@ -1031,16 +903,10 @@
             ]
         ], 
         "existing_data": {
-            "id": "tWS-CA", 
-            "nswap": true, 
-            "score": 1.9996703646571148, 
-            "swap": true, 
-            "units": [
-                "1S72|1|0|C|1983", 
-                "1S72|1|0|A|1981"
-            ]
+            "coordfile": "new_coors/tWS-CA.gro", 
+            "score": 1.8561839643126115, 
+            "swap": true
         }, 
-        "handled": true, 
         "mtype": "1", 
         "recs": "AC", 
         "type": "tSW"
@@ -1108,25 +974,18 @@
     {
         "bonds": [
             [
-                "O2", 
-                "N6"
+                "N6", 
+                "O2"
             ]
         ], 
         "existing_data": {
-            "id": "tWS-AC", 
-            "nswap": true, 
-            "score": -0.26490087020455855, 
-            "swap": false, 
-            "units": [
-                "3U5H|1|5|A|882", 
-                "3U5H|1|5|C|877"
-            ]
+            "coordfile": "new_coors/tWS-AC.gro", 
+            "score": -0.22232542493045448, 
+            "swap": false
         }, 
-        "handled": true, 
         "mtype": "0", 
-        "recs": "CA", 
-        "swapped": true, 
-        "type": "tSW"
+        "recs": "AC", 
+        "type": "tWS"
     }, 
     {
         "bonds": [
@@ -1156,16 +1015,10 @@
             ]
         ], 
         "existing_data": {
-            "id": "tWW-CA", 
-            "nswap": true, 
-            "score": 0.3004687506801429, 
-            "swap": true, 
-            "units": [
-                "1S72|1|0|C|2037", 
-                "1S72|1|0|A|1742"
-            ]
+            "coordfile": "new_coors/tWW-AC.gro", 
+            "score": 0.32022355529190083, 
+            "swap": false
         }, 
-        "handled": true, 
         "mtype": "1", 
         "recs": "AC", 
         "type": "tWW"
@@ -1251,20 +1104,18 @@
             [
                 "N6", 
                 "O2"
+            ], 
+            [
+                "N7", 
+                "C1'"
             ]
         ], 
         "existing_data": {
-            "id": "cHS-AU", 
-            "nswap": false, 
-            "score": 1.6237857638932731, 
-            "swap": false, 
-            "units": [
-                "3U5F|1|6|A|47", 
-                "3U5F|1|6|U|98"
-            ]
+            "coordfile": "new_coors/cHS-AU.gro", 
+            "score": 1.5787308376226166, 
+            "swap": false
         }, 
-        "handled": true, 
-        "mtype": "1a", 
+        "mtype": "1", 
         "recs": "AU", 
         "type": "cHS"
     }, 
@@ -1295,33 +1146,26 @@
     {
         "bonds": [
             [
-                "O4", 
-                "N6"
+                "N6", 
+                "O4"
             ], 
             [
-                "N3", 
-                "N7"
+                "N7", 
+                "N3"
             ], 
             [
-                "O2", 
-                "C8"
+                "C8", 
+                "O2"
             ]
         ], 
         "existing_data": {
-            "id": "cWH-UA", 
-            "nswap": false, 
-            "score": 1.9407607908143898, 
-            "swap": true, 
-            "units": [
-                "4JF2|1|A|U|32", 
-                "4JF2|1|A|A|72"
-            ]
+            "coordfile": "new_coors/cWH-UA.gro", 
+            "score": 0.52770176864373886, 
+            "swap": true
         }, 
-        "handled": true, 
         "mtype": "2", 
-        "recs": "UA", 
-        "swapped": true, 
-        "type": "cWH"
+        "recs": "AU", 
+        "type": "cHW"
     }, 
     {
         "bonds": [
@@ -1352,19 +1196,17 @@
             [
                 "C2", 
                 "O4"
+            ], 
+            [
+                "N3", 
+                "C5"
             ]
         ], 
         "existing_data": {
-            "id": "cHS-UA", 
-            "nswap": true, 
-            "score": 2.2349798867878476, 
-            "swap": true, 
-            "units": [
-                "1GRZ|1|A|U|412", 
-                "1GRZ|1|A|A|410"
-            ]
+            "coordfile": "new_coors/cHS-UA.gro", 
+            "score": 2.222742703273461, 
+            "swap": true
         }, 
-        "handled": true, 
         "mtype": "2a", 
         "recs": "AU", 
         "type": "cSH"
@@ -1386,44 +1228,35 @@
             [
                 "C2", 
                 "O2"
+            ], 
+            [
+                "N3", 
+                "C1'"
             ]
         ], 
         "existing_data": {
-            "id": "cSs-UA", 
-            "nswap": true, 
-            "score": 1.6559014369641618, 
-            "swap": true, 
-            "units": [
-                "1GID|1|A|U|224", 
-                "1GID|1|A|A|152"
-            ]
+            "coordfile": "new_coors/cSS-UA.gro", 
+            "score": 1.2126881021702565, 
+            "swap": true
         }, 
-        "handled": true, 
-        "mtype": "1a", 
+        "mtype": "1", 
         "recs": "AU", 
         "type": "cSS"
     }, 
     {
         "bonds": [
             [
-                "O2", 
-                "C1'"
+                "C1'", 
+                "O2"
             ]
         ], 
         "existing_data": {
-            "id": "cSs-AU", 
-            "nswap": true, 
-            "score": 2.4200914606296173, 
-            "swap": false, 
-            "units": [
-                "1VW3|1|A|A|1718", 
-                "1VW3|1|A|U|1383"
-            ]
+            "coordfile": "new_coors/cSS-AU.gro", 
+            "score": 2.4179077366416819, 
+            "swap": false
         }, 
-        "handled": true, 
-        "mtype": "0", 
-        "recs": "UA", 
-        "swapped": true, 
+        "mtype": "3", 
+        "recs": "AU", 
         "type": "cSS"
     }, 
     {
@@ -1441,33 +1274,26 @@
     {
         "bonds": [
             [
-                "O4", 
-                "C2"
+                "C2", 
+                "O4"
             ], 
             [
                 "N3", 
                 "N3"
             ], 
             [
-                "O2", 
-                "C1'"
+                "C1'", 
+                "O2"
             ]
         ], 
         "existing_data": {
-            "id": "cWS-UA", 
-            "nswap": false, 
-            "score": 2.0896220405226256, 
-            "swap": true, 
-            "units": [
-                "3LA5|1|A|U|49", 
-                "3LA5|1|A|A|76"
-            ]
+            "coordfile": "new_coors/cWS-UA.gro", 
+            "score": 0.65264588344653651, 
+            "swap": true
         }, 
-        "handled": true, 
         "mtype": "2", 
-        "recs": "UA", 
-        "swapped": true, 
-        "type": "cWS"
+        "recs": "AU", 
+        "type": "cSW"
     }, 
     {
         "bonds": [
@@ -1504,7 +1330,11 @@
                 "C5"
             ]
         ], 
-        "existing_data": null, 
+        "existing_data": {
+            "coordfile": "new_coors/cWH-AU.gro", 
+            "score": 0.40123373906424509, 
+            "swap": false
+        }, 
         "mtype": "2a", 
         "recs": "AU", 
         "type": "cWH"
@@ -1524,25 +1354,22 @@
     {
         "bonds": [
             [
-                "O2", 
-                "N6"
+                "N6", 
+                "O2"
+            ], 
+            [
+                "N1", 
+                "C1'"
             ]
         ], 
         "existing_data": {
-            "id": "cWS-AU", 
-            "nswap": true, 
-            "score": 1.1607280874738295, 
-            "swap": false, 
-            "units": [
-                "3NPN|1|A|A|44", 
-                "3NPN|1|A|U|33"
-            ]
+            "coordfile": "new_coors/cWS-AU.gro", 
+            "score": 1.1595979990887335, 
+            "swap": false
         }, 
-        "handled": true, 
-        "mtype": "2a", 
-        "recs": "UA", 
-        "swapped": true, 
-        "type": "cSW"
+        "mtype": "1", 
+        "recs": "AU", 
+        "type": "cWS"
     }, 
     {
         "bonds": [
@@ -1584,16 +1411,10 @@
             ]
         ], 
         "existing_data": {
-            "id": "cWW-AU", 
-            "nswap": false, 
-            "score": 1.8265375640764816, 
-            "swap": false, 
-            "units": [
-                "466D|1|A|A|2", 
-                "466D|1|B|U|13"
-            ]
+            "coordfile": "new_coors/cWW-UA.gro", 
+            "score": 0.36425682701704015, 
+            "swap": true
         }, 
-        "handled": true, 
         "mtype": "2", 
         "recs": "AU", 
         "type": "cWW"
@@ -1613,24 +1434,17 @@
     {
         "bonds": [
             [
-                "O4", 
-                "N6"
+                "N6", 
+                "O4"
             ]
         ], 
         "existing_data": {
-            "id": "tHH-AU", 
-            "nswap": true, 
-            "score": 0.42892476373027, 
-            "swap": false, 
-            "units": [
-                "1S72|1|0|A|2260", 
-                "1S72|1|0|U|2133"
-            ]
+            "coordfile": "new_coors/tHH-UA.gro", 
+            "score": 0.37854006823598763, 
+            "swap": true
         }, 
-        "handled": true, 
         "mtype": "0", 
-        "recs": "UA", 
-        "swapped": true, 
+        "recs": "AU", 
         "type": "tHH"
     }, 
     {
@@ -1664,25 +1478,18 @@
     {
         "bonds": [
             [
-                "O2", 
-                "N6"
+                "N6", 
+                "O2"
             ]
         ], 
         "existing_data": {
-            "id": "tHS-AU", 
-            "nswap": true, 
-            "score": 0.19403937485717115, 
-            "swap": false, 
-            "units": [
-                "1S72|1|0|A|2398", 
-                "1S72|1|0|U|2390"
-            ]
+            "coordfile": "new_coors/tHS-AU.gro", 
+            "score": 0.18418991418368602, 
+            "swap": false
         }, 
-        "handled": true, 
         "mtype": "0", 
-        "recs": "UA", 
-        "swapped": true, 
-        "type": "tSH"
+        "recs": "AU", 
+        "type": "tHS"
     }, 
     {
         "bonds": [
@@ -1715,33 +1522,26 @@
     {
         "bonds": [
             [
-                "O4", 
-                "C8"
+                "N6", 
+                "O2"
             ], 
             [
-                "N3", 
-                "N7"
+                "N7", 
+                "N3"
             ], 
             [
-                "O2", 
-                "N6"
+                "C8", 
+                "O4"
             ]
         ], 
         "existing_data": {
-            "id": "tWH-UA", 
-            "nswap": false, 
-            "score": 1.9229964354620463, 
-            "swap": true, 
-            "units": [
-                "3ZP8|1|A|U|6", 
-                "3ZP8|1|A|A|28"
-            ]
+            "coordfile": "new_coors/tWH-UA.gro", 
+            "score": 0.47903959349809239, 
+            "swap": true
         }, 
-        "handled": true, 
         "mtype": "2", 
-        "recs": "UA", 
-        "swapped": true, 
-        "type": "tWH"
+        "recs": "AU", 
+        "type": "tHW"
     }, 
     {
         "bonds": [
@@ -1763,16 +1563,10 @@
             ]
         ], 
         "existing_data": {
-            "id": "tHS-UA", 
-            "nswap": true, 
-            "score": 1.568870999527338, 
-            "swap": true, 
-            "units": [
-                "3GX5|1|A|U|57", 
-                "3GX5|1|A|A|45"
-            ]
+            "coordfile": "new_coors/tHS-UA.gro", 
+            "score": 0.49618768996151719, 
+            "swap": true
         }, 
-        "handled": true, 
         "mtype": "0", 
         "recs": "AU", 
         "type": "tSH"
@@ -1808,24 +1602,17 @@
     {
         "bonds": [
             [
-                "O2", 
-                "C2"
+                "C2", 
+                "O2"
             ]
         ], 
         "existing_data": {
-            "id": "tSs-AU", 
-            "nswap": true, 
-            "score": 1.2627475206401841, 
-            "swap": false, 
-            "units": [
-                "1J1U|1|B|A|522", 
-                "1J1U|1|B|U|508"
-            ]
+            "coordfile": "new_coors/tSS-AU.gro", 
+            "score": 0.17009196567434071, 
+            "swap": false
         }, 
-        "handled": true, 
         "mtype": "0", 
-        "recs": "UA", 
-        "swapped": true, 
+        "recs": "AU", 
         "type": "tSS"
     }, 
     {
@@ -1872,16 +1659,10 @@
             ]
         ], 
         "existing_data": {
-            "id": "tWS-UA", 
-            "nswap": true, 
-            "score": 1.964207870110063, 
-            "swap": true, 
-            "units": [
-                "1S72|1|0|U|779", 
-                "1S72|1|0|A|776"
-            ]
+            "coordfile": "new_coors/tWS-UA.gro", 
+            "score": 0.43686862582256697, 
+            "swap": true
         }, 
-        "handled": true, 
         "mtype": "2", 
         "recs": "AU", 
         "type": "tSW"
@@ -1945,7 +1726,11 @@
                 "O2"
             ]
         ], 
-        "existing_data": null, 
+        "existing_data": {
+            "coordfile": "new_coors/tWS-AU.gro", 
+            "score": 0.69642580909786167, 
+            "swap": false
+        }, 
         "mtype": "0", 
         "recs": "AU", 
         "type": "tWS"
@@ -1981,32 +1766,25 @@
     {
         "bonds": [
             [
-                "O4", 
-                "C2"
+                "N6", 
+                "O2"
             ], 
             [
-                "N3", 
-                "N1"
+                "N1", 
+                "N3"
             ], 
             [
-                "O2", 
-                "N6"
+                "C2", 
+                "O4"
             ]
         ], 
         "existing_data": {
-            "id": "tWW-AU", 
-            "nswap": true, 
-            "score": 1.7567680392897902, 
-            "swap": false, 
-            "units": [
-                "1S72|1|0|A|2467", 
-                "1S72|1|0|U|2109"
-            ]
+            "coordfile": "new_coors/tWW-UA.gro", 
+            "score": 0.2347798042486732, 
+            "swap": true
         }, 
-        "handled": true, 
         "mtype": "2", 
-        "recs": "UA", 
-        "swapped": true, 
+        "recs": "AU", 
         "type": "tWW"
     }, 
     {
@@ -2045,16 +1823,10 @@
             ]
         ], 
         "existing_data": {
-            "id": "cHH-AG", 
-            "nswap": false, 
-            "score": 0.1532616165815468, 
-            "swap": false, 
-            "units": [
-                "2QBG|1|B|A|1664", 
-                "2QBG|1|B|G|1992"
-            ]
+            "coordfile": "new_coors/cHH-AG.gro", 
+            "score": 0.11911653469373729, 
+            "swap": false
         }, 
-        "handled": true, 
         "mtype": "2a", 
         "recs": "AG", 
         "type": "cHH"
@@ -2102,25 +1874,22 @@
     {
         "bonds": [
             [
-                "N2", 
-                "N7"
+                "N7", 
+                "N2"
+            ], 
+            [
+                "C8", 
+                "N3"
             ]
         ], 
         "existing_data": {
-            "id": "cHS-AG", 
-            "nswap": true, 
-            "score": 1.5069841959667474, 
-            "swap": false, 
-            "units": [
-                "1U6B|1|B|A|129", 
-                "1U6B|1|B|G|128"
-            ]
+            "coordfile": "new_coors/cHS-AG.gro", 
+            "score": 1.3444102610808142, 
+            "swap": false
         }, 
-        "handled": true, 
-        "mtype": "1a", 
-        "recs": "GA", 
-        "swapped": true, 
-        "type": "cSH"
+        "mtype": "3", 
+        "recs": "AG", 
+        "type": "cHS"
     }, 
     {
         "bonds": [
@@ -2146,16 +1915,10 @@
             ]
         ], 
         "existing_data": {
-            "id": "cWH-GA", 
-            "nswap": true, 
-            "score": 1.8074543019201406, 
-            "swap": true, 
-            "units": [
-                "1FJG|1|A|G|724", 
-                "1FJG|1|A|A|665"
-            ]
+            "coordfile": "new_coors/cWH-GA.gro", 
+            "score": -0.1424686986689454, 
+            "swap": true
         }, 
-        "handled": true, 
         "mtype": "2a", 
         "recs": "AG", 
         "type": "cHW"
@@ -2191,25 +1954,18 @@
     {
         "bonds": [
             [
-                "O6", 
-                "C2"
+                "C2", 
+                "O6"
             ]
         ], 
         "existing_data": {
-            "id": "cHS-GA", 
-            "nswap": false, 
-            "score": 1.6995801632388787, 
-            "swap": true, 
-            "units": [
-                "2CV1|1|C|G|510", 
-                "2CV1|1|C|A|545"
-            ]
+            "coordfile": "new_coors/cHS-GA.gro", 
+            "score": 0.76997076889424809, 
+            "swap": true
         }, 
-        "handled": true, 
         "mtype": "2a", 
-        "recs": "GA", 
-        "swapped": true, 
-        "type": "cHS"
+        "recs": "AG", 
+        "type": "cSH"
     }, 
     {
         "bonds": [
@@ -2238,34 +1994,7 @@
     {
         "bonds": [
             [
-                "N3", 
-                "C2"
-            ], 
-            [
-                "C1'", 
-                "N3"
-            ]
-        ], 
-        "existing_data": {
-            "id": "cSs-GA", 
-            "nswap": false, 
-            "score": 1.7430148635820977, 
-            "swap": true, 
-            "units": [
-                "1Q96|1|A|G|16", 
-                "1Q96|1|C|A|15"
-            ]
-        }, 
-        "handled": true, 
-        "mtype": "3", 
-        "recs": "GA", 
-        "swapped": true, 
-        "type": "cSS"
-    }, 
-    {
-        "bonds": [
-            [
-                "N2", 
+                "C2", 
                 "N3"
             ], 
             [
@@ -2274,19 +2003,32 @@
             ]
         ], 
         "existing_data": {
-            "id": "cSs-AG", 
-            "nswap": true, 
-            "score": 1.4261315648294721, 
-            "swap": false, 
-            "units": [
-                "1S72|1|0|A|2776", 
-                "1S72|1|0|G|2574"
-            ]
+            "coordfile": "new_coors/cSS-GA.gro", 
+            "score": 1.5455974956437526, 
+            "swap": true
         }, 
-        "handled": true, 
         "mtype": "1", 
-        "recs": "GA", 
-        "swapped": true, 
+        "recs": "AG", 
+        "type": "cSS"
+    }, 
+    {
+        "bonds": [
+            [
+                "N3", 
+                "N2"
+            ], 
+            [
+                "C1'", 
+                "N3"
+            ]
+        ], 
+        "existing_data": {
+            "coordfile": "new_coors/cSS-AG.gro", 
+            "score": 1.3270170309126583, 
+            "swap": false
+        }, 
+        "mtype": "3", 
+        "recs": "AG", 
         "type": "cSS"
     }, 
     {
@@ -2313,16 +2055,10 @@
             ]
         ], 
         "existing_data": {
-            "id": "cWS-GA", 
-            "nswap": true, 
-            "score": 1.2417228050990072, 
-            "swap": true, 
-            "units": [
-                "2AW7|1|A|G|394", 
-                "2AW7|1|A|A|366"
-            ]
+            "coordfile": "new_coors/cWS-GA.gro", 
+            "score": 0.52137232798189026, 
+            "swap": true
         }, 
-        "handled": true, 
         "mtype": "2a", 
         "recs": "AG", 
         "type": "cSW"
@@ -2358,25 +2094,18 @@
     {
         "bonds": [
             [
-                "O6", 
-                "N6"
+                "N6", 
+                "O6"
             ]
         ], 
         "existing_data": {
-            "id": "cWH-AG", 
-            "nswap": true, 
-            "score": 0.05597550853986544, 
-            "swap": false, 
-            "units": [
-                "420D|1|B|A|27", 
-                "420D|1|A|G|6"
-            ]
+            "coordfile": "new_coors/cWH-AG.gro", 
+            "score": 0.10278483181248399, 
+            "swap": false
         }, 
-        "handled": true, 
         "mtype": "2a", 
-        "recs": "GA", 
-        "swapped": true, 
-        "type": "cHW"
+        "recs": "AG", 
+        "type": "cWH"
     }, 
     {
         "bonds": [
@@ -2405,29 +2134,22 @@
     {
         "bonds": [
             [
-                "N3", 
-                "N6"
+                "N6", 
+                "N3"
             ], 
             [
-                "O2'", 
-                "N1"
+                "N1", 
+                "C1'"
             ]
         ], 
         "existing_data": {
-            "id": "cWS-AG", 
-            "nswap": true, 
-            "score": 2.223049380586077, 
-            "swap": false, 
-            "units": [
-                "1J5E|1|A|A|607", 
-                "1J5E|1|A|G|309"
-            ]
+            "coordfile": "new_coors/cWS-AG.gro", 
+            "score": 2.2289610638464428, 
+            "swap": false
         }, 
-        "handled": true, 
-        "mtype": "3", 
-        "recs": "GA", 
-        "swapped": true, 
-        "type": "cSW"
+        "mtype": "1", 
+        "recs": "AG", 
+        "type": "cWS"
     }, 
     {
         "bonds": [
@@ -2468,7 +2190,11 @@
                 "N1"
             ]
         ], 
-        "existing_data": null, 
+        "existing_data": {
+            "coordfile": "new_coors/cWW-AG.gro", 
+            "score": -0.12789068022418038, 
+            "swap": false
+        }, 
         "mtype": "2a", 
         "recs": "AG", 
         "type": "cWW"
@@ -2476,24 +2202,13 @@
     {
         "bonds": [
             [
-                "O6", 
-                "C2"
+                "C2", 
+                "O6"
             ]
         ], 
-        "existing_data": {
-            "id": "cWW-AG", 
-            "nswap": true, 
-            "score": 13.948076236833657, 
-            "swap": false, 
-            "units": [
-                "2Q1R|2|A|A|1009||||2_755", 
-                "2Q1R|1|A|G|1004"
-            ]
-        }, 
-        "handled": true, 
-        "mtype": "0", 
-        "recs": "GA", 
-        "swapped": true, 
+        "existing_data": null, 
+        "mtype": "4", 
+        "recs": "AG", 
         "type": "cWW"
     }, 
     {
@@ -2504,16 +2219,10 @@
             ]
         ], 
         "existing_data": {
-            "id": "tHH-AG", 
-            "nswap": false, 
-            "score": 0.01189831993410051, 
-            "swap": false, 
-            "units": [
-                "1S72|1|0|A|913", 
-                "1S72|1|0|G|1071"
-            ]
+            "coordfile": "new_coors/tHH-AG.gro", 
+            "score": -0.027194540217055696, 
+            "swap": false
         }, 
-        "handled": true, 
         "mtype": "0", 
         "recs": "AG", 
         "type": "tHH"
@@ -2570,16 +2279,10 @@
             ]
         ], 
         "existing_data": {
-            "id": "tHS-AG", 
-            "nswap": false, 
-            "score": 0.3151969824229808, 
-            "swap": false, 
-            "units": [
-                "3DVZ|1|A|A|2657", 
-                "3DVZ|1|A|G|2664"
-            ]
+            "coordfile": "new_coors/tHS-AG.gro", 
+            "score": 0.27041240157572344, 
+            "swap": false
         }, 
-        "handled": true, 
         "mtype": "1", 
         "recs": "AG", 
         "type": "tHS"
@@ -2695,28 +2398,21 @@
     {
         "bonds": [
             [
-                "N2", 
+                "C2", 
                 "N3"
             ], 
             [
                 "N3", 
-                "C2"
+                "N2"
             ]
         ], 
         "existing_data": {
-            "id": "tSs-AG", 
-            "nswap": true, 
-            "score": 0.9164569921942913, 
-            "swap": false, 
-            "units": [
-                "4ENB|1|A|A|21", 
-                "4ENB|1|A|G|3"
-            ]
+            "coordfile": "new_coors/tSS-GA.gro", 
+            "score": 0.79780628740080317, 
+            "swap": true
         }, 
-        "handled": true, 
         "mtype": "1", 
-        "recs": "GA", 
-        "swapped": true, 
+        "recs": "AG", 
         "type": "tSS"
     }, 
     {
@@ -2790,25 +2486,18 @@
     {
         "bonds": [
             [
-                "N7", 
-                "N6"
+                "N6", 
+                "N7"
             ]
         ], 
         "existing_data": {
-            "id": "tWH-AG", 
-            "nswap": true, 
-            "score": 0.06289946853636241, 
-            "swap": false, 
-            "units": [
-                "2CV1|1|C|A|546", 
-                "2CV1|1|C|G|522"
-            ]
+            "coordfile": "new_coors/tWH-AG.gro", 
+            "score": 0.08021530304061919, 
+            "swap": false
         }, 
-        "handled": true, 
-        "mtype": "1b", 
-        "recs": "GA", 
-        "swapped": true, 
-        "type": "tHW"
+        "mtype": "1a", 
+        "recs": "AG", 
+        "type": "tWH"
     }, 
     {
         "bonds": [
@@ -2841,29 +2530,22 @@
     {
         "bonds": [
             [
-                "N2", 
-                "N1"
+                "N6", 
+                "N3"
             ], 
             [
-                "N3", 
-                "N6"
+                "N1", 
+                "N2"
             ]
         ], 
         "existing_data": {
-            "id": "tWS-AG", 
-            "nswap": true, 
-            "score": 0.5265353627533256, 
-            "swap": false, 
-            "units": [
-                "1L2X|1|A|A|24", 
-                "1L2X|1|A|G|7"
-            ]
+            "coordfile": "new_coors/tWS-AG.gro", 
+            "score": 0.013102795151870072, 
+            "swap": false
         }, 
-        "handled": true, 
         "mtype": "1", 
-        "recs": "GA", 
-        "swapped": true, 
-        "type": "tSW"
+        "recs": "AG", 
+        "type": "tWS"
     }, 
     {
         "bonds": [
@@ -2936,25 +2618,18 @@
     {
         "bonds": [
             [
-                "O2", 
-                "C5"
+                "C5", 
+                "O2"
             ]
         ], 
         "existing_data": {
-            "id": "cHS-CC", 
-            "nswap": true, 
-            "score": 0.29811487886365207, 
-            "swap": false, 
-            "units": [
-                "1FJG|1|A|C|749", 
-                "1FJG|1|A|C|748"
-            ]
+            "coordfile": "new_coors/cHS-CC.gro", 
+            "score": 0.25046228537817772, 
+            "swap": false
         }, 
-        "handled": true, 
-        "mtype": "1a", 
+        "mtype": "2a", 
         "recs": "CC", 
-        "swapped": true, 
-        "type": "cSH"
+        "type": "cHS"
     }, 
     {
         "bonds": [
@@ -2983,29 +2658,22 @@
     {
         "bonds": [
             [
-                "N3", 
-                "N4"
+                "N4", 
+                "N3"
             ], 
             [
-                "O2", 
-                "C5"
+                "C5", 
+                "O2"
             ]
         ], 
         "existing_data": {
-            "id": "cWH-CC", 
-            "nswap": false, 
-            "score": 0.5727319868706158, 
-            "swap": true, 
-            "units": [
-                "1S72|1|0|C|1176", 
-                "1S72|1|0|C|1196"
-            ]
+            "coordfile": "new_coors/cWH-CC.gro", 
+            "score": 0.56052883830366307, 
+            "swap": true
         }, 
-        "handled": true, 
-        "mtype": "3", 
+        "mtype": "1", 
         "recs": "CC", 
-        "swapped": true, 
-        "type": "cWH"
+        "type": "cHW"
     }, 
     {
         "bonds": [
@@ -3036,21 +2704,19 @@
         "type": "cHW"
     }, 
     {
-        "bonds": [], 
-        "existing_data": {
-            "id": "cSs-CC", 
-            "nswap": false, 
-            "score": 2.2744298461710493, 
-            "swap": true, 
-            "units": [
-                "1Q86|1|A|C|2542", 
-                "1Q86|1|5|C|75"
+        "bonds": [
+            [
+                "O2", 
+                "C1'"
             ]
+        ], 
+        "existing_data": {
+            "coordfile": "new_coors/cSS-CC.gro", 
+            "score": 2.3039694929353915, 
+            "swap": true
         }, 
-        "handled": true, 
-        "mtype": "2", 
+        "mtype": "0", 
         "recs": "CC", 
-        "swapped": true, 
         "type": "cSS"
     }, 
     {
@@ -3068,25 +2734,22 @@
     {
         "bonds": [
             [
-                "N4", 
-                "O2"
+                "O2", 
+                "N4"
+            ], 
+            [
+                "C1'", 
+                "N3"
             ]
         ], 
         "existing_data": {
-            "id": "cWS-CC", 
-            "nswap": false, 
-            "score": 1.2067427376421607, 
-            "swap": true, 
-            "units": [
-                "1S72|1|0|C|1428", 
-                "1S72|1|0|C|1439"
-            ]
+            "coordfile": "new_coors/cWS-CC.gro", 
+            "score": 1.2302764992858743, 
+            "swap": true
         }, 
-        "handled": true, 
-        "mtype": "1a", 
+        "mtype": "2", 
         "recs": "CC", 
-        "swapped": true, 
-        "type": "cWS"
+        "type": "cSW"
     }, 
     {
         "bonds": [
@@ -3103,48 +2766,34 @@
     {
         "bonds": [
             [
-                "N3", 
-                "N4"
+                "N4", 
+                "N3"
             ]
         ], 
         "existing_data": {
-            "id": "cWw-Cc", 
-            "nswap": false, 
-            "score": -0.10489989198326999, 
-            "swap": true, 
-            "units": [
-                "3RW6|1|H|C|16", 
-                "3RW6|1|H|C|49"
-            ]
+            "coordfile": "new_coors/cWW-CC.gro", 
+            "score": -0.047869361730757287, 
+            "swap": true
         }, 
-        "handled": true, 
-        "mtype": "3a", 
+        "mtype": "1a", 
         "recs": "CC", 
-        "swapped": true, 
         "type": "cWW"
     }, 
     {
         "bonds": [
             [
-                "O2", 
-                "N4"
+                "N4", 
+                "O2"
             ]
         ], 
         "existing_data": {
-            "id": "tHS-CC", 
-            "nswap": true, 
-            "score": -0.24988400445564496, 
-            "swap": false, 
-            "units": [
-                "1Q96|1|A|C|22", 
-                "1Q96|1|A|C|8"
-            ]
+            "coordfile": "new_coors/tHS-CC.gro", 
+            "score": -0.28163845845276692, 
+            "swap": false
         }, 
-        "handled": true, 
         "mtype": "0", 
         "recs": "CC", 
-        "swapped": true, 
-        "type": "tSH"
+        "type": "tHS"
     }, 
     {
         "bonds": [
@@ -3185,29 +2834,22 @@
     {
         "bonds": [
             [
-                "N3", 
-                "C5"
+                "N4", 
+                "O2"
             ], 
             [
-                "O2", 
-                "N4"
+                "C5", 
+                "N3"
             ]
         ], 
         "existing_data": {
-            "id": "tWH-CC", 
-            "nswap": false, 
-            "score": 0.6058574458952031, 
-            "swap": true, 
-            "units": [
-                "1MFQ|1|A|C|191", 
-                "1MFQ|1|A|C|207"
-            ]
+            "coordfile": "new_coors/tWH-CC.gro", 
+            "score": 0.5840834006252893, 
+            "swap": true
         }, 
-        "handled": true, 
-        "mtype": "2b", 
+        "mtype": "2a", 
         "recs": "CC", 
-        "swapped": true, 
-        "type": "tWH"
+        "type": "tHW"
     }, 
     {
         "bonds": [
@@ -3261,16 +2903,10 @@
             ]
         ], 
         "existing_data": {
-            "id": "tWS-CC", 
-            "nswap": true, 
-            "score": 0.44764936624244855, 
-            "swap": true, 
-            "units": [
-                "1ET4|1|B|C|324", 
-                "1ET4|1|A|C|219"
-            ]
+            "coordfile": "new_coors/tWS-CC.gro", 
+            "score": 0.48730383214626816, 
+            "swap": true
         }, 
-        "handled": true, 
         "mtype": "0", 
         "recs": "CC", 
         "type": "tSW"
@@ -3323,16 +2959,10 @@
             ]
         ], 
         "existing_data": {
-            "id": "tWW-CC", 
-            "nswap": false, 
-            "score": -0.16981925123196318, 
-            "swap": false, 
-            "units": [
-                "3ZP8|1|A|C|8", 
-                "3ZP8|1|A|C|26"
-            ]
+            "coordfile": "new_coors/tWW-CC.gro", 
+            "score": -0.14379414718184469, 
+            "swap": false
         }, 
-        "handled": true, 
         "mtype": "2a", 
         "recs": "CC", 
         "type": "tWW"
@@ -3388,25 +3018,18 @@
     {
         "bonds": [
             [
-                "O2", 
-                "N4"
+                "N4", 
+                "O2"
             ]
         ], 
         "existing_data": {
-            "id": "cHS-CU", 
-            "nswap": true, 
-            "score": -0.06638877393790388, 
-            "swap": false, 
-            "units": [
-                "2QBZ|1|X|C|35", 
-                "2QBZ|1|X|U|34"
-            ]
+            "coordfile": "new_coors/cHS-CU.gro", 
+            "score": -0.19072068389566077, 
+            "swap": false
         }, 
-        "handled": true, 
-        "mtype": "2a", 
-        "recs": "UC", 
-        "swapped": true, 
-        "type": "cSH"
+        "mtype": "1a", 
+        "recs": "CU", 
+        "type": "cHS"
     }, 
     {
         "bonds": [
@@ -3523,7 +3146,11 @@
                 "C5"
             ]
         ], 
-        "existing_data": null, 
+        "existing_data": {
+            "coordfile": "new_coors/cHS-UC.gro", 
+            "score": 0.85899340158838644, 
+            "swap": true
+        }, 
         "mtype": "1a", 
         "recs": "CU", 
         "type": "cSH"
@@ -3548,16 +3175,10 @@
             ]
         ], 
         "existing_data": {
-            "id": "cSs-UC", 
-            "nswap": true, 
-            "score": 1.6804109371809064, 
-            "swap": true, 
-            "units": [
-                "1S72|1|0|U|2595", 
-                "1S72|1|0|C|1993"
-            ]
+            "coordfile": "new_coors/cSS-UC.gro", 
+            "score": 1.7546253004678789, 
+            "swap": true
         }, 
-        "handled": true, 
         "mtype": "0", 
         "recs": "CU", 
         "type": "cSS"
@@ -3565,24 +3186,17 @@
     {
         "bonds": [
             [
-                "O2", 
-                "C1'"
+                "C1'", 
+                "O2"
             ]
         ], 
         "existing_data": {
-            "id": "cSs-CU", 
-            "nswap": true, 
-            "score": 3.582498898865291, 
-            "swap": false, 
-            "units": [
-                "1S72|1|0|C|879", 
-                "1S72|1|0|U|779"
-            ]
+            "coordfile": "new_coors/cSS-CU.gro", 
+            "score": 3.5687980783862123, 
+            "swap": false
         }, 
-        "handled": true, 
-        "mtype": "0", 
-        "recs": "UC", 
-        "swapped": true, 
+        "mtype": "2", 
+        "recs": "CU", 
         "type": "cSS"
     }, 
     {
@@ -3596,7 +3210,11 @@
                 "O2"
             ]
         ], 
-        "existing_data": null, 
+        "existing_data": {
+            "coordfile": "new_coors/cWS-UC.gro", 
+            "score": 0.8432174773120007, 
+            "swap": true
+        }, 
         "mtype": "1", 
         "recs": "CU", 
         "type": "cSW"
@@ -3652,7 +3270,11 @@
                 "C5"
             ]
         ], 
-        "existing_data": null, 
+        "existing_data": {
+            "coordfile": "new_coors/cWH-CU.gro", 
+            "score": 1.1136023903537904, 
+            "swap": false
+        }, 
         "mtype": "3b", 
         "recs": "CU", 
         "type": "cWH"
@@ -3662,20 +3284,18 @@
             [
                 "N4", 
                 "O2"
+            ], 
+            [
+                "N3", 
+                "C1'"
             ]
         ], 
         "existing_data": {
-            "id": "cWS-CU", 
-            "nswap": false, 
-            "score": 1.2043382746375628, 
-            "swap": false, 
-            "units": [
-                "3LA5|1|A|C|50", 
-                "3LA5|1|A|U|75"
-            ]
+            "coordfile": "new_coors/cWS-CU.gro", 
+            "score": 1.2273975686799046, 
+            "swap": false
         }, 
-        "handled": true, 
-        "mtype": "1a", 
+        "mtype": "1", 
         "recs": "CU", 
         "type": "cWS"
     }, 
@@ -3715,16 +3335,10 @@
             ]
         ], 
         "existing_data": {
-            "id": "cWW-UC", 
-            "nswap": true, 
-            "score": 2.7891116177127975, 
-            "swap": true, 
-            "units": [
-                "1S72|1|0|U|900", 
-                "1S72|1|0|C|764"
-            ]
+            "coordfile": "new_coors/cWW-UC.gro", 
+            "score": 1.0852196943557011, 
+            "swap": true
         }, 
-        "handled": true, 
         "mtype": "2a", 
         "recs": "CU", 
         "type": "cWW"
@@ -3749,16 +3363,10 @@
             ]
         ], 
         "existing_data": {
-            "id": "tHH-CU", 
-            "nswap": false, 
-            "score": 0.06635624732057543, 
-            "swap": false, 
-            "units": [
-                "1FJG|1|A|C|1071", 
-                "1FJG|1|A|U|1085"
-            ]
+            "coordfile": "new_coors/tHH-UC.gro", 
+            "score": 0.053981264290576814, 
+            "swap": true
         }, 
-        "handled": true, 
         "mtype": "0", 
         "recs": "CU", 
         "type": "tHH"
@@ -3790,25 +3398,18 @@
     {
         "bonds": [
             [
-                "O2", 
-                "N4"
+                "N4", 
+                "O2"
             ]
         ], 
         "existing_data": {
-            "id": "tHS-CU", 
-            "nswap": true, 
-            "score": 0.0670155242086179, 
-            "swap": false, 
-            "units": [
-                "1S72|1|0|C|228", 
-                "1S72|1|0|U|211"
-            ]
+            "coordfile": "new_coors/tHS-CU.gro", 
+            "score": -0.01824204340601332, 
+            "swap": false
         }, 
-        "handled": true, 
         "mtype": "0", 
-        "recs": "UC", 
-        "swapped": true, 
-        "type": "tSH"
+        "recs": "CU", 
+        "type": "tHS"
     }, 
     {
         "bonds": [
@@ -3962,16 +3563,10 @@
             ]
         ], 
         "existing_data": {
-            "id": "tWS-UC", 
-            "nswap": true, 
-            "score": 2.6081950281213793, 
-            "swap": true, 
-            "units": [
-                "2AW7|1|A|U|1205", 
-                "2AW7|1|A|C|1200"
-            ]
+            "coordfile": "new_coors/tWS-UC.gro", 
+            "score": 0.90219199069043121, 
+            "swap": true
         }, 
-        "handled": true, 
         "mtype": "1", 
         "recs": "CU", 
         "type": "tSW"
@@ -4035,7 +3630,11 @@
                 "O2"
             ]
         ], 
-        "existing_data": null, 
+        "existing_data": {
+            "coordfile": "new_coors/tWS-CU.gro", 
+            "score": 0.72521330491038283, 
+            "swap": false
+        }, 
         "mtype": "0", 
         "recs": "CU", 
         "type": "tWS"
@@ -4088,16 +3687,10 @@
             ]
         ], 
         "existing_data": {
-            "id": "tWW-CU", 
-            "nswap": false, 
-            "score": 2.0012161281044083, 
-            "swap": false, 
-            "units": [
-                "1S72|1|0|C|1394", 
-                "1S72|1|0|U|1432"
-            ]
+            "coordfile": "new_coors/tWW-CU.gro", 
+            "score": 0.057259681027459264, 
+            "swap": false
         }, 
-        "handled": true, 
         "mtype": "2a", 
         "recs": "CU", 
         "type": "tWW"
@@ -4166,16 +3759,10 @@
             ]
         ], 
         "existing_data": {
-            "id": "cHH-CG", 
-            "nswap": false, 
-            "score": 0.9870684560534788, 
-            "swap": false, 
-            "units": [
-                "1S72|1|0|C|2493", 
-                "1S72|1|0|G|2494"
-            ]
+            "coordfile": "new_coors/cHH-GC.gro", 
+            "score": 1.1354040195714981, 
+            "swap": true
         }, 
-        "handled": true, 
         "mtype": "4", 
         "recs": "CG", 
         "type": "cHH"
@@ -4183,25 +3770,18 @@
     {
         "bonds": [
             [
-                "N3", 
-                "N4"
+                "N4", 
+                "N3"
             ]
         ], 
         "existing_data": {
-            "id": "cHS-CG", 
-            "nswap": true, 
-            "score": 2.064051770545146, 
-            "swap": false, 
-            "units": [
-                "1FJG|1|A|C|1103", 
-                "1FJG|1|A|G|1084"
-            ]
+            "coordfile": "new_coors/cHS-CG.gro", 
+            "score": 2.0190957919865653, 
+            "swap": false
         }, 
-        "handled": true, 
-        "mtype": "3a", 
-        "recs": "GC", 
-        "swapped": true, 
-        "type": "cSH"
+        "mtype": "1a", 
+        "recs": "CG", 
+        "type": "cHS"
     }, 
     {
         "bonds": [
@@ -4290,87 +3870,66 @@
     {
         "bonds": [
             [
-                "C1'", 
-                "O2"
-            ]
-        ], 
-        "existing_data": {
-            "id": "cSs-GC", 
-            "nswap": false, 
-            "score": 3.796109437061304, 
-            "swap": true, 
-            "units": [
-                "488D|1|A|G|50", 
-                "488D|1|B|C|152"
-            ]
-        }, 
-        "handled": true, 
-        "mtype": "3", 
-        "recs": "GC", 
-        "swapped": true, 
-        "type": "cSS"
-    }, 
-    {
-        "bonds": [
-            [
-                "N2", 
-                "O2"
-            ], 
-            [
-                "N3", 
+                "O2", 
                 "C1'"
             ]
         ], 
         "existing_data": {
-            "id": "cSs-CG", 
-            "nswap": true, 
-            "score": 1.4712739781530613, 
-            "swap": false, 
-            "units": [
-                "1S72|1|0|C|774", 
-                "1S72|1|0|G|471"
-            ]
+            "coordfile": "new_coors/cSS-GC.gro", 
+            "score": 3.8404053666339473, 
+            "swap": true
         }, 
-        "handled": true, 
-        "mtype": "1", 
-        "recs": "GC", 
-        "swapped": true, 
+        "mtype": "0", 
+        "recs": "CG", 
         "type": "cSS"
     }, 
     {
         "bonds": [
             [
-                "N2", 
-                "O2"
+                "O2", 
+                "N2"
+            ], 
+            [
+                "C1'", 
+                "N3"
             ]
         ], 
-        "existing_data": null, 
-        "mtype": "3", 
-        "recs": "GC", 
-        "type": "cWS"
+        "existing_data": {
+            "coordfile": "new_coors/cSS-CG.gro", 
+            "score": 1.634462974173168, 
+            "swap": false
+        }, 
+        "mtype": "2", 
+        "recs": "CG", 
+        "type": "cSS"
     }, 
     {
         "bonds": [
             [
-                "N1", 
-                "O2"
+                "O2", 
+                "N2"
+            ]
+        ], 
+        "existing_data": null, 
+        "mtype": "0", 
+        "recs": "CG", 
+        "type": "cSW"
+    }, 
+    {
+        "bonds": [
+            [
+                "O2", 
+                "N1"
             ]
         ], 
         "existing_data": {
-            "id": "cWS-GC", 
-            "nswap": false, 
-            "score": 0.6516555444198895, 
-            "swap": true, 
-            "units": [
-                "1S72|1|0|G|1302", 
-                "1S72|1|0|C|1353"
-            ]
+            "coordfile": "new_coors/cWS-GC.gro", 
+            "score": -0.05601657265703075, 
+            "swap": true
         }, 
-        "handled": true, 
-        "mtype": "2a", 
-        "recs": "GC", 
-        "swapped": true, 
-        "type": "cWS"
+        "mtype": "1a", 
+        "recs": "CG", 
+        "type": "cSW"
     }, 
     {
         "bonds": [
@@ -4403,25 +3962,18 @@
     {
         "bonds": [
             [
-                "O6", 
-                "N4"
+                "N4", 
+                "O6"
             ]
         ], 
         "existing_data": {
-            "id": "cWH-CG", 
-            "nswap": true, 
-            "score": 0.08931263443301374, 
-            "swap": false, 
-            "units": [
-                "1NBS|1|B|C|223", 
-                "1NBS|1|B|G|193"
-            ]
+            "coordfile": "new_coors/cWH-CG.gro", 
+            "score": 0.047851517624991402, 
+            "swap": false
         }, 
-        "handled": true, 
         "mtype": "2a", 
-        "recs": "GC", 
-        "swapped": true, 
-        "type": "cHW"
+        "recs": "CG", 
+        "type": "cWH"
     }, 
     {
         "bonds": [
@@ -4440,20 +3992,18 @@
             [
                 "N4", 
                 "N3"
+            ], 
+            [
+                "N3", 
+                "C1'"
             ]
         ], 
         "existing_data": {
-            "id": "cWS-CG", 
-            "nswap": false, 
-            "score": 1.3775629175269297, 
-            "swap": false, 
-            "units": [
-                "1S72|1|0|C|2720", 
-                "1S72|1|0|G|2763"
-            ]
+            "coordfile": "new_coors/cWS-CG.gro", 
+            "score": 1.403228654162737, 
+            "swap": false
         }, 
-        "handled": true, 
-        "mtype": "1a", 
+        "mtype": "1", 
         "recs": "CG", 
         "type": "cWS"
     }, 
@@ -4521,16 +4071,10 @@
             ]
         ], 
         "existing_data": {
-            "id": "cWW-CG", 
-            "nswap": false, 
-            "score": 1.3672145990606814, 
-            "swap": false, 
-            "units": [
-                "3R1E|1|A|C|2", 
-                "3R1E|1|B|G|7"
-            ]
+            "coordfile": "new_coors/cWW-CG.gro", 
+            "score": -0.1494582382119248, 
+            "swap": false
         }, 
-        "handled": true, 
         "mtype": "2", 
         "recs": "CG", 
         "type": "cWW"
@@ -4571,16 +4115,10 @@
             ]
         ], 
         "existing_data": {
-            "id": "tHH-CG", 
-            "nswap": false, 
-            "score": 0.393976643043326, 
-            "swap": false, 
-            "units": [
-                "1S72|1|0|C|2391", 
-                "1S72|1|0|G|2397"
-            ]
+            "coordfile": "new_coors/tHH-CG.gro", 
+            "score": 0.37207422007626323, 
+            "swap": false
         }, 
-        "handled": true, 
         "mtype": "1", 
         "recs": "CG", 
         "type": "tHH"
@@ -4709,16 +4247,10 @@
             ]
         ], 
         "existing_data": {
-            "id": "tSs-GC", 
-            "nswap": true, 
-            "score": 0.37003575766811236, 
-            "swap": true, 
-            "units": [
-                "1VW3|1|A|G|2820", 
-                "1VW3|1|A|C|2773"
-            ]
+            "coordfile": "new_coors/tSS-GC.gro", 
+            "score": 0.37393835307522227, 
+            "swap": true
         }, 
-        "handled": true, 
         "mtype": "0", 
         "recs": "CG", 
         "type": "tSS"
@@ -4750,7 +4282,11 @@
                 "O6"
             ]
         ], 
-        "existing_data": null, 
+        "existing_data": {
+            "coordfile": "new_coors/tWS-GC.gro", 
+            "score": 0.85665573352126567, 
+            "swap": true
+        }, 
         "mtype": "1", 
         "recs": "CG", 
         "type": "tSW"
@@ -4762,17 +4298,7 @@
                 "N2"
             ]
         ], 
-        "existing_data": {
-            "id": "tWS-GC", 
-            "nswap": true, 
-            "score": 1.6937131532197383, 
-            "swap": true, 
-            "units": [
-                "1EC6|1|C|G|10", 
-                "1EC6|1|C|C|7"
-            ]
-        }, 
-        "handled": true, 
+        "existing_data": null, 
         "mtype": "2a", 
         "recs": "CG", 
         "type": "tSW"
@@ -4797,16 +4323,10 @@
             ]
         ], 
         "existing_data": {
-            "id": "tWH-CG", 
-            "nswap": false, 
-            "score": 0.09087366187783097, 
-            "swap": false, 
-            "units": [
-                "1L2X|1|A|C|8", 
-                "1L2X|1|A|G|12"
-            ]
+            "coordfile": "new_coors/tWH-CG.gro", 
+            "score": 0.12096329083285484, 
+            "swap": false
         }, 
-        "handled": true, 
         "mtype": "1a", 
         "recs": "CG", 
         "type": "tWH"
@@ -4838,29 +4358,22 @@
     {
         "bonds": [
             [
-                "N2", 
+                "N4", 
                 "N3"
             ], 
             [
                 "N3", 
-                "N4"
+                "N2"
             ]
         ], 
         "existing_data": {
-            "id": "tWS-CG", 
-            "nswap": true, 
-            "score": 0.4452795159336571, 
-            "swap": false, 
-            "units": [
-                "4FAW|1|A|C|372", 
-                "4FAW|1|A|G|369"
-            ]
+            "coordfile": "new_coors/tWS-CG.gro", 
+            "score": -0.23214751312580617, 
+            "swap": false
         }, 
-        "handled": true, 
         "mtype": "1", 
-        "recs": "GC", 
-        "swapped": true, 
-        "type": "tSW"
+        "recs": "CG", 
+        "type": "tWS"
     }, 
     {
         "bonds": [
@@ -4921,7 +4434,11 @@
                 "N1"
             ]
         ], 
-        "existing_data": null, 
+        "existing_data": {
+            "coordfile": "new_coors/tWW-CG.gro", 
+            "score": -0.28453210104925675, 
+            "swap": false
+        }, 
         "mtype": "3", 
         "recs": "CG", 
         "type": "tWW"
@@ -4929,24 +4446,13 @@
     {
         "bonds": [
             [
-                "N2", 
-                "O2"
+                "O2", 
+                "N2"
             ]
         ], 
-        "existing_data": {
-            "id": "tWW-CG", 
-            "nswap": true, 
-            "score": 1.2711071822113658, 
-            "swap": false, 
-            "units": [
-                "1J1U|1|B|C|549", 
-                "1J1U|1|B|G|515"
-            ]
-        }, 
-        "handled": true, 
+        "existing_data": null, 
         "mtype": "4", 
-        "recs": "GC", 
-        "swapped": true, 
+        "recs": "CG", 
         "type": "tWW"
     }, 
     {
@@ -4988,25 +4494,18 @@
     {
         "bonds": [
             [
-                "O2", 
-                "C5"
+                "C5", 
+                "O2"
             ]
         ], 
         "existing_data": {
-            "id": "cHS-UU", 
-            "nswap": true, 
-            "score": 0.7841164536633909, 
-            "swap": false, 
-            "units": [
-                "1FXL|1|B|U|9", 
-                "1FXL|1|B|U|8"
-            ]
+            "coordfile": "new_coors/cHS-UU.gro", 
+            "score": 0.72710570087101178, 
+            "swap": false
         }, 
-        "handled": true, 
-        "mtype": "1a", 
+        "mtype": "2a", 
         "recs": "UU", 
-        "swapped": true, 
-        "type": "cSH"
+        "type": "cHS"
     }, 
     {
         "bonds": [
@@ -5031,7 +4530,11 @@
                 "O2"
             ]
         ], 
-        "existing_data": null, 
+        "existing_data": {
+            "coordfile": "new_coors/cWH-UU.gro", 
+            "score": 0.44018589295100874, 
+            "swap": true
+        }, 
         "mtype": "1", 
         "recs": "UU", 
         "type": "cHW"
@@ -5075,52 +4578,38 @@
     {
         "bonds": [
             [
-                "C1'", 
-                "O2"
-            ]
-        ], 
-        "existing_data": {
-            "id": "cSs-UU", 
-            "nswap": false, 
-            "score": 1.952959686391436, 
-            "swap": true, 
-            "units": [
-                "3U5H|1|5|U|188", 
-                "3U5H|1|5|U|207"
-            ]
-        }, 
-        "handled": true, 
-        "mtype": "2", 
-        "recs": "UU", 
-        "swapped": true, 
-        "type": "cSS"
-    }, 
-    {
-        "bonds": [
-            [
-                "N3", 
-                "O2"
-            ], 
-            [
                 "O2", 
                 "C1'"
             ]
         ], 
         "existing_data": {
-            "id": "cWS-UU", 
-            "nswap": false, 
-            "score": 2.462945550128162, 
-            "swap": true, 
-            "units": [
-                "1S72|1|0|U|454", 
-                "1S72|1|0|U|1362"
-            ]
+            "coordfile": "new_coors/cSS-UU.gro", 
+            "score": 1.9458956667804914, 
+            "swap": true
         }, 
-        "handled": true, 
-        "mtype": "2", 
+        "mtype": "0", 
         "recs": "UU", 
-        "swapped": true, 
-        "type": "cWS"
+        "type": "cSS"
+    }, 
+    {
+        "bonds": [
+            [
+                "O2", 
+                "N3"
+            ], 
+            [
+                "C1'", 
+                "O2"
+            ]
+        ], 
+        "existing_data": {
+            "coordfile": "new_coors/cWS-UU.gro", 
+            "score": 0.57011155318863493, 
+            "swap": true
+        }, 
+        "mtype": "1", 
+        "recs": "UU", 
+        "type": "cSW"
     }, 
     {
         "bonds": [
@@ -5137,28 +4626,21 @@
     {
         "bonds": [
             [
-                "N3", 
-                "O4"
+                "O4", 
+                "N3"
             ], 
             [
-                "O2", 
-                "N3"
+                "N3", 
+                "O2"
             ]
         ], 
         "existing_data": {
-            "id": "cwW-uU", 
-            "nswap": false, 
-            "score": 0.0012085570640780752, 
-            "swap": true, 
-            "units": [
-                "3SYW|1|A|U|14", 
-                "3SYW|1|B|U|8"
-            ]
+            "coordfile": "new_coors/cWW-UU.gro", 
+            "score": -2.3945643369938097e-05, 
+            "swap": false
         }, 
-        "handled": true, 
-        "mtype": "3", 
+        "mtype": "1", 
         "recs": "UU", 
-        "swapped": true, 
         "type": "cWW"
     }, 
     {
@@ -5233,28 +4715,21 @@
         "bonds": [
             [
                 "O4", 
-                "C5"
+                "N3"
             ], 
             [
-                "N3", 
+                "C5", 
                 "O4"
             ]
         ], 
         "existing_data": {
-            "id": "tWH-UU", 
-            "nswap": false, 
-            "score": 2.409804204852301, 
-            "swap": true, 
-            "units": [
-                "4LVZ|1|A|U|35", 
-                "4LVZ|1|A|U|42"
-            ]
+            "coordfile": "new_coors/tWH-UU.gro", 
+            "score": 0.49879384997687359, 
+            "swap": true
         }, 
-        "handled": true, 
         "mtype": "1", 
         "recs": "UU", 
-        "swapped": true, 
-        "type": "tWH"
+        "type": "tHW"
     }, 
     {
         "bonds": [
@@ -5311,29 +4786,22 @@
     {
         "bonds": [
             [
-                "O4", 
-                "C1'"
+                "O2", 
+                "N3"
             ], 
             [
-                "N3", 
-                "O2"
+                "C1'", 
+                "O4"
             ]
         ], 
         "existing_data": {
-            "id": "tWS-UU", 
-            "nswap": false, 
-            "score": 3.512842048174449, 
-            "swap": true, 
-            "units": [
-                "1GRZ|1|A|U|106", 
-                "1GRZ|1|A|U|258"
-            ]
+            "coordfile": "new_coors/tWS-UU.gro", 
+            "score": 1.7599740978713365, 
+            "swap": true
         }, 
-        "handled": true, 
         "mtype": "1", 
         "recs": "UU", 
-        "swapped": true, 
-        "type": "tWS"
+        "type": "tSW"
     }, 
     {
         "bonds": [
@@ -5359,19 +4827,12 @@
             ]
         ], 
         "existing_data": {
-            "id": "tWW-UU", 
-            "nswap": true, 
-            "score": 3.8223591846144593, 
-            "swap": false, 
-            "units": [
-                "2QBG|1|B|U|2586", 
-                "2QBG|1|B|U|1782"
-            ]
+            "coordfile": "new_coors/tWW-UU.gro", 
+            "score": -0.0027385343818100427, 
+            "swap": false
         }, 
-        "handled": true, 
         "mtype": "1", 
         "recs": "UU", 
-        "swapped": true, 
         "type": "tWW"
     }, 
     {
@@ -5445,29 +4906,22 @@
     {
         "bonds": [
             [
-                "N2", 
-                "O4"
+                "O4", 
+                "N2"
             ], 
             [
-                "N3", 
-                "C5"
+                "C5", 
+                "N3"
             ]
         ], 
         "existing_data": {
-            "id": "cHS-UG", 
-            "nswap": true, 
-            "score": 0.8162663140028115, 
-            "swap": false, 
-            "units": [
-                "3DVZ|1|A|U|2656", 
-                "3DVZ|1|A|G|2655"
-            ]
+            "coordfile": "new_coors/cHS-UG.gro", 
+            "score": 0.43262952246423447, 
+            "swap": false
         }, 
-        "handled": true, 
         "mtype": "2a", 
-        "recs": "GU", 
-        "swapped": true, 
-        "type": "cSH"
+        "recs": "UG", 
+        "type": "cHS"
     }, 
     {
         "bonds": [
@@ -5573,16 +5027,10 @@
             ]
         ], 
         "existing_data": {
-            "id": "cSs-GU", 
-            "nswap": true, 
-            "score": 3.319843783671632, 
-            "swap": true, 
-            "units": [
-                "1S72|1|0|G|871", 
-                "1S72|1|0|U|866"
-            ]
+            "coordfile": "new_coors/cSS-GU.gro", 
+            "score": 3.3638947029694894, 
+            "swap": true
         }, 
-        "handled": true, 
         "mtype": "0", 
         "recs": "UG", 
         "type": "cSS"
@@ -5599,16 +5047,10 @@
             ]
         ], 
         "existing_data": {
-            "id": "cSs-UG", 
-            "nswap": false, 
-            "score": 1.4569517300339956, 
-            "swap": false, 
-            "units": [
-                "1S72|1|0|U|2115", 
-                "1S72|1|0|G|2632"
-            ]
+            "coordfile": "new_coors/cSS-UG.gro", 
+            "score": 1.5166739543276329, 
+            "swap": false
         }, 
-        "handled": true, 
         "mtype": "2", 
         "recs": "UG", 
         "type": "cSS"
@@ -5616,37 +5058,30 @@
     {
         "bonds": [
             [
-                "N2", 
-                "O2"
+                "O2", 
+                "N2"
             ]
         ], 
         "existing_data": null, 
-        "mtype": "3", 
-        "recs": "GU", 
-        "type": "cWS"
+        "mtype": "0", 
+        "recs": "UG", 
+        "type": "cSW"
     }, 
     {
         "bonds": [
             [
-                "N1", 
-                "O2"
+                "O2", 
+                "N1"
             ]
         ], 
         "existing_data": {
-            "id": "cWS-GU", 
-            "nswap": false, 
-            "score": 0.9927581453696204, 
-            "swap": true, 
-            "units": [
-                "3U5H|1|5|G|661", 
-                "3U5H|1|5|U|942"
-            ]
+            "coordfile": "new_coors/cWS-GU.gro", 
+            "score": 0.027026987808517422, 
+            "swap": true
         }, 
-        "handled": true, 
-        "mtype": "2a", 
-        "recs": "GU", 
-        "swapped": true, 
-        "type": "cWS"
+        "mtype": "1a", 
+        "recs": "UG", 
+        "type": "cSW"
     }, 
     {
         "bonds": [
@@ -5684,16 +5119,10 @@
             ]
         ], 
         "existing_data": {
-            "id": "cWH-UG", 
-            "nswap": false, 
-            "score": 2.628812541834965, 
-            "swap": false, 
-            "units": [
-                "1S72|1|0|U|2278", 
-                "1S72|1|0|G|2471"
-            ]
+            "coordfile": "new_coors/cWH-UG.gro", 
+            "score": 0.40021447300549018, 
+            "swap": false
         }, 
-        "handled": true, 
         "mtype": "2b", 
         "recs": "UG", 
         "type": "cWH"
@@ -5725,33 +5154,26 @@
     {
         "bonds": [
             [
-                "N2", 
-                "O4"
+                "O4", 
+                "N2"
             ], 
             [
                 "N3", 
                 "N3"
             ], 
             [
-                "C1'", 
-                "O2"
+                "O2", 
+                "C1'"
             ]
         ], 
         "existing_data": {
-            "id": "cWS-UG", 
-            "nswap": true, 
-            "score": 1.9433339002112682, 
-            "swap": false, 
-            "units": [
-                "1S72|1|0|U|1435", 
-                "1S72|1|0|G|1389"
-            ]
+            "coordfile": "new_coors/cWS-UG.gro", 
+            "score": 0.21594680429103885, 
+            "swap": false
         }, 
-        "handled": true, 
         "mtype": "2", 
-        "recs": "GU", 
-        "swapped": true, 
-        "type": "cSW"
+        "recs": "UG", 
+        "type": "cWS"
     }, 
     {
         "bonds": [
@@ -5804,28 +5226,21 @@
     {
         "bonds": [
             [
-                "O6", 
-                "N3"
+                "N3", 
+                "O6"
             ], 
             [
-                "N1", 
-                "O2"
+                "O2", 
+                "N1"
             ]
         ], 
         "existing_data": {
-            "id": "cWW-GU", 
-            "nswap": false, 
-            "score": 33.78789545781217, 
-            "swap": true, 
-            "units": [
-                "3ND3|2|A|G|2||||4_555", 
-                "3ND3|1|A|U|15"
-            ]
+            "coordfile": "new_coors/cWW-UG.gro", 
+            "score": -0.21464079367777922, 
+            "swap": false
         }, 
-        "handled": true, 
-        "mtype": "1", 
-        "recs": "GU", 
-        "swapped": true, 
+        "mtype": "3", 
+        "recs": "UG", 
         "type": "cWW"
     }, 
     {
@@ -5875,25 +5290,18 @@
     {
         "bonds": [
             [
-                "N2", 
-                "O4"
+                "O4", 
+                "N2"
             ]
         ], 
         "existing_data": {
-            "id": "tHS-UG", 
-            "nswap": true, 
-            "score": 0.8088072828705313, 
-            "swap": false, 
-            "units": [
-                "1S72|1|0|U|265", 
-                "1S72|1|0|G|246"
-            ]
+            "coordfile": "new_coors/tHS-UG.gro", 
+            "score": -0.20295094888911125, 
+            "swap": false
         }, 
-        "handled": true, 
         "mtype": "0", 
-        "recs": "GU", 
-        "swapped": true, 
-        "type": "tSH"
+        "recs": "UG", 
+        "type": "tHS"
     }, 
     {
         "bonds": [
@@ -5934,7 +5342,11 @@
                 "O6"
             ]
         ], 
-        "existing_data": null, 
+        "existing_data": {
+            "coordfile": "new_coors/tWH-GU.gro", 
+            "score": 0.54833043114589497, 
+            "swap": true
+        }, 
         "mtype": "1", 
         "recs": "UG", 
         "type": "tHW"
@@ -5942,25 +5354,14 @@
     {
         "bonds": [
             [
-                "N2", 
-                "O4"
+                "O4", 
+                "N2"
             ]
         ], 
-        "existing_data": {
-            "id": "tWH-GU", 
-            "nswap": false, 
-            "score": 1.2271173382014533, 
-            "swap": true, 
-            "units": [
-                "3UMY|1|B|G|2166", 
-                "3UMY|1|B|U|2172"
-            ]
-        }, 
-        "handled": true, 
-        "mtype": "2b", 
-        "recs": "GU", 
-        "swapped": true, 
-        "type": "tWH"
+        "existing_data": null, 
+        "mtype": "2a", 
+        "recs": "UG", 
+        "type": "tHW"
     }, 
     {
         "bonds": [
@@ -6005,24 +5406,17 @@
     {
         "bonds": [
             [
-                "N2", 
-                "O2"
+                "O2", 
+                "N2"
             ]
         ], 
         "existing_data": {
-            "id": "tSs-GU", 
-            "nswap": false, 
-            "score": 1.1659624111746143, 
-            "swap": true, 
-            "units": [
-                "1S72|1|0|G|1855", 
-                "1S72|1|0|U|1874"
-            ]
+            "coordfile": "new_coors/tSS-GU.gro", 
+            "score": 0.54508688312616105, 
+            "swap": true
         }, 
-        "handled": true, 
         "mtype": "0", 
-        "recs": "GU", 
-        "swapped": true, 
+        "recs": "UG", 
         "type": "tSS"
     }, 
     {
@@ -6052,7 +5446,11 @@
                 "O6"
             ]
         ], 
-        "existing_data": null, 
+        "existing_data": {
+            "coordfile": "new_coors/tWS-GU.gro", 
+            "score": 0.30180132589562536, 
+            "swap": true
+        }, 
         "mtype": "1", 
         "recs": "UG", 
         "type": "tSW"
@@ -6060,25 +5458,14 @@
     {
         "bonds": [
             [
-                "N2", 
-                "O2"
+                "O2", 
+                "N2"
             ]
         ], 
-        "existing_data": {
-            "id": "tWS-GU", 
-            "nswap": false, 
-            "score": 1.2957087643091272, 
-            "swap": true, 
-            "units": [
-                "3RG5|1|A|G|18", 
-                "3RG5|1|A|U|55"
-            ]
-        }, 
-        "handled": true, 
-        "mtype": "2b", 
-        "recs": "GU", 
-        "swapped": true, 
-        "type": "tWS"
+        "existing_data": null, 
+        "mtype": "2a", 
+        "recs": "UG", 
+        "type": "tSW"
     }, 
     {
         "bonds": [
@@ -6095,29 +5482,22 @@
     {
         "bonds": [
             [
-                "N7", 
-                "N3"
+                "O4", 
+                "C8"
             ], 
             [
-                "C8", 
-                "O4"
+                "N3", 
+                "N7"
             ]
         ], 
         "existing_data": {
-            "id": "tWH-UG", 
-            "nswap": true, 
-            "score": 2.8568150577562923, 
-            "swap": false, 
-            "units": [
-                "1S72|1|0|U|2419", 
-                "1S72|1|0|G|2404"
-            ]
+            "coordfile": "new_coors/tWH-UG.gro", 
+            "score": 0.97690261267872058, 
+            "swap": false
         }, 
-        "handled": true, 
-        "mtype": "2b", 
-        "recs": "GU", 
-        "swapped": true, 
-        "type": "tHW"
+        "mtype": "2a", 
+        "recs": "UG", 
+        "type": "tWH"
     }, 
     {
         "bonds": [
@@ -6146,33 +5526,26 @@
     {
         "bonds": [
             [
-                "N2", 
-                "O2"
+                "O4", 
+                "C1'"
             ], 
             [
                 "N3", 
                 "N3"
             ], 
             [
-                "C1'", 
-                "O4"
+                "O2", 
+                "N2"
             ]
         ], 
         "existing_data": {
-            "id": "tWS-UG", 
-            "nswap": true, 
-            "score": 3.63913680820466, 
-            "swap": false, 
-            "units": [
-                "1S72|1|0|U|121", 
-                "1S72|1|0|G|51"
-            ]
+            "coordfile": "new_coors/tWS-UG.gro", 
+            "score": 2.341467656417946, 
+            "swap": false
         }, 
-        "handled": true, 
         "mtype": "2", 
-        "recs": "GU", 
-        "swapped": true, 
-        "type": "tSW"
+        "recs": "UG", 
+        "type": "tWS"
     }, 
     {
         "bonds": [
@@ -6197,7 +5570,11 @@
                 "O6"
             ]
         ], 
-        "existing_data": null, 
+        "existing_data": {
+            "coordfile": "new_coors/tWW-UG.gro", 
+            "score": 0.25959195031576554, 
+            "swap": false
+        }, 
         "mtype": "1", 
         "recs": "UG", 
         "type": "tWW"
@@ -6209,17 +5586,7 @@
                 "N2"
             ]
         ], 
-        "existing_data": {
-            "id": "tWW-GU", 
-            "nswap": true, 
-            "score": 2.03892688958977, 
-            "swap": true, 
-            "units": [
-                "1S72|1|0|G|1970", 
-                "1S72|1|0|U|1966"
-            ]
-        }, 
-        "handled": true, 
+        "existing_data": null, 
         "mtype": "2a", 
         "recs": "UG", 
         "type": "tWW"
@@ -6251,24 +5618,17 @@
     {
         "bonds": [
             [
-                "C8", 
-                "O6"
+                "O6", 
+                "C8"
             ]
         ], 
         "existing_data": {
-            "id": "cHh-Gg", 
-            "nswap": true, 
-            "score": 0.8387446583432348, 
-            "swap": false, 
-            "units": [
-                "1VW3|1|A|G|2849", 
-                "1VW3|1|A|G|2848"
-            ]
+            "coordfile": "new_coors/cHH-GG.gro", 
+            "score": 0.79493876124839824, 
+            "swap": true
         }, 
-        "handled": true, 
-        "mtype": "4", 
+        "mtype": "0", 
         "recs": "GG", 
-        "swapped": true, 
         "type": "cHH"
     }, 
     {
@@ -6315,16 +5675,10 @@
             ]
         ], 
         "existing_data": {
-            "id": "cHS-GG", 
-            "nswap": false, 
-            "score": 1.0380936110977228, 
-            "swap": false, 
-            "units": [
-                "1I9V|1|A|G|10", 
-                "1I9V|1|A|G|45"
-            ]
+            "coordfile": "new_coors/cHS-GG.gro", 
+            "score": 0.57569280376164889, 
+            "swap": false
         }, 
-        "handled": true, 
         "mtype": "2a", 
         "recs": "GG", 
         "type": "cHS"
@@ -6368,7 +5722,11 @@
                 "N2"
             ]
         ], 
-        "existing_data": null, 
+        "existing_data": {
+            "coordfile": "new_coors/cWH-GG.gro", 
+            "score": -0.092295575251544193, 
+            "swap": true
+        }, 
         "mtype": "1", 
         "recs": "GG", 
         "type": "cHW"
@@ -6397,16 +5755,10 @@
             ]
         ], 
         "existing_data": {
-            "id": "cSs-GG", 
-            "nswap": true, 
-            "score": 1.4711000051324565, 
-            "swap": true, 
-            "units": [
-                "3U5H|1|5|G|2414", 
-                "3U5H|1|5|G|924"
-            ]
+            "coordfile": "new_coors/cSS-GG.gro", 
+            "score": 1.4521989662814383, 
+            "swap": true
         }, 
-        "handled": true, 
         "mtype": "1", 
         "recs": "GG", 
         "type": "cSS"
@@ -6426,25 +5778,22 @@
     {
         "bonds": [
             [
-                "O6", 
-                "N2"
+                "N2", 
+                "O6"
+            ], 
+            [
+                "N3", 
+                "N1"
             ]
         ], 
         "existing_data": {
-            "id": "cWS-GG", 
-            "nswap": false, 
-            "score": 2.68238823907645, 
-            "swap": true, 
-            "units": [
-                "2BTE|1|B|G|13", 
-                "2BTE|1|B|G|21"
-            ]
+            "coordfile": "new_coors/cWS-GG.gro", 
+            "score": 0.80448192064741963, 
+            "swap": true
         }, 
-        "handled": true, 
         "mtype": "2a", 
         "recs": "GG", 
-        "swapped": true, 
-        "type": "cWS"
+        "type": "cSW"
     }, 
     {
         "bonds": [
@@ -6485,24 +5834,17 @@
     {
         "bonds": [
             [
-                "C8", 
-                "O6"
+                "O6", 
+                "C8"
             ]
         ], 
         "existing_data": {
-            "id": "tHh-Gg", 
-            "nswap": true, 
-            "score": 1.0161964857068884, 
-            "swap": false, 
-            "units": [
-                "1S72|1|0|G|2616", 
-                "1S72|1|0|G|2611"
-            ]
+            "coordfile": "new_coors/tHH-GG.gro", 
+            "score": 0.54961974545357606, 
+            "swap": true
         }, 
-        "handled": true, 
-        "mtype": "2b", 
+        "mtype": "2a", 
         "recs": "GG", 
-        "swapped": true, 
         "type": "tHH"
     }, 
     {
@@ -6541,16 +5883,10 @@
             ]
         ], 
         "existing_data": {
-            "id": "tHS-GG", 
-            "nswap": false, 
-            "score": 0.4392258377594014, 
-            "swap": false, 
-            "units": [
-                "1LNT|1|A|G|7", 
-                "1LNT|1|B|G|18"
-            ]
+            "coordfile": "new_coors/tHS-GG.gro", 
+            "score": -0.097696236591791497, 
+            "swap": false
         }, 
-        "handled": true, 
         "mtype": "0", 
         "recs": "GG", 
         "type": "tHS"
@@ -6622,7 +5958,11 @@
                 "O6"
             ]
         ], 
-        "existing_data": null, 
+        "existing_data": {
+            "coordfile": "new_coors/tWH-GG.gro", 
+            "score": 0.44022728462855171, 
+            "swap": true
+        }, 
         "mtype": "2", 
         "recs": "GG", 
         "type": "tHW"
@@ -6634,17 +5974,7 @@
                 "N2"
             ]
         ], 
-        "existing_data": {
-            "id": "tWH-GG", 
-            "nswap": true, 
-            "score": 1.4791926704304657, 
-            "swap": true, 
-            "units": [
-                "2ZY6|1|A|G|19", 
-                "2ZY6|1|A|G|12"
-            ]
-        }, 
-        "handled": true, 
+        "existing_data": null, 
         "mtype": "3a", 
         "recs": "GG", 
         "type": "tHW"
@@ -6661,16 +5991,10 @@
             ]
         ], 
         "existing_data": {
-            "id": "tSs-GG", 
-            "nswap": false, 
-            "score": 0.7555867933920051, 
-            "swap": false, 
-            "units": [
-                "1LNG|1|B|G|166", 
-                "1LNG|1|B|G|213"
-            ]
+            "coordfile": "new_coors/tSS-GG.gro", 
+            "score": -0.2119018648231028, 
+            "swap": false
         }, 
-        "handled": true, 
         "mtype": "1", 
         "recs": "GG", 
         "type": "tSS"
@@ -6742,7 +6066,11 @@
                 "O6"
             ]
         ], 
-        "existing_data": null, 
+        "existing_data": {
+            "coordfile": "new_coors/tWW-GG.gro", 
+            "score": -0.27389198671506265, 
+            "swap": false
+        }, 
         "mtype": "1", 
         "recs": "GG", 
         "type": "tWW"
@@ -6750,24 +6078,13 @@
     {
         "bonds": [
             [
-                "N2", 
-                "O6"
+                "O6", 
+                "N2"
             ]
         ], 
-        "existing_data": {
-            "id": "tWW-GG", 
-            "nswap": false, 
-            "score": 1.4646346833715236, 
-            "swap": true, 
-            "units": [
-                "1NUV|1|C|G|26", 
-                "1NUV|1|E|G|27"
-            ]
-        }, 
-        "handled": true, 
-        "mtype": "2b", 
+        "existing_data": null, 
+        "mtype": "2a", 
         "recs": "GG", 
-        "swapped": true, 
         "type": "tWW"
     }, 
     {
