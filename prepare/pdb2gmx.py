@@ -64,6 +64,16 @@ def pdb2gmx(pdbid):
     pdb2gro(pdbname)
 
 
+def editconf(finame, foname, force=False, print_cmd=True):
+    if not force and os.path.exists(foname):
+        return foname
+    cmd = "gmx editconf -d 1.0 -f %s -o %s > /dev/null 2>&1" % (finame, foname)
+    if print_cmd:
+        print(cmd)
+    os.system(cmd)
+    return foname
+
+
 if __name__ == "__main__":
     for each in sys.argv[1:]:
         pdb2gmx(each)

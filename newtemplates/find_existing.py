@@ -15,6 +15,38 @@ def load_data():
     return possible_list, coordfiles
 
 
+def add_phosphate(ori, foname):
+    with open(ori) as fi1, open(foname) as fi2:
+        phosphate = [tuple(map((lambda x: float(x) / 10), fi1.readline()[30:54].split())) for _ in xrange(3)]
+        lines = fi2.readlines()
+    new_lines = ["%s\n" % os.path.splitext(os.path.split(ori)[-1])[0]]
+    new_lines.append("%5d\n" % (int(lines[1]) + 1))
+    new_lines.append("%s    P    1%8.3f%8.3f%8.3f\n" % (
+        lines[2][:10], phosphate[0][0], phosphate[0][1], phosphate[0][2]
+    ))
+    new_lines.append("%s  O1P    2%8.3f%8.3f%8.3f\n" % (
+        lines[2][:10], phosphate[1][0], phosphate[1][1], phosphate[1][2]
+    ))
+    new_lines.append("%s  O2P    3%8.3f%8.3f%8.3f\n" % (
+        lines[2][:10], phosphate[2][0], phosphate[2][1], phosphate[2][2]
+    ))
+    i = 3
+    for line in lines[2:-1]:
+        if line[12:15] in {"H5T", "H3T"}:
+            continue
+        i += 1
+        new_lines.append("%s%3d%s" % (
+            line[:17], i, line[20:]
+        ))
+    new_lines.append(lines[-1])
+
+    with open(foname, "w") as fo:
+        fo.writelines(new_lines)
+    pdb2gmx.editconf(foname, foname, force=True)
+
+    return foname
+
+
 def get_coordfile(ori, force=False):
     new_file = ori.replace("coors", "new_coors")
     tmp = os.path.split(ori)[-1]
@@ -28,7 +60,7 @@ def get_coordfile(ori, force=False):
                 continue
             fo.write("%sA%s           %c \n" % (line[:21], line[22:-1], line[13]))
     foname = pdb2gmx.pdb2gro(new_file)
-    return foname
+    return add_phosphate(ori, foname)
 
 
 def find_atom(residue, atomname):

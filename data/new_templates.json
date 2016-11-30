@@ -28,7 +28,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cHS-AA.gro", 
-            "score": 0.40861481992785964, 
+            "score": 0.40861481992786097, 
             "swap": false
         }, 
         "mtype": "1", 
@@ -96,7 +96,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cSS-AA.gro", 
-            "score": 1.3147247300386149, 
+            "score": 1.3147247300386116, 
             "swap": true
         }, 
         "mtype": "1", 
@@ -132,7 +132,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cWS-AA.gro", 
-            "score": 1.282854092176583, 
+            "score": 1.2846138262923941, 
             "swap": true
         }, 
         "mtype": "3", 
@@ -152,7 +152,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cWW-AA.gro", 
-            "score": 0.74988450644734184, 
+            "score": 0.74988450644734317, 
             "swap": false
         }, 
         "mtype": "1", 
@@ -172,7 +172,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tHH-AA.gro", 
-            "score": 0.086205841987438303, 
+            "score": 0.086205841987438081, 
             "swap": false
         }, 
         "mtype": "1", 
@@ -208,7 +208,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tHS-AA.gro", 
-            "score": 0.72526564925221648, 
+            "score": 0.72526564925221848, 
             "swap": false
         }, 
         "mtype": "1", 
@@ -244,7 +244,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tWH-AA.gro", 
-            "score": 0.15278731297354331, 
+            "score": 0.15278731297354131, 
             "swap": true
         }, 
         "mtype": "1", 
@@ -280,7 +280,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tSS-AA.gro", 
-            "score": 1.5541529112761576, 
+            "score": 1.5541529112761587, 
             "swap": false
         }, 
         "mtype": "1", 
@@ -316,7 +316,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tWS-AA.gro", 
-            "score": 0.59855483462289327, 
+            "score": 0.59855483462289349, 
             "swap": true
         }, 
         "mtype": "1", 
@@ -352,7 +352,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tWW-AA.gro", 
-            "score": 0.075539291050655599, 
+            "score": 0.075539291050655821, 
             "swap": false
         }, 
         "mtype": "1", 
@@ -412,7 +412,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cHS-AC.gro", 
-            "score": 0.052281039507104499, 
+            "score": 0.052281039507104721, 
             "swap": false
         }, 
         "mtype": "1", 
@@ -504,7 +504,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cHS-CA.gro", 
-            "score": 0.37883018904252141, 
+            "score": 0.37883018904251919, 
             "swap": true
         }, 
         "mtype": "3a", 
@@ -524,7 +524,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cSS-CA.gro", 
-            "score": 1.08834329464086, 
+            "score": 1.0883432946408609, 
             "swap": true
         }, 
         "mtype": "1", 
@@ -540,7 +540,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cSS-AC.gro", 
-            "score": 2.2848578613686747, 
+            "score": 2.2848578613686703, 
             "swap": false
         }, 
         "mtype": "3", 
@@ -596,7 +596,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cWS-CA.gro", 
-            "score": 1.5181584585178283, 
+            "score": 1.51815845851783, 
             "swap": true
         }, 
         "mtype": "3", 
@@ -640,7 +640,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cWS-AC.gro", 
-            "score": 1.0469815974861774, 
+            "score": 1.0469815974861763, 
             "swap": false
         }, 
         "mtype": "1", 
@@ -680,7 +680,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cWW-AC.gro", 
-            "score": -0.067800716016406692, 
+            "score": -0.067800716016407581, 
             "swap": false
         }, 
         "mtype": "1a", 
@@ -724,7 +724,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tHH-AC.gro", 
-            "score": 1.2233309848879577, 
+            "score": 1.2233309848879594, 
             "swap": false
         }, 
         "mtype": "1b", 
@@ -752,7 +752,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tHS-AC.gro", 
-            "score": 0.56179460270617287, 
+            "score": 0.56179460270617465, 
             "swap": false
         }, 
         "mtype": "0", 
@@ -788,7 +788,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tWH-CA.gro", 
-            "score": 0.0097426174488479678, 
+            "score": 0.0097426174488464135, 
             "swap": true
         }, 
         "mtype": "1", 
@@ -840,7 +840,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tHS-CA.gro", 
-            "score": 0.15748169407272172, 
+            "score": 0.15748169407272394, 
             "swap": true
         }, 
         "mtype": "1b", 
@@ -868,7 +868,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tSS-AC.gro", 
-            "score": 0.37780044055546691, 
+            "score": 0.37780044055546869, 
             "swap": false
         }, 
         "mtype": "0", 
@@ -904,7 +904,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tWS-CA.gro", 
-            "score": 1.8561839643126115, 
+            "score": 1.8561839643126121, 
             "swap": true
         }, 
         "mtype": "1", 
@@ -980,7 +980,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tWS-AC.gro", 
-            "score": -0.22232542493045448, 
+            "score": -0.22232542493045537, 
             "swap": false
         }, 
         "mtype": "0", 
@@ -1016,7 +1016,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tWW-AC.gro", 
-            "score": 0.32022355529190083, 
+            "score": 0.32022355529189994, 
             "swap": false
         }, 
         "mtype": "1", 
@@ -1112,7 +1112,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cHS-AU.gro", 
-            "score": 1.5787308376226166, 
+            "score": 1.5787308376226163, 
             "swap": false
         }, 
         "mtype": "1", 
@@ -1160,7 +1160,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cWH-UA.gro", 
-            "score": 0.52770176864373886, 
+            "score": 0.52770176864373786, 
             "swap": true
         }, 
         "mtype": "2", 
@@ -1204,7 +1204,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cHS-UA.gro", 
-            "score": 2.222742703273461, 
+            "score": 2.2227427032734624, 
             "swap": true
         }, 
         "mtype": "2a", 
@@ -1236,7 +1236,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cSS-UA.gro", 
-            "score": 1.2126881021702565, 
+            "score": 1.2126881021702589, 
             "swap": true
         }, 
         "mtype": "1", 
@@ -1252,7 +1252,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cSS-AU.gro", 
-            "score": 2.4179077366416819, 
+            "score": 2.417907736641681, 
             "swap": false
         }, 
         "mtype": "3", 
@@ -1288,7 +1288,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cWS-UA.gro", 
-            "score": 0.65264588344653651, 
+            "score": 0.65264588344653751, 
             "swap": true
         }, 
         "mtype": "2", 
@@ -1332,7 +1332,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cWH-AU.gro", 
-            "score": 0.40123373906424509, 
+            "score": 0.40123373906424553, 
             "swap": false
         }, 
         "mtype": "2a", 
@@ -1364,7 +1364,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cWS-AU.gro", 
-            "score": 1.1595979990887335, 
+            "score": 1.1595979990887346, 
             "swap": false
         }, 
         "mtype": "1", 
@@ -1412,7 +1412,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cWW-UA.gro", 
-            "score": 0.36425682701704015, 
+            "score": 0.36425682701704076, 
             "swap": true
         }, 
         "mtype": "2", 
@@ -1440,7 +1440,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tHH-UA.gro", 
-            "score": 0.37854006823598763, 
+            "score": 0.37854006823599207, 
             "swap": true
         }, 
         "mtype": "0", 
@@ -1484,7 +1484,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tHS-AU.gro", 
-            "score": 0.18418991418368602, 
+            "score": 0.18418991418368247, 
             "swap": false
         }, 
         "mtype": "0", 
@@ -1536,7 +1536,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tWH-UA.gro", 
-            "score": 0.47903959349809239, 
+            "score": 0.4790395934980925, 
             "swap": true
         }, 
         "mtype": "2", 
@@ -1564,7 +1564,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tHS-UA.gro", 
-            "score": 0.49618768996151719, 
+            "score": 0.49618768996151674, 
             "swap": true
         }, 
         "mtype": "0", 
@@ -1608,7 +1608,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tSS-AU.gro", 
-            "score": 0.17009196567434071, 
+            "score": 0.17009196567433849, 
             "swap": false
         }, 
         "mtype": "0", 
@@ -1660,7 +1660,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tWS-UA.gro", 
-            "score": 0.43686862582256697, 
+            "score": 0.43686862582256908, 
             "swap": true
         }, 
         "mtype": "2", 
@@ -1728,7 +1728,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tWS-AU.gro", 
-            "score": 0.69642580909786167, 
+            "score": 0.69642580909785945, 
             "swap": false
         }, 
         "mtype": "0", 
@@ -1780,7 +1780,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tWW-UA.gro", 
-            "score": 0.2347798042486732, 
+            "score": 0.23477980424867706, 
             "swap": true
         }, 
         "mtype": "2", 
@@ -1824,7 +1824,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cHH-AG.gro", 
-            "score": 0.11911653469373729, 
+            "score": 0.11911653469373107, 
             "swap": false
         }, 
         "mtype": "2a", 
@@ -1884,7 +1884,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cHS-AG.gro", 
-            "score": 1.3444102610808142, 
+            "score": 1.3444102610808151, 
             "swap": false
         }, 
         "mtype": "3", 
@@ -1916,7 +1916,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cWH-GA.gro", 
-            "score": -0.1424686986689454, 
+            "score": -0.14246869866894762, 
             "swap": true
         }, 
         "mtype": "2a", 
@@ -1960,7 +1960,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cHS-GA.gro", 
-            "score": 0.76997076889424809, 
+            "score": 0.76997076889425209, 
             "swap": true
         }, 
         "mtype": "2a", 
@@ -2004,7 +2004,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cSS-GA.gro", 
-            "score": 1.5455974956437526, 
+            "score": 1.5455974956437535, 
             "swap": true
         }, 
         "mtype": "1", 
@@ -2024,7 +2024,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cSS-AG.gro", 
-            "score": 1.3270170309126583, 
+            "score": 1.3270170309126597, 
             "swap": false
         }, 
         "mtype": "3", 
@@ -2056,7 +2056,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cWS-GA.gro", 
-            "score": 0.52137232798189026, 
+            "score": 0.52137232798188915, 
             "swap": true
         }, 
         "mtype": "2a", 
@@ -2100,7 +2100,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cWH-AG.gro", 
-            "score": 0.10278483181248399, 
+            "score": 0.1027848318124831, 
             "swap": false
         }, 
         "mtype": "2a", 
@@ -2144,7 +2144,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cWS-AG.gro", 
-            "score": 2.2289610638464428, 
+            "score": 2.2289610638464437, 
             "swap": false
         }, 
         "mtype": "1", 
@@ -2192,7 +2192,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cWW-AG.gro", 
-            "score": -0.12789068022418038, 
+            "score": -0.12789068022417993, 
             "swap": false
         }, 
         "mtype": "2a", 
@@ -2220,7 +2220,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tHH-AG.gro", 
-            "score": -0.027194540217055696, 
+            "score": -0.027194540217049479, 
             "swap": false
         }, 
         "mtype": "0", 
@@ -2280,7 +2280,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tHS-AG.gro", 
-            "score": 0.27041240157572344, 
+            "score": 0.27041240157572233, 
             "swap": false
         }, 
         "mtype": "1", 
@@ -2408,7 +2408,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tSS-GA.gro", 
-            "score": 0.79780628740080317, 
+            "score": 0.79780628740080406, 
             "swap": true
         }, 
         "mtype": "1", 
@@ -2540,7 +2540,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tWS-AG.gro", 
-            "score": 0.013102795151870072, 
+            "score": 0.013102795151871627, 
             "swap": false
         }, 
         "mtype": "1", 
@@ -2624,7 +2624,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cHS-CC.gro", 
-            "score": 0.25046228537817772, 
+            "score": 0.25046228537817861, 
             "swap": false
         }, 
         "mtype": "2a", 
@@ -2668,7 +2668,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cWH-CC.gro", 
-            "score": 0.56052883830366307, 
+            "score": 0.56052883830366551, 
             "swap": true
         }, 
         "mtype": "1", 
@@ -2712,7 +2712,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cSS-CC.gro", 
-            "score": 2.3039694929353915, 
+            "score": 2.3039694929353942, 
             "swap": true
         }, 
         "mtype": "0", 
@@ -2744,7 +2744,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cWS-CC.gro", 
-            "score": 1.2302764992858743, 
+            "score": 1.2302764992858721, 
             "swap": true
         }, 
         "mtype": "2", 
@@ -2772,7 +2772,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cWW-CC.gro", 
-            "score": -0.047869361730757287, 
+            "score": -0.047869361730760396, 
             "swap": true
         }, 
         "mtype": "1a", 
@@ -2788,7 +2788,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tHS-CC.gro", 
-            "score": -0.28163845845276692, 
+            "score": -0.28163845845276914, 
             "swap": false
         }, 
         "mtype": "0", 
@@ -2844,7 +2844,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tWH-CC.gro", 
-            "score": 0.5840834006252893, 
+            "score": 0.58408340062528774, 
             "swap": true
         }, 
         "mtype": "2a", 
@@ -2904,7 +2904,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tWS-CC.gro", 
-            "score": 0.48730383214626816, 
+            "score": 0.48730383214627127, 
             "swap": true
         }, 
         "mtype": "0", 
@@ -2960,7 +2960,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tWW-CC.gro", 
-            "score": -0.14379414718184469, 
+            "score": -0.14379414718184647, 
             "swap": false
         }, 
         "mtype": "2a", 
@@ -3024,7 +3024,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cHS-CU.gro", 
-            "score": -0.19072068389566077, 
+            "score": -0.19072068389566477, 
             "swap": false
         }, 
         "mtype": "1a", 
@@ -3148,7 +3148,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cHS-UC.gro", 
-            "score": 0.85899340158838644, 
+            "score": 0.85899340158838466, 
             "swap": true
         }, 
         "mtype": "1a", 
@@ -3212,7 +3212,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cWS-UC.gro", 
-            "score": 0.8432174773120007, 
+            "score": 0.84321747731200136, 
             "swap": true
         }, 
         "mtype": "1", 
@@ -3272,7 +3272,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cWH-CU.gro", 
-            "score": 1.1136023903537904, 
+            "score": 1.1136023903537917, 
             "swap": false
         }, 
         "mtype": "3b", 
@@ -3292,7 +3292,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cWS-CU.gro", 
-            "score": 1.2273975686799046, 
+            "score": 1.2273975686799043, 
             "swap": false
         }, 
         "mtype": "1", 
@@ -3336,7 +3336,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cWW-UC.gro", 
-            "score": 1.0852196943557011, 
+            "score": 1.0852196943556993, 
             "swap": true
         }, 
         "mtype": "2a", 
@@ -3364,7 +3364,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tHH-UC.gro", 
-            "score": 0.053981264290576814, 
+            "score": 0.053981264290574149, 
             "swap": true
         }, 
         "mtype": "0", 
@@ -3404,7 +3404,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tHS-CU.gro", 
-            "score": -0.01824204340601332, 
+            "score": -0.018242043406011099, 
             "swap": false
         }, 
         "mtype": "0", 
@@ -3564,7 +3564,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tWS-UC.gro", 
-            "score": 0.90219199069043121, 
+            "score": 0.90219199069043254, 
             "swap": true
         }, 
         "mtype": "1", 
@@ -3688,7 +3688,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tWW-CU.gro", 
-            "score": 0.057259681027459264, 
+            "score": 0.057259681027461262, 
             "swap": false
         }, 
         "mtype": "2a", 
@@ -3760,7 +3760,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cHH-GC.gro", 
-            "score": 1.1354040195714981, 
+            "score": 1.1354040195714941, 
             "swap": true
         }, 
         "mtype": "4", 
@@ -3776,7 +3776,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cHS-CG.gro", 
-            "score": 2.0190957919865653, 
+            "score": 2.0190957919865657, 
             "swap": false
         }, 
         "mtype": "1a", 
@@ -3876,7 +3876,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cSS-GC.gro", 
-            "score": 3.8404053666339473, 
+            "score": 3.8404053666339459, 
             "swap": true
         }, 
         "mtype": "0", 
@@ -3896,7 +3896,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cSS-CG.gro", 
-            "score": 1.634462974173168, 
+            "score": 1.6344629741731673, 
             "swap": false
         }, 
         "mtype": "2", 
@@ -3924,7 +3924,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cWS-GC.gro", 
-            "score": -0.05601657265703075, 
+            "score": -0.056016572657024977, 
             "swap": true
         }, 
         "mtype": "1a", 
@@ -3968,7 +3968,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cWH-CG.gro", 
-            "score": 0.047851517624991402, 
+            "score": 0.047851517624993622, 
             "swap": false
         }, 
         "mtype": "2a", 
@@ -4000,7 +4000,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cWS-CG.gro", 
-            "score": 1.403228654162737, 
+            "score": 1.4032286541627395, 
             "swap": false
         }, 
         "mtype": "1", 
@@ -4072,7 +4072,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cWW-CG.gro", 
-            "score": -0.1494582382119248, 
+            "score": -0.14945823821192419, 
             "swap": false
         }, 
         "mtype": "2", 
@@ -4116,7 +4116,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tHH-CG.gro", 
-            "score": 0.37207422007626323, 
+            "score": 0.37207422007626278, 
             "swap": false
         }, 
         "mtype": "1", 
@@ -4248,7 +4248,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tSS-GC.gro", 
-            "score": 0.37393835307522227, 
+            "score": 0.37393835307521783, 
             "swap": true
         }, 
         "mtype": "0", 
@@ -4284,7 +4284,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tWS-GC.gro", 
-            "score": 0.85665573352126567, 
+            "score": 0.85665573352126412, 
             "swap": true
         }, 
         "mtype": "1", 
@@ -4324,7 +4324,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tWH-CG.gro", 
-            "score": 0.12096329083285484, 
+            "score": 0.1209632908328504, 
             "swap": false
         }, 
         "mtype": "1a", 
@@ -4368,7 +4368,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tWS-CG.gro", 
-            "score": -0.23214751312580617, 
+            "score": -0.23070528577874416, 
             "swap": false
         }, 
         "mtype": "1", 
@@ -4436,7 +4436,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tWW-CG.gro", 
-            "score": -0.28453210104925675, 
+            "score": -0.28453210104925764, 
             "swap": false
         }, 
         "mtype": "3", 
@@ -4500,7 +4500,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cHS-UU.gro", 
-            "score": 0.72710570087101178, 
+            "score": 0.7271057008710109, 
             "swap": false
         }, 
         "mtype": "2a", 
@@ -4532,7 +4532,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cWH-UU.gro", 
-            "score": 0.44018589295100874, 
+            "score": 0.44018589295100652, 
             "swap": true
         }, 
         "mtype": "1", 
@@ -4584,7 +4584,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cSS-UU.gro", 
-            "score": 1.9458956667804914, 
+            "score": 1.9458956667804879, 
             "swap": true
         }, 
         "mtype": "0", 
@@ -4604,7 +4604,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cWS-UU.gro", 
-            "score": 0.57011155318863493, 
+            "score": 0.57011155318863826, 
             "swap": true
         }, 
         "mtype": "1", 
@@ -4636,7 +4636,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cWW-UU.gro", 
-            "score": -2.3945643369938097e-05, 
+            "score": -2.394564336816174e-05, 
             "swap": false
         }, 
         "mtype": "1", 
@@ -4724,7 +4724,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tWH-UU.gro", 
-            "score": 0.49879384997687359, 
+            "score": 0.49879384997687293, 
             "swap": true
         }, 
         "mtype": "1", 
@@ -4796,7 +4796,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tWS-UU.gro", 
-            "score": 1.7599740978713365, 
+            "score": 1.7599740978713356, 
             "swap": true
         }, 
         "mtype": "1", 
@@ -4828,7 +4828,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tWW-UU.gro", 
-            "score": -0.0027385343818100427, 
+            "score": -0.0027385343818104868, 
             "swap": false
         }, 
         "mtype": "1", 
@@ -4916,7 +4916,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cHS-UG.gro", 
-            "score": 0.43262952246423447, 
+            "score": 0.43262952246423647, 
             "swap": false
         }, 
         "mtype": "2a", 
@@ -5028,7 +5028,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cSS-GU.gro", 
-            "score": 3.3638947029694894, 
+            "score": 3.363894702969493, 
             "swap": true
         }, 
         "mtype": "0", 
@@ -5076,7 +5076,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cWS-GU.gro", 
-            "score": 0.027026987808517422, 
+            "score": 0.027026987808517866, 
             "swap": true
         }, 
         "mtype": "1a", 
@@ -5120,7 +5120,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cWH-UG.gro", 
-            "score": 0.40021447300549018, 
+            "score": 0.40021447300549373, 
             "swap": false
         }, 
         "mtype": "2b", 
@@ -5236,7 +5236,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cWW-UG.gro", 
-            "score": -0.21464079367777922, 
+            "score": -0.214640793677775, 
             "swap": false
         }, 
         "mtype": "3", 
@@ -5296,7 +5296,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tHS-UG.gro", 
-            "score": -0.20295094888911125, 
+            "score": -0.20295094888911258, 
             "swap": false
         }, 
         "mtype": "0", 
@@ -5344,7 +5344,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tWH-GU.gro", 
-            "score": 0.54833043114589497, 
+            "score": 0.54833043114589697, 
             "swap": true
         }, 
         "mtype": "1", 
@@ -5412,7 +5412,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tSS-GU.gro", 
-            "score": 0.54508688312616105, 
+            "score": 0.54508688312615972, 
             "swap": true
         }, 
         "mtype": "0", 
@@ -5448,7 +5448,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tWS-GU.gro", 
-            "score": 0.30180132589562536, 
+            "score": 0.30180132589562314, 
             "swap": true
         }, 
         "mtype": "1", 
@@ -5492,7 +5492,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tWH-UG.gro", 
-            "score": 0.97690261267872058, 
+            "score": 0.97690261267872258, 
             "swap": false
         }, 
         "mtype": "2a", 
@@ -5572,7 +5572,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tWW-UG.gro", 
-            "score": 0.25959195031576554, 
+            "score": 0.25959195031576665, 
             "swap": false
         }, 
         "mtype": "1", 
@@ -5624,7 +5624,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cHH-GG.gro", 
-            "score": 0.79493876124839824, 
+            "score": 0.79493876124839868, 
             "swap": true
         }, 
         "mtype": "0", 
@@ -5676,7 +5676,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cHS-GG.gro", 
-            "score": 0.57569280376164889, 
+            "score": 0.57569280376164667, 
             "swap": false
         }, 
         "mtype": "2a", 
@@ -5724,7 +5724,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cWH-GG.gro", 
-            "score": -0.092295575251544193, 
+            "score": -0.092295575251542639, 
             "swap": true
         }, 
         "mtype": "1", 
@@ -5756,7 +5756,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cSS-GG.gro", 
-            "score": 1.4521989662814383, 
+            "score": 1.452198966281439, 
             "swap": true
         }, 
         "mtype": "1", 
@@ -5788,7 +5788,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/cWS-GG.gro", 
-            "score": 0.80448192064741963, 
+            "score": 0.80448192064741764, 
             "swap": true
         }, 
         "mtype": "2a", 
@@ -5840,7 +5840,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tHH-GG.gro", 
-            "score": 0.54961974545357606, 
+            "score": 0.54961974545357695, 
             "swap": true
         }, 
         "mtype": "2a", 
@@ -5884,7 +5884,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tHS-GG.gro", 
-            "score": -0.097696236591791497, 
+            "score": -0.097696236591792385, 
             "swap": false
         }, 
         "mtype": "0", 
@@ -5960,7 +5960,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tWH-GG.gro", 
-            "score": 0.44022728462855171, 
+            "score": 0.44022728462855332, 
             "swap": true
         }, 
         "mtype": "2", 
@@ -5992,7 +5992,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tSS-GG.gro", 
-            "score": -0.2119018648231028, 
+            "score": -0.21190186482310036, 
             "swap": false
         }, 
         "mtype": "1", 
@@ -6068,7 +6068,7 @@
         ], 
         "existing_data": {
             "coordfile": "new_coors/tWW-GG.gro", 
-            "score": -0.27389198671506265, 
+            "score": -0.2738919867150611, 
             "swap": false
         }, 
         "mtype": "1", 
