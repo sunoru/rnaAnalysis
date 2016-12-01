@@ -122,7 +122,7 @@ def save_data(result_list):
 
 
 def list_possible(force=False):
-    if not force and os.path.exists(datafile):
+    if not force and os.path.isfile(datafile):
         with open(datafile) as fi:
             result_list = json.load(fi)
         return result_list

@@ -5,6 +5,7 @@ import os
 import numpy
 import pybel
 
+import utils
 import list_possible
 from prepare import handle, prepare, pdb2gmx
 
@@ -52,7 +53,7 @@ def get_coordfile(ori, force=False):
     tmp = os.path.split(ori)[-1]
     new_file = new_file.replace(tmp, tmp[:4] + tmp[4:6].upper() + tmp[6:])
 
-    if not force and os.path.exists(new_file):
+    if not force and os.path.isfile(new_file):
         return new_file
     with open(ori) as fi, open(new_file, "w") as fo:
         for i, line in enumerate(fi):
@@ -65,7 +66,7 @@ def get_coordfile(ori, force=False):
 
 def find_atom(residue, atomname):
     for atom in residue.atoms:
-        if residue.OBResidue.GetAtomID(atom.OBAtom).strip() == atomname:
+        if utils.atom_name(residue, atom) == atomname:
             return atom
     assert False
 

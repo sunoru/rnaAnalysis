@@ -21,7 +21,7 @@ def hasitem(data, item):
 def usable_data(ori, force_fetch=False):
     datapath = "data/data.json"
     redpath = "data/redundant.dat"
-    if not force_fetch and os.path.exists(datapath):
+    if not force_fetch and os.path.isfile(datapath):
         with open(datapath) as fi:
             rawdata = fi.read()
         with open(redpath, "rb") as fi:
@@ -68,7 +68,7 @@ def usable_data(ori, force_fetch=False):
 
 def fetch_pdb(pdbname):
     pdbfile = "pdbs/%s.pdb" % pdbname
-    if os.path.exists(pdbfile):
+    if os.path.isfile(pdbfile):
         return pdbfile
     print "fetching %s..." % pdbname
     resp = requests.get("https://files.rcsb.org/download/%s.pdb" % pdbname)

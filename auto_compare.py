@@ -19,7 +19,7 @@ def readfile(filename):
 
 def fetch_pdbfile(pdbid):
     filename = "%s.pdb" % (pdbid)
-    if os.path.exists(filename):
+    if os.path.isfile(filename):
         return
     url = "https://files.rcsb.org/download/%s.pdb" % pdbid
     print "Fetching %s" % url
@@ -29,7 +29,7 @@ def fetch_pdbfile(pdbid):
         fo.write(raw)
 
 def editconf(pdbid):
-    if os.path.exists("%s.gro" % pdbid):
+    if os.path.isfile("%s.gro" % pdbid):
         return
     cmd = "gmx editconf -d 1.0 -f %s-t.gro -o %s.gro > /dev/null 2>&1" % (
         pdbid, pdbid
@@ -44,7 +44,7 @@ def analysis(pdbid):
 
 def fetch_dssr_output(pdbid):
     filename = "dssr.txt"
-    if os.path.exists(filename):
+    if os.path.isfile(filename):
         return
     print "Requesting DSSR output"
     url = "http://dssr.x3dna.org"
@@ -66,7 +66,7 @@ def get_dssr_result():
     return result
 
 def compare(pdbid):
-    if not os.path.exists(pdbid):
+    if not os.path.isfile(pdbid):
         os.mkdir(pdbid)
     cwd = os.getcwd()
     os.chdir(pdbid)

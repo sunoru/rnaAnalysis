@@ -13,7 +13,7 @@ def pdb2pdb(pdbid):
     else:
         finame = "%s.pdb" % pdbid
     foname = finame.replace(".pdb", "-t.pdb")
-    if os.path.exists(foname):
+    if os.path.isfile(foname):
         return foname
     with open(finame) as fi, open(foname, 'w') as fo:
         cchain = None
@@ -48,7 +48,7 @@ def pdb2pdb(pdbid):
 
 def pdb2gro(pdbname, print_cmd=True):
     foname = pdbname[:-3] + "gro"
-    if os.path.exists(foname):
+    if os.path.isfile(foname):
         return foname
     cmd = "gmx pdb2gmx -f %s -ff amber99sb-ildn -water none -p %s -i %s -o %s >> /dev/null 2>&1" % (
         pdbname, pdbname[:-3] + "top", pdbname[:-3] + "itp", foname
@@ -65,7 +65,7 @@ def pdb2gmx(pdbid):
 
 
 def editconf(finame, foname, force=False, print_cmd=True):
-    if not force and os.path.exists(foname):
+    if not force and os.path.isfile(foname):
         return foname
     cmd = "gmx editconf -d 1.0 -f %s -o %s > /dev/null 2>&1" % (finame, foname)
     if print_cmd:

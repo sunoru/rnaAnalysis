@@ -43,7 +43,7 @@ def handle_existing(item, force):
     units = [unit.split('|') for unit in edata["units"]]
     pdbfile = "pdbs/%s-%s.pdb" % (units[0][0], edata["id"])
     foname = pdb2gmx.pdb2gro(pdbfile)  # , False)
-    if not os.path.exists(foname):
+    if not os.path.isfile(foname):
         print foname
         return
     new_name = "%s-%s-%s" % (item["type"], item["recs"], item["mtype"])
