@@ -1,5 +1,6 @@
 #!/usr/bin/python2.7
 import numpy as np
+from numpy import cos, sin, array, matrix
 import os
 import pybel
 
@@ -37,6 +38,36 @@ def get_plane(res):
     return result
 
 
+def get_norm((a, b, c)):
+    length = np.sqrt(a ** 2 + b ** 2 + 1)
+    return (-a / length, -b / length, 1 / length)
+
+
+def get_rotation_matrix(alpha, beta, gamma):  # in Euler angles
+    # I really miss Julia...
+    return matrix([
+        [cos(alpha) * cos(gamma) - cos(beta) * sin(alpha) * sin(gamma),
+         -cos(beta) * cos(gamma) * sin(alpha) - cos(alpha) * sin(gamma), sin(alpha) * sin(beta)],
+        [cos(gamma) * sin(alpha) + cos(alpha) * cos(beta) * sin(gamma),
+         cos(alpha) * cos(beta) * cos(gamma) - sin(alpha) * sin(gamma), -cos(alpha) * sin(beta)],
+        [sin(beta) * sin(gamma), cos(gamma) * sin(beta), cos(beta)]
+    ])
+
+
+def translate(atom, (dx, dy, dz)):
+    x, y, z = atom.coords
+    set_coords(atom, (x + dx, y + dy, z + dz))
+
+
+def rotate_to_xoy(res):
+    plane = get_plane(res)
+    norm = get_norm(plane)
+    map(lambda atom: translate(atom, (0, 0, -plane[2])), res.atoms)
+    beta = np.arccos(norm[2])
+    alpha = np.arccos(-norm[1] / sin(beta))
+    assert np.abs(norm[0] - sin(alpha) * sin(beta)) <= 0.001
+
+
 def try_edge_pair(item, res1, res2):
     bonds = []
     for bond in item["bonds"]:
@@ -45,6 +76,8 @@ def try_edge_pair(item, res1, res2):
         bonds.append((atom1, atom2))
         for bond in bonds:
             pass
+    rotate_to_xoy(res1)
+    rotate_to_xoy(res2)
 
 
 def make_new(item):
