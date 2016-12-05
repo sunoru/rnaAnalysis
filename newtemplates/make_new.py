@@ -5,7 +5,7 @@ import os
 import pybel
 
 import utils
-import find_existing
+import find_existing, list_possible
 
 
 def set_coords(atom, (x, y, z)):
@@ -54,30 +54,111 @@ def get_rotation_matrix(alpha, beta, gamma):  # in Euler angles
     ])
 
 
-def translate(atom, (dx, dy, dz)):
+def translate_atom(atom, (dx, dy, dz)):
     x, y, z = atom.coords
     set_coords(atom, (x + dx, y + dy, z + dz))
+
+
+def translate(res, (dx, dy, dz)):
+    for atom in res.atoms:
+        translate_atom(atom, (dx, dy, dz))
+
+
+def rotate_atom(atom, rm):
+    coords = np.matrix(atom.coords).T
+    x, y, z = (rm * coords).T.tolist()[0]
+    set_coords(atom, (x, y, z))
+
+
+def rotate(res, rm):
+    for atom in res.atoms:
+        rotate_atom(atom, rm)
 
 
 def rotate_to_xoy(res):
     plane = get_plane(res)
     norm = get_norm(plane)
-    map(lambda atom: translate(atom, (0, 0, -plane[2])), res.atoms)
+    translate(res, (0, 0, -plane[2]))
+    if np.abs(norm[2] - 1.0) <= 0.001:
+        return
     beta = np.arccos(norm[2])
     alpha = np.arccos(-norm[1] / sin(beta))
     assert np.abs(norm[0] - sin(alpha) * sin(beta)) <= 0.001
+    rrm = get_rotation_matrix(alpha, beta, 0)
+    rm = np.linalg.inv(rrm)
+    rotate(res, rm)
+    for atom in res.atoms:
+        print atom.coords
+
+
+def flip_atom(atom, direction):
+    x, y, z = atom.coords
+    if direction == 0:
+        # 0 for horizontal
+        set_coords(atom, (x, -y, z))
+    elif direction == 1:
+        set_coords(atom, (-x, y, z))
+    else:
+        assert False
+
+
+def vertical_flip(res):
+    for atom in res.atoms:
+        flip_atom(atom, 1)
+
+
+def horizontal_flip(res):
+    for atom in res.atoms:
+        flip_atom(atom, 0)
+
+
+def check_upper(res, atoms):
+    p = 0
+    for atom in atoms:
+        y = atom.coords[1]
+        for neighbour in utils.get_bonded_atoms(atom):
+            if neighbour.GetAtomicNum() == 1:
+                continue
+            if neighbour.GetY() > y:
+                p += 1
+            else:
+                p -= 1
+    return p > 0
+
+
+def put_residue(res, edge, upper, mirror):
+    atom_names = map(lambda x: x[0], list_possible.bond_atoms[res.name][edge])
+    atoms = [find_existing.find_atom(res, atom_name) for atom_name in atom_names]
+    x = [_.coords[0] for _ in atoms]
+    y = [_.coords[1] for _ in atoms]
+    A = np.vstack([x, np.ones(len(x))]).T
+    k, b = np.linalg.lstsq(A, y)[0]
+    gamma = -np.arctan(k)
+    rm = get_rotation_matrix(0, 0, gamma)
+    rotate(res, rm)
+    if not ((atoms[0].coords[1] > atoms[1].coords[1]) ^ mirror):
+        horizontal_flip(res)
+    if check_upper(res, atoms) != upper:
+        vertical_flip(res)
+    if upper:
+        min_y = min(_.coords[1] for _ in atoms)
+        translate(res, (0, -min_y + 1.5, 0))
+    else:
+        max_y = max(_.coords[1] for _ in atoms)
+        translate(res, (0, -max_y - 1.5, 0))
 
 
 def try_edge_pair(item, res1, res2):
     bonds = []
     for bond in item["bonds"]:
         atom1 = find_existing.find_atom(res1, bond[0])
-        atom2 = find_existing.find_atom(res1, bond[1])
+        atom2 = find_existing.find_atom(res2, bond[1])
         bonds.append((atom1, atom2))
-        for bond in bonds:
-            pass
     rotate_to_xoy(res1)
     rotate_to_xoy(res2)
+    iso, edge1, edge2 = item["type"][1:3]
+    put_residue(res1, edge1, True, False)
+    put_residue(res2, edge2, False, True if iso == 't' else False)
 
 
 def make_new(item):
@@ -98,6 +179,6 @@ def make_new(item):
     filename = "new_coors/%s.gro" % new_name
 
     try_edge_pair(item, res1, res2)
-    moldata.localopt()
+    # moldata.localopt()
     moldata.write(format="gro", filename=filename, overwrite=True)
     return filename

@@ -4,3 +4,5 @@ __pycache__
 *.bak
 .idea/
 build/
+*.itp
+*.top

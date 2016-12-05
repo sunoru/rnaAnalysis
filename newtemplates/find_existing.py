@@ -84,9 +84,8 @@ def get_distance(coords1, coords2):
 
 def get_hydrogen(atom):
     hs = []
-    for neighbour in pybel.ob.OBAtomAtomIter(atom):
-        bond = atom.GetBond(neighbour)
-        if neighbour.GetAtomicNum() == 1 and bond.GetBondOrder() == 1:
+    for neighbour in utils.get_bonded_atoms(atom):
+        if neighbour.GetAtomicNum() == 1:
             hs.append(neighbour)
     return hs
 
@@ -102,8 +101,8 @@ def get_angle(vec1, vec2, vec3):
 
 
 def get_hbond_angle(res1, res2, atom_a, atom_b, bond):
-    hs = get_hydrogen(atom_a.OBAtom)
-    hs.extend(get_hydrogen(atom_b.OBAtom))
+    hs = get_hydrogen(atom_a)
+    hs.extend(get_hydrogen(atom_b))
     angle = -1
     for h in hs:
         t = get_angle(atom_a.coords, (h.GetX(), h.GetY(), h.GetZ()), atom_b.coords)
