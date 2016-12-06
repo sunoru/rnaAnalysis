@@ -11,6 +11,6 @@ def atom_name(residue, atom):
 def get_bonded_atoms(atom):
     obatom = atom.OBAtom
     for neighbour in pybel.ob.OBAtomAtomIter(obatom):
-        bond = atom.GetBond(neighbour)
+        bond = obatom.GetBond(neighbour)
         if bond.GetBondOrder() > 0:
             yield neighbour

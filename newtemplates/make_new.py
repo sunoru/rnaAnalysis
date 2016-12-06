@@ -82,22 +82,30 @@ def rotate_to_xoy(res):
     if np.abs(norm[2] - 1.0) <= 0.001:
         return
     beta = np.arccos(norm[2])
-    alpha = np.arccos(-norm[1] / sin(beta))
-    assert np.abs(norm[0] - sin(alpha) * sin(beta)) <= 0.001
+    alpha = np.arcsin(norm[0] / sin(beta))
+    # alpha = np.arccos(-norm[1] / sin(beta))
+    assert np.abs(norm[1] + cos(alpha) * sin(beta)) <= 0.001
+    # assert np.abs(norm[0] - sin(alpha) * sin(beta)) <= 0.001
     rrm = get_rotation_matrix(alpha, beta, 0)
     rm = np.linalg.inv(rrm)
     rotate(res, rm)
+
+
+def move_to_origin(res):
+    center = np.zeros(3)
     for atom in res.atoms:
-        print atom.coords
+        center += np.array(atom.coords)
+    center /= len(res.atoms)
+    translate(res, (-center[0], -center[1], -center[2]))
 
 
 def flip_atom(atom, direction):
     x, y, z = atom.coords
     if direction == 0:
         # 0 for horizontal
-        set_coords(atom, (x, -y, z))
-    elif direction == 1:
         set_coords(atom, (-x, y, z))
+    elif direction == 1:
+        set_coords(atom, (x, -y, z))
     else:
         assert False
 
@@ -126,6 +134,16 @@ def check_upper(res, atoms):
     return p > 0
 
 
+testpdb = None
+iii = 0
+
+
+def test_show():
+    global iii
+    iii += 1
+    testpdb.write("gro", "test_new/%d.gro" % iii, True)
+
+
 def put_residue(res, edge, upper, mirror):
     atom_names = map(lambda x: x[0], list_possible.bond_atoms[res.name][edge])
     atoms = [find_existing.find_atom(res, atom_name) for atom_name in atom_names]
@@ -135,17 +153,18 @@ def put_residue(res, edge, upper, mirror):
     k, b = np.linalg.lstsq(A, y)[0]
     gamma = -np.arctan(k)
     rm = get_rotation_matrix(0, 0, gamma)
+    test_show()
+    translate(res, (0, -b, 0))
+    test_show()
     rotate(res, rm)
-    if not ((atoms[0].coords[1] > atoms[1].coords[1]) ^ mirror):
+    test_show()
+    if not ((atoms[0].coords[0] > atoms[1].coords[0]) ^ mirror):
         horizontal_flip(res)
     if check_upper(res, atoms) != upper:
         vertical_flip(res)
-    if upper:
-        min_y = min(_.coords[1] for _ in atoms)
-        translate(res, (0, -min_y + 1.5, 0))
-    else:
-        max_y = max(_.coords[1] for _ in atoms)
-        translate(res, (0, -max_y - 1.5, 0))
+    test_show()
+    mean_y = sum(_.coords[1] for _ in atoms) / len(atoms)
+    translate(res, (0, -mean_y + (1.5 if upper else -1.5), 0))
 
 
 def try_edge_pair(item, res1, res2):
@@ -156,9 +175,16 @@ def try_edge_pair(item, res1, res2):
         bonds.append((atom1, atom2))
     rotate_to_xoy(res1)
     rotate_to_xoy(res2)
-    iso, edge1, edge2 = item["type"][1:3]
+    move_to_origin(res1)
+    move_to_origin(res2)
+    iso, edge1, edge2 = item["type"]
     put_residue(res1, edge1, True, False)
     put_residue(res2, edge2, False, True if iso == 't' else False)
+    t = -sum(atom1.coords[0] - atom2.coords[0] for atom1, atom2 in bonds) / len(bonds)
+    translate(res1, (t, 0, 0))
+    p = -sum(atom1.coords[0] + atom2.coords[0] for atom1, atom2 in bonds) / 2 / len(bonds)
+    translate(res1, (p, 0, 0))
+    translate(res2, (p, 0, 0))
 
 
 def make_new(item):
@@ -171,12 +197,15 @@ def make_new(item):
         swap = True
     assert os.path.isfile(ori)
     moldata = pybel.readfile("gro", ori).next()
+    global testpdb
+    testpdb = moldata
     res1, res2 = moldata.residues
     if swap:
         res1, res2 = res2, res1
     assert res1.name == res1c and res2.name == res2c
     new_name = utils.get_name(item)
-    filename = "new_coors/%s.gro" % new_name
+    # filename = "new_coors/%s.gro" % new_name
+    filename = "test_new/%s.gro" % new_name
 
     try_edge_pair(item, res1, res2)
     # moldata.localopt()
