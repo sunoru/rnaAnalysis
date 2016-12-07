@@ -3,6 +3,7 @@ import numpy as np
 from numpy import cos, sin, array, matrix
 import os
 import pybel
+from scipy.spatial import ConvexHull
 
 import utils
 import find_existing, list_possible
@@ -136,6 +137,7 @@ def check_upper(res, atoms):
 
 testpdb = None
 iii = 0
+testatoms = None
 
 
 def test_show():
@@ -144,25 +146,66 @@ def test_show():
     testpdb.write("gro", "test_new/%d.gro" % iii, True)
 
 
+def get_line((x0, y0), (x1, y1)):
+    return y1 - y0, x0 - x1, (y0 - y1) * x0 + (x1 - x0) * y0
+
+
+def calc_distance((a, b, c), v):
+    return np.abs(a * v[0] + b * v[1] + c) / np.sqrt(a ** 2 + b ** 2)
+
+
+def find_the_line(points):
+    hull = ConvexHull(points)
+    best_triple = None
+    best_distance = 2007012811.0
+    for simplex in hull.simplices:
+        longest = 0.0
+        longestv = None
+        line = get_line(points[simplex][0], points[simplex][1])
+        for v in hull.vertices:
+            if v in simplex:
+                continue
+            dist = calc_distance(line, points[v])
+            if dist > longest:
+                longest, longestv = dist, v
+        if longest < best_distance:
+            best_distance = longest
+            best_triple = (line, longestv)
+    assert best_triple is not None
+    a, b, c = best_triple[0]
+    k = -a / b
+    nb = -c / b
+    lx, ly = points[best_triple[1]]
+    p = a * lx + b * ly + c
+    d = best_distance / 2
+    if p > 0:
+        nb += d * np.sqrt(k ** 2 + 1)
+    elif p < 0:
+        nb -= d * np.sqrt(k ** 2 + 1)
+    else:
+        assert False
+    return k, nb
+
+
 def put_residue(res, edge, upper, mirror):
     atom_names = map(lambda x: x[0], list_possible.bond_atoms[res.name][edge])
     atoms = [find_existing.find_atom(res, atom_name) for atom_name in atom_names]
-    x = [_.coords[0] for _ in atoms]
-    y = [_.coords[1] for _ in atoms]
-    A = np.vstack([x, np.ones(len(x))]).T
-    k, b = np.linalg.lstsq(A, y)[0]
-    gamma = -np.arctan(k)
-    rm = get_rotation_matrix(0, 0, gamma)
-    test_show()
+    global testatoms
+    testatoms = atoms
+    points = array([[_.coords[0], _.coords[1]] for _ in atoms])
+    # Should not use linear regression.
+    # A = np.vstack([x, np.ones(len(x))]).T
+    # k, b = np.linalg.lstsq(A, y)[0]
+    k, b = find_the_line(points)
+
+    gamma = np.arctan(k)
+    rm = get_rotation_matrix(0, 0, -gamma)
     translate(res, (0, -b, 0))
-    test_show()
     rotate(res, rm)
-    test_show()
-    if not ((atoms[0].coords[0] > atoms[1].coords[0]) ^ mirror):
+    if (atoms[0].coords[0] > atoms[1].coords[0]) ^ mirror:
         horizontal_flip(res)
     if check_upper(res, atoms) != upper:
         vertical_flip(res)
-    test_show()
     mean_y = sum(_.coords[1] for _ in atoms) / len(atoms)
     translate(res, (0, -mean_y + (1.5 if upper else -1.5), 0))
 
@@ -185,6 +228,7 @@ def try_edge_pair(item, res1, res2):
     p = -sum(atom1.coords[0] + atom2.coords[0] for atom1, atom2 in bonds) / 2 / len(bonds)
     translate(res1, (p, 0, 0))
     translate(res2, (p, 0, 0))
+    print bonds
 
 
 def make_new(item):
