@@ -1,6 +1,6 @@
 #!/usr/bin/python2.7
 import numpy as np
-from numpy import cos, sin, array, matrix
+from numpy import cos, sin, array, matrix, abs
 import os
 import pybel
 from scipy.spatial import ConvexHull
@@ -80,12 +80,12 @@ def rotate_to_xoy(res):
     plane = get_plane(res)
     norm = get_norm(plane)
     translate(res, (0, 0, -plane[2]))
-    if np.abs(norm[2] - 1.0) <= 0.001:
+    if abs(norm[2] - 1.0) <= 0.001:
         return
     beta = np.arccos(norm[2])
     alpha = np.arcsin(norm[0] / sin(beta))
     # alpha = np.arccos(-norm[1] / sin(beta))
-    assert np.abs(norm[1] + cos(alpha) * sin(beta)) <= 0.001
+    assert abs(norm[1] + cos(alpha) * sin(beta)) <= 0.001 or abs(norm[1] - cos(alpha) * sin(beta)) <= 0.001
     # assert np.abs(norm[0] - sin(alpha) * sin(beta)) <= 0.001
     rrm = get_rotation_matrix(alpha, beta, 0)
     rm = np.linalg.inv(rrm)
@@ -151,10 +151,16 @@ def get_line((x0, y0), (x1, y1)):
 
 
 def calc_distance((a, b, c), v):
-    return np.abs(a * v[0] + b * v[1] + c) / np.sqrt(a ** 2 + b ** 2)
+    return abs(a * v[0] + b * v[1] + c) / np.sqrt(a ** 2 + b ** 2)
 
 
 def find_the_line(points):
+    if len(points) == 2:
+        x1, y1 = points[0]
+        x2, y2 = points[1]
+        k = -(x2 / x1) / (y2 - y1)
+        b = (y1 + y2) / 2 - k * (x1 + x2) / 2
+        return k, b
     hull = ConvexHull(points)
     best_triple = None
     best_distance = 2007012811.0
@@ -210,16 +216,72 @@ def put_residue(res, edge, upper, mirror):
     translate(res, (0, -mean_y + (1.5 if upper else -1.5), 0))
 
 
+def has_overlay(res1, res2):
+    points1, points2 = (array([[_.coords[0], _.coords[1]] for _ in res.atoms]) for res in (res1, res2))
+    hull1, hull2 = (ConvexHull(points) for points in (points1, points2))
+    for v1 in hull1.vertices:
+        p1 = points1[v1]
+        l = len(hull2.vertices)
+        q = np.cross(points2[hull2.vertices[l - 1]] - p1, points2[hull2.vertices[0]] - p1)
+        flag = True
+        for i in xrange(l - 1):
+            if np.cross(points2[hull2.vertices[i]] - p1, points2[hull2.vertices[i + 1]] - p1) * q < 0:
+                flag = False
+                break
+        if flag:
+            return True
+    return False
+
+
+def reflect_point((x0, y0), (k, b)):
+    c = (k ** 2 - 1) * x0 + 2 * (b - y0) * k
+    x0p = -c / (k ** 2 + 1)
+    #    c = abs(k) * (k * x0 + b - y0) * 2 / (k ** 2 + 1)
+    #    x0p = x0 + c
+    y0p = -(x0p - x0) / k + y0
+    return x0p, y0p
+
+
+def reflect_mutate(res):
+    c4p = utils.get_atom_by_name(res, "C4'")
+    c5p = utils.get_atom_by_name(res, "C5'")
+    to_mutate = map(lambda x: utils.get_atom_by_name(res, x), [
+        "H5'1", "H5'2", "O5'", "P", "O1P", "O2P"
+    ])
+    a, b, c = get_line(c4p.coords[:2], c5p.coords[:2])
+    k = -a / b
+    bb = -c / b
+    for each in to_mutate:
+        x, y, z = each.coords
+        xp, yp = reflect_point((x, y), (k, bb))
+        set_coords(each, (xp, yp, z))
+
+
+def handle_phosphate(res1, res2):
+    if not has_overlay(res1, res2):
+        return
+    reflect_mutate(res1)
+    if not has_overlay(res1, res2):
+        return
+    reflect_mutate(res2)
+    if not has_overlay(res1, res2):
+        return
+    reflect_mutate(res1)
+    if not has_overlay(res1, res2):
+        return
+    assert False
+
+
 def try_edge_pair(item, res1, res2):
     bonds = []
     for bond in item["bonds"]:
         atom1 = find_existing.find_atom(res1, bond[0])
         atom2 = find_existing.find_atom(res2, bond[1])
         bonds.append((atom1, atom2))
-    rotate_to_xoy(res1)
-    rotate_to_xoy(res2)
     move_to_origin(res1)
     move_to_origin(res2)
+    rotate_to_xoy(res1)
+    rotate_to_xoy(res2)
     iso, edge1, edge2 = item["type"]
     put_residue(res1, edge1, True, False)
     put_residue(res2, edge2, False, True if iso == 't' else False)
@@ -228,17 +290,20 @@ def try_edge_pair(item, res1, res2):
     p = -sum(atom1.coords[0] + atom2.coords[0] for atom1, atom2 in bonds) / 2 / len(bonds)
     translate(res1, (p, 0, 0))
     translate(res2, (p, 0, 0))
-    print bonds
+    # handle_phosphate(res1, res2)
 
 
 def make_new(item):
     res1c, res2c = item["recs"]
     iso, edge1, edge2 = item["type"]
-    ori = "new_coors/cWW-%c%c.gro" % (res1c, res2c)
+    ori = str("new_coors/cWW-%c%c.gro" % (res1c, res2c))
     swap = False
     if not os.path.isfile(ori):
-        ori = "new_coors/cWW-%c%c.gro" % (res2c, res1c)
+        ori = str("new_coors/cWW-%c%c.gro" % (res2c, res1c))
         swap = True
+    if not os.path.isfile(ori):
+        ori = str("new_coors/tWW-%c%c.gro" % (res1c, res2c))
+        swap = False
     assert os.path.isfile(ori)
     moldata = pybel.readfile("gro", ori).next()
     global testpdb
@@ -248,10 +313,11 @@ def make_new(item):
         res1, res2 = res2, res1
     assert res1.name == res1c and res2.name == res2c
     new_name = utils.get_name(item)
+    print new_name
     # filename = "new_coors/%s.gro" % new_name
     filename = "test_new/%s.gro" % new_name
 
     try_edge_pair(item, res1, res2)
-    # moldata.localopt()
+    moldata.localopt()
     moldata.write(format="gro", filename=filename, overwrite=True)
     return filename

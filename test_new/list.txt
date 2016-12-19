@@ -1,0 +1,583 @@
+cHH-AA-1
+[[u'N6', u'N7'], [u'N7', u'C8']]
+cHS-AA-3
+[[u'N7', u'C2'], [u'C8', u'N3']]
+cHW-AA-1
+[[u'N6', u'N1'], [u'N7', u'C2']]
+cHW-AA-3
+[[u'N7', u'N6'], [u'C8', u'N1']]
+cSW-AA-1
+[[u'C2', u'N1'], [u'N3', u'C2']]
+------------------------------------------------
+tHH-AA-3
+[[u'N7', u'C8'], [u'C8', u'N7']]
+tHS-AA-3
+[[u'N7', u"C1'"], [u'C8', u'N3']]
+tHW-AA-3
+[[u'N7', u'C2'], [u'C8', u'N1']]
+tSS-AA-3
+[[u'N3', u"C1'"], [u"C1'", u'N3']]
+tSW-AA-3
+[[u'N3', u'C2'], [u"C1'", u'N1']]
+tWW-AA-3
+[[u'N1', u'C2'], [u'C2', u'N1']]
+cHH-AC-1b
+[[u'N7', u'C6']]
+cHH-AC-3a
+[[u'N7', u'N4']]
+cHS-AC-3
+[[u'C8', u'O2']]
+cHW-AC-0
+[[u'N6', u'O2']]
+cHW-AC-1a
+[[u'N6', u'N3']]
+cHW-AC-2b
+[[u'C8', u'O2']]
+cHW-AC-3
+[[u'N7', u'N4'], [u'C8', u'N3']]
+cSH-AC-1b
+[[u'N3', u'C6']]
+cSW-AC-0
+[[u'C2', u'O2']]
+cSW-AC-1a
+[[u'C2', u'N3']]
+cSW-AC-2b
+[[u"C1'", u'O2']]
+cWH-AC-1b
+[[u'N1', u'C6']]
+cWH-AC-3a
+[[u'N1', u'N4']]
+cWS-AC-3
+[[u'C2', u'O2']]
+cWW-AC-0
+[[u'N6', u'O2']]
+cWW-AC-2b
+[[u'C2', u'O2']]
+cWW-AC-3
+[[u'N1', u'N4'], [u'C2', u'N3']]
+tHH-AC-3a
+[[u'N7', u'C6']]
+tHS-AC-2
+[[u'N7', u"C1'"], [u'C8', u'O2']]
+tHW-AC-2a
+[[u'N6', u'O2']]
+tHW-AC-3b
+[[u'C8', u'N3']]
+tHW-AC-4
+[[u'C8', u'O2']]
+tSH-AC-3a
+[[u'N3', u'C6']]
+tSS-AC-2
+[[u'N3', u"C1'"], [u"C1'", u'O2']]
+tSW-AC-2a
+[[u'C2', u'O2']]
+tSW-AC-3b
+[[u"C1'", u'N3']]
+tSW-AC-4
+[[u"C1'", u'O2']]
+tWH-AC-1b
+[[u'N1', u'N4']]
+tWH-AC-3a
+[[u'N1', u'C6']]
+tWS-AC-2
+[[u'N1', u"C1'"], [u'C2', u'O2']]
+tWW-AC-2a
+[[u'N6', u'O2']]
+tWW-AC-3b
+[[u'C2', u'N3']]
+tWW-AC-4
+[[u'C2', u'O2']]
+cHH-AU-1b
+[[u'N7', u'C6']]
+cHH-AU-2a
+[[u'N6', u'O4'], [u'N7', u'C5']]
+cHH-AU-4
+[[u'C8', u'O4']]
+cHS-AU-3
+[[u'C8', u'O2']]
+cHW-AU-0
+[[u'N6', u'O2']]
+cHW-AU-4
+[[u'C8', u'O4']]
+cSH-AU-1b
+[[u'N3', u'C6']]
+cSH-AU-4
+[[u"C1'", u'O4']]
+cSW-AU-0
+[[u'C2', u'O2']]
+cSW-AU-4
+[[u"C1'", u'O4']]
+cWH-AU-1b
+[[u'N1', u'C6']]
+cWH-AU-4
+[[u'C2', u'O4']]
+cWS-AU-3
+[[u'C2', u'O2']]
+cWW-AU-0
+[[u'N6', u'O2']]
+cWW-AU-4
+[[u'C2', u'O4']]
+tHH-AU-2b
+[[u'C8', u'O4'], [u'N7', u'C5']]
+tHH-AU-3a
+[[u'N7', u'C6']]
+tHS-AU-2
+[[u'N7', u"C1'"], [u'C8', u'O2']]
+tHW-AU-0
+[[u'N6', u'O4']]
+tHW-AU-4
+[[u'C8', u'O2']]
+tSH-AU-2b
+[[u"C1'", u'O4'], [u'N3', u'C5']]
+tSH-AU-3a
+[[u'N3', u'C6']]
+tSS-AU-2
+[[u'N3', u"C1'"], [u"C1'", u'O2']]
+tSW-AU-0
+[[u'C2', u'O4']]
+tSW-AU-4
+[[u"C1'", u'O2']]
+tWH-AU-0
+[[u'N6', u'O4']]
+tWH-AU-2b
+[[u'C2', u'O4'], [u'N1', u'C5']]
+tWH-AU-3a
+[[u'N1', u'C6']]
+tWS-AU-2
+[[u'N1', u"C1'"], [u'C2', u'O2']]
+tWW-AU-0
+[[u'N6', u'O4']]
+tWW-AU-4
+[[u'C2', u'O2']]
+cHH-AG-1
+[[u'N6', u'N7'], [u'N7', u'C8']]
+cHH-AG-3b
+[[u'C8', u'N7']]
+cHH-AG-4
+[[u'C8', u'O6']]
+cHS-AG-1
+[[u'N6', u'N3'], [u'N7', u"C1'"]]
+cHW-AG-1b
+[[u'N7', u'N2']]
+cHW-AG-4
+[[u'C8', u'O6']]
+cSH-AG-1
+[[u'C2', u'N7'], [u'N3', u'C8']]
+cSH-AG-3b
+[[u"C1'", u'N7']]
+cSH-AG-4
+[[u"C1'", u'O6']]
+cSW-AG-1b
+[[u'N3', u'N2']]
+cSW-AG-4
+[[u"C1'", u'O6']]
+cWH-AG-1
+[[u'N6', u'N7'], [u'N1', u'C8']]
+cWH-AG-3b
+[[u'C2', u'N7']]
+cWH-AG-4
+[[u'C2', u'O6']]
+cWS-AG-3
+[[u'N1', u'N2'], [u'C2', u'N3']]
+cWW-AG-1b
+[[u'N1', u'N2']]
+cWW-AG-4
+[[u'C2', u'O6']]
+tHH-AG-1a
+[[u'N6', u'N7']]
+tHH-AG-2b
+[[u'C8', u'O6']]
+tHH-AG-3
+[[u'N7', u'C8'], [u'C8', u'N7']]
+tHS-AG-3
+[[u'N7', u"C1'"], [u'C8', u'N3']]
+tHW-AG-0
+[[u'N6', u'O6']]
+tHW-AG-2b
+[[u'C8', u'O6'], [u'N7', u'N1']]
+tHW-AG-3a
+[[u'N7', u'N2']]
+tSH-AG-0
+[[u'C2', u'O6']]
+tSH-AG-1a
+[[u'C2', u'N7']]
+tSH-AG-2b
+[[u"C1'", u'O6']]
+tSH-AG-3
+[[u'N3', u'C8'], [u"C1'", u'N7']]
+tSS-AG-3
+[[u'N3', u"C1'"], [u"C1'", u'N3']]
+tSW-AG-0
+[[u'C2', u'O6']]
+tSW-AG-2b
+[[u"C1'", u'O6'], [u'N3', u'N1']]
+tSW-AG-3a
+[[u'N3', u'N2']]
+tWH-AG-0
+[[u'N6', u'O6']]
+tWH-AG-2b
+[[u'C2', u'O6']]
+tWH-AG-3
+[[u'N1', u'C8'], [u'C2', u'N7']]
+tWS-AG-3
+[[u'N1', u"C1'"], [u'C2', u'N3']]
+tWW-AG-0
+[[u'N6', u'O6']]
+tWW-AG-2b
+[[u'C2', u'O6'], [u'N1', u'N1']]
+tWW-AG-3a
+[[u'N1', u'N2']]
+cHS-CC-1a
+[[u'N4', u'O2']]
+cHS-CC-3
+[[u'C6', u'O2']]
+cHW-CC-0
+[[u'N4', u'O2']]
+cHW-CC-2b
+[[u'C6', u'O2'], [u'C5', u'N3']]
+cHW-CC-3b
+[[u'C6', u'N3']]
+cSW-CC-1b
+[[u"C1'", u'O2']]
+cWW-CC-0
+[[u'N4', u'O2']]
+tHS-CC-1b
+[[u'C5', u'O2']]
+tHS-CC-2b
+[[u'C6', u'O2']]
+tHW-CC-1a
+[[u'N4', u'N3']]
+tHW-CC-3
+[[u'C5', u'O2'], [u'C6', u'N3']]
+tHW-CC-4
+[[u'C6', u'O2']]
+tSS-CC-1
+[[u'O2', u"C1'"], [u"C1'", u'O2']]
+tSW-CC-2b
+[[u"C1'", u'N3']]
+tSW-CC-3
+[[u"C1'", u'O2']]
+tWW-CC-1
+[[u'N4', u'N3'], [u'N3', u'N4']]
+tWW-CC-2b
+[[u'O2', u'N4']]
+cHH-CU-2a
+[[u'N4', u'O4']]
+cHH-CU-3a
+[[u'C5', u'O4']]
+cHH-CU-4
+[[u'C6', u'O4']]
+cHS-CU-2a
+[[u'C5', u'O2']]
+cHS-CU-3
+[[u'C6', u'O2']]
+cHW-CU-0
+[[u'N4', u'O2']]
+cHW-CU-1b
+[[u'C5', u'O2']]
+cHW-CU-2a
+[[u'N4', u'O4']]
+cHW-CU-2b
+[[u'C6', u'O2']]
+cHW-CU-3a
+[[u'C5', u'O4']]
+cHW-CU-4
+[[u'C6', u'O4']]
+cSH-CU-0
+[[u'O2', u'C6']]
+cSH-CU-3
+[[u"C1'", u'O4']]
+cSW-CU-3
+[[u"C1'", u'O4']]
+cWH-CU-1b
+[[u'N3', u'C6']]
+cWH-CU-2
+[[u'N4', u'O4'], [u'N3', u'C5'], [u'O2', u'C6']]
+cWS-CU-2b
+[[u'O2', u"C1'"]]
+cWW-CU-0
+[[u'N4', u'O2']]
+cWW-CU-3b
+[[u'O2', u'N3']]
+tHH-CU-1b
+[[u'C5', u'O4']]
+tHH-CU-2b
+[[u'C6', u'O4']]
+tHS-CU-1b
+[[u'C5', u'O2']]
+tHS-CU-2b
+[[u'C6', u'O2']]
+tHW-CU-0
+[[u'N4', u'O4']]
+tHW-CU-1b
+[[u'C5', u'O4']]
+tHW-CU-2a
+[[u'N4', u'O2']]
+tHW-CU-2b
+[[u'C6', u'O4']]
+tHW-CU-3a
+[[u'C5', u'O2']]
+tHW-CU-4
+[[u'C6', u'O2']]
+tSH-CU-1
+[[u'O2', u'C5'], [u"C1'", u'O4']]
+tSH-CU-2a
+[[u'O2', u'C6']]
+tSS-CU-1
+[[u'O2', u"C1'"], [u"C1'", u'O2']]
+tSW-CU-3
+[[u"C1'", u'O2']]
+tWH-CU-0
+[[u'N4', u'O4']]
+tWH-CU-3
+[[u'N3', u'C6'], [u'O2', u'C5']]
+tWH-CU-4
+[[u'O2', u'C6']]
+tWS-CU-2a
+[[u'N3', u"C1'"]]
+tWS-CU-3
+[[u'O2', u"C1'"]]
+tWW-CU-0
+[[u'N4', u'O4']]
+tWW-CU-3b
+[[u'O2', u'N3']]
+cHH-CG-1a
+[[u'N4', u'N7']]
+cHH-CG-2a
+[[u'N4', u'O6'], [u'C5', u'N7']]
+cHH-CG-3
+[[u'C5', u'O6'], [u'C6', u'N7']]
+cHS-CG-3b
+[[u'C6', u'N3']]
+cHW-CG-2a
+[[u'N4', u'O6']]
+cHW-CG-3a
+[[u'C5', u'O6']]
+cHW-CG-4
+[[u'C6', u'O6']]
+cSH-CG-0
+[[u'O2', u'C8']]
+cSH-CG-2b
+[[u"C1'", u'N7']]
+cSH-CG-3
+[[u"C1'", u'O6']]
+cSW-CG-0
+[[u'O2', u'N2']]
+cSW-CG-3
+[[u"C1'", u'O6']]
+cWH-CG-1
+[[u'N4', u'N7'], [u'N3', u'C8']]
+cWH-CG-2b
+[[u'O2', u'C8']]
+cWS-CG-2b
+[[u'O2', u"C1'"]]
+cWS-CG-3a
+[[u'N3', u'N2']]
+cWS-CG-4
+[[u'O2', u'N2']]
+cWW-CG-1b
+[[u'N3', u'N2']]
+cWW-CG-3b
+[[u'O2', u'N1']]
+tHH-CG-0
+[[u'N4', u'O6']]
+tHH-CG-2b
+[[u'C6', u'O6'], [u'C5', u'N7']]
+tHH-CG-3b
+[[u'C6', u'N7']]
+tHS-CG-1a
+[[u'N4', u'N3']]
+tHS-CG-3b
+[[u'C6', u'N3']]
+tHW-CG-0
+[[u'N4', u'O6']]
+tHW-CG-1b
+[[u'C5', u'O6']]
+tHW-CG-2b
+[[u'C6', u'O6']]
+tSH-CG-1b
+[[u"C1'", u'O6']]
+tSH-CG-2
+[[u'O2', u'C8'], [u"C1'", u'N7']]
+tSS-CG-2
+[[u'O2', u"C1'"], [u"C1'", u'N3']]
+tSW-CG-2a
+[[u'O2', u'N2']]
+tWH-CG-0
+[[u'N4', u'O6']]
+tWH-CG-3a
+[[u'N3', u'C8']]
+tWH-CG-4
+[[u'O2', u'C8']]
+tWS-CG-2b
+[[u'O2', u'N2']]
+tWS-CG-3a
+[[u'N3', u"C1'"]]
+tWS-CG-4
+[[u'O2', u"C1'"]]
+tWW-CG-0
+[[u'N4', u'O6']]
+tWW-CG-4
+[[u'O2', u'N2']]
+cHH-UU-0
+[[u'O4', u'C6']]
+cHH-UU-1a
+[[u'O4', u'C5']]
+cHS-UU-0
+[[u'O4', u"C1'"]]
+cHS-UU-3
+[[u'C6', u'O2']]
+cHW-UU-2b
+[[u'C6', u'O2']]
+cHW-UU-3a
+[[u'C5', u'O4']]
+cHW-UU-4
+[[u'C6', u'O4']]
+cSW-UU-3
+[[u"C1'", u'O4']]
+tHH-UU-1
+[[u'O4', u'C5'], [u'C5', u'O4']]
+tHH-UU-2a
+[[u'O4', u'C6']]
+tHH-UU-2b
+[[u'C6', u'O4']]
+tHS-UU-1
+[[u'O4', u"C1'"], [u'C5', u'O2']]
+tHS-UU-2b
+[[u'C6', u'O2']]
+tHW-UU-2b
+[[u'C6', u'O4']]
+tHW-UU-3a
+[[u'C5', u'O2']]
+tHW-UU-4
+[[u'C6', u'O2']]
+tSS-UU-1
+[[u'O2', u"C1'"], [u"C1'", u'O2']]
+tSW-UU-3
+[[u"C1'", u'O2']]
+tWW-UU-3
+[[u'N3', u'O2'], [u'O2', u'N3']]
+cHH-UG-0
+[[u'O4', u'C8']]
+cHH-UG-3
+[[u'C5', u'O6'], [u'C6', u'N7']]
+cHH-UG-4
+[[u'C6', u'O6']]
+cHS-UG-0
+[[u'O4', u"C1'"]]
+cHS-UG-3b
+[[u'C6', u'N3']]
+cHW-UG-0
+[[u'O4', u'N2']]
+cHW-UG-1a
+[[u'O4', u'N1']]
+cHW-UG-3a
+[[u'C5', u'O6']]
+cHW-UG-4
+[[u'C6', u'O6']]
+cSH-UG-0
+[[u'O2', u'C8']]
+cSH-UG-2b
+[[u"C1'", u'N7']]
+cSH-UG-3
+[[u"C1'", u'O6']]
+cSW-UG-0
+[[u'O2', u'N2']]
+cSW-UG-3
+[[u"C1'", u'O6']]
+cWH-UG-0
+[[u'O4', u'C8']]
+cWH-UG-3a
+[[u'N3', u'O6']]
+cWS-UG-0
+[[u'O4', u"C1'"]]
+cWS-UG-4
+[[u'O2', u'N2']]
+cWW-UG-0
+[[u'O4', u'N2']]
+cWW-UG-1a
+[[u'O4', u'N1']]
+cWW-UG-2b
+[[u'O2', u'N2']]
+tHH-UG-1b
+[[u'C5', u'O6']]
+tHH-UG-2
+[[u'O4', u'C8'], [u'C5', u'N7'], [u'C6', u'O6']]
+tHH-UG-3b
+[[u'C6', u'N7']]
+tHS-UG-2a
+[[u'O4', u"C1'"], [u'C5', u'N3']]
+tHS-UG-3b
+[[u'C6', u'N3']]
+tHW-UG-2a
+[[u'O4', u'N2']]
+tHW-UG-2b
+[[u'C6', u'O6']]
+tSH-UG-1b
+[[u"C1'", u'O6']]
+tSH-UG-2
+[[u'O2', u'C8'], [u"C1'", u'N7']]
+tSS-UG-2
+[[u'O2', u"C1'"], [u"C1'", u'N3']]
+tSW-UG-2a
+[[u'O2', u'N2']]
+tWH-UG-1b
+[[u'N3', u'O6']]
+tWH-UG-4
+[[u'O2', u'C8']]
+tWS-UG-0
+[[u'O4', u'N2']]
+tWS-UG-4
+[[u'O2', u"C1'"]]
+tWW-UG-2a
+[[u'O4', u'N2']]
+tWW-UG-3b
+[[u'O2', u'N1']]
+tWW-UG-4
+[[u'O2', u'N2']]
+cHH-GG-1b
+[[u'N7', u'C8']]
+cHS-GG-0
+[[u'O6', u"C1'"]]
+cHS-GG-1b
+[[u'N7', u"C1'"]]
+cHS-GG-3
+[[u'N7', u'N2'], [u'C8', u'N3']]
+cHW-GG-0
+[[u'O6', u'N2']]
+cHW-GG-4
+[[u'C8', u'O6']]
+cSW-GG-1b
+[[u'N3', u'N2']]
+cSW-GG-4
+[[u"C1'", u'O6']]
+cWW-GG-0
+[[u'O6', u'N2']]
+cWW-GG-1a
+[[u'O6', u'N1']]
+tHH-GG-2b
+[[u'C8', u'O6']]
+tHH-GG-3
+[[u'N7', u'C8'], [u'C8', u'N7']]
+tHS-GG-1b
+[[u'N7', u'N2']]
+tHS-GG-2a
+[[u'O6', u"C1'"]]
+tHS-GG-3
+[[u'N7', u"C1'"], [u'C8', u'N3']]
+tHW-GG-1a
+[[u'O6', u'N1']]
+tHW-GG-3a
+[[u'N7', u'N2']]
+tSS-GG-3
+[[u'N3', u"C1'"], [u"C1'", u'N3']]
+tSW-GG-0
+[[u'N2', u'O6']]
+tSW-GG-2b
+[[u"C1'", u'O6'], [u'N3', u'N1']]
+tSW-GG-3a
+[[u'N3', u'N2']]
+tWW-GG-2a
+[[u'O6', u'N2']]
+tWW-GG-2b
+[[u'N2', u'O6']]
