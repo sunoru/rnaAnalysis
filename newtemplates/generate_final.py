@@ -1,90 +1,59 @@
-#!/usr/bin/python2.7
 import os
 
-from newtemplates import find_existing, list_possible
-from prepare import pdb2gmx
+from newtemplates import list_possible, utils
 
 
-def find_line(lines, key, cmp=lambda a, b: a == b):
-    for i, line in enumerate(lines):
-        if cmp(line, key):
-            return i
-    return -1
+def add_data(fo, item, coordfile, existing, i):
+    itemname = utils.get_name(item)
+    print "Working on %s..." % itemname
+    with open(coordfile) as fi:
+        lines = fi.readlines()
+    rmsd = item.get("rmsd", 0.22)
 
-
-def change_num(line, num):
-    return line[:6] + "%5d" % num + line[11:]
-
-
-def handle_existing(item, force):
-    if not force and item.get("handled"):
-        return
-    edata = item["existing_data"]
-    if edata["swap"] ^ edata["nswap"] and not item.get("swapped"):
-        item["recs"] = item["recs"][1] + item["recs"][0]
-        item["type"] = item["type"][0] + item["type"][2] + item["type"][1]
-        if item["type"][0] == 't':
-            item["bonds"] = list(map(
-                lambda x: [x[1], x[0]],
-                reversed(item["bonds"])
-            ))
-            item["mtype"] = item["mtype"][0] + ('' if len(item["mtype"]) == 1 else (
-                'a' if item["mtype"][1] == 'b' else 'b'))
-        else:
-            item["bonds"] = list(map(
-                lambda x: [x[1], x[0]],
-                item["bonds"]
-            ))
-            item["mtype"] = str(len(list_possible.bond_atoms[item["recs"][0]][item["type"][1]]) + \
-                                len(list_possible.bond_atoms[item["recs"][1]][item["type"][2]]) - 1 - \
-                                int(item["mtype"][0]) - 1) + ('' if len(item["mtype"]) == 1 else item["mtype"][1])
-        item["swapped"] = True
-
-    units = [unit.split('|') for unit in edata["units"]]
-    pdbfile = "pdbs/%s-%s.pdb" % (units[0][0], edata["id"])
-    foname = pdb2gmx.pdb2gro(pdbfile)  # , False)
-    if not os.path.isfile(foname):
-        print foname
-        return
-    new_name = "%s-%s-%s" % (item["type"], item["recs"], item["mtype"])
-    finame = editconf(foname, "pdbs/%s.pdb" % new_name)
-    with open(finame) as fi:
-        fi_raw = fi.readlines()
-    new_filename = "new_pdbs/%s.pdb" % new_name
-
-    fo_raw = []
-    fo_raw.append("TITLE     %s\n" % new_name)
-    fo_raw.append("REMARK {sequence} {bondtype} {rmsd}\n".format(
-        sequence=item["recs"],
-        bondtype="%s-%s" % (item["type"], item["mtype"]),
-        rmsd=0.3
+    fo.write("MODEL%9d\n" % (i + 1))
+    fo.write("REMARK {sequence} {bondtype} {iso} {rmsd}\n".format(
+        sequence=sequence.upper(),
+        bondtype=family[1].upper() + family[1].lower() + family[2].upper() + family[2].lower(),
+        iso="cis" if family[0] == 'c' else "trans",
+        rmsd=rmsd
     ))
-    fo_raw.append(fi_raw[find_line(fi_raw, "CRYST1", lambda a, b: a.startswith(b))])
-    atom_start = find_line(fi_raw, "ATOM", lambda a, b: a.startswith(b))
-    split_point = -1
-    for i in xrange(atom_start, len(fi_raw) - 2):
-        if split_point == -1 and i > atom_start and fi_raw[i - 1][22:26] != fi_raw[i][22:26]:
-            split_point = len(fo_raw)
-        fo_raw.append(fi_raw[i])
-    assert split_point >= 0
-    for bond in item["bonds"]:
-        fo_raw.append("CONECT %4d %4d\n" % tuple(map(
-            lambda raw, atom: int(raw[find_line(raw, atom, lambda a, b: a[12:16].strip() == b)][6:11]),
-            (fo_raw, fo_raw[split_point:]), (bond[0], bond[1])
-        )))
+    cryst = tuple(map(lambda x: 10 * float(x), lines[-1].split()))
+    fo.write("CRYST1%9.3f%9.3f%9.3f  90.00  90.00  90.00 P 1           1\n" % cryst)
+    residues = read_residues(lines[2:-1])
+    q = 0
+    resnum = 0
+    for res in residues:
+        assert (len(res["atoms"]) == len(resorder[res["restype"]]))
+        resnum += 1
+        res["resnum"] = resnum
+        for i in xrange(len(res["atoms"])):
+            q += 1
+            atom, newname = find_atom(res["atoms"], resorder[res["restype"]][i])
+            atom["num"] = q
+            atom["type"] = newname
+            fo.write("ATOM%7d  %-6s%-6s%-5d%8.3f%8.3f%8.3f  1.00  0.00\n" % (
+                q, newname, res["restype"], resnum,
+                atom["coords"][0], atom["coords"][1], atom["coords"][2]
+            ))
+    connects = find_connect(residues, filename.split('.')[0])
+    for connect in connects:
+        fo.write("CONECT %4d %4d\n" % connect)
+    fo.write("ENDMDL\n")
 
-    with open(new_filename, "w") as fo:
-        fo.writelines(fo_raw)
-    item["handled"] = True
 
-
-def main(force=False):
-    possible_list = find_existing.main()
-    for each in possible_list:
-        if each["existing_data"] is not None:
-            handle_existing(each, force)
-    list_possible.save_data(possible_list)
+def main():
+    data_list = list_possible.list_possible()
+    final_file = open("RNA-bps.pdb", 'w')
+    for i, item in enumerate(data_list):
+        itemname = utils.get_name(item)
+        existing = item["existing_data"] is not None
+        if existing:
+            coordfile = "new_coors/%s.gro" % '-'.join(itemname.split('-')[-1])
+        else:
+            coordfile = "test_new/%s.gro" % itemname
+        add_data(final_file, item, coordfile, existing, i)
+    final_file.close()
 
 
 if __name__ == "__main__":
-    main(True)
+    main()

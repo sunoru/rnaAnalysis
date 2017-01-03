@@ -314,10 +314,23 @@ def make_new(item):
     assert res1.name == res1c and res2.name == res2c
     new_name = utils.get_name(item)
     print new_name
-    # filename = "new_coors/%s.gro" % new_name
     filename = "test_new/%s.gro" % new_name
 
     try_edge_pair(item, res1, res2)
     moldata.localopt()
     moldata.write(format="gro", filename=filename, overwrite=True)
     return filename
+
+
+def main(force=False):
+    data_list = list_possible.list_possible()
+    for item in data_list:
+        if item["existing_data"] is None and (force or not item.get("created")):
+            print utils.get_name(item)
+            make_new(item)
+            item["created"] = True
+    list_possible.save_data(data_list)
+
+
+if __name__ == "__main__":
+    main(force=True)

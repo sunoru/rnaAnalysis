@@ -221,8 +221,7 @@ def main():
 
     fo = open("RNA-bps.pdb", "w")
 
-    for i in range(len(coorlist)):
-        filename = coorlist[i]
+    for i, filename in enumerate(coorlist):
         handle_file(fo, filename, i)
 
     fo.close()
