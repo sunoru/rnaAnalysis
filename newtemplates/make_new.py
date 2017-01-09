@@ -7,6 +7,7 @@ from scipy.spatial import ConvexHull
 
 import utils
 import find_existing, list_possible
+from prepare import pdb2gmx
 
 
 def set_coords(atom, (x, y, z)):
@@ -313,12 +314,15 @@ def make_new(item):
         res1, res2 = res2, res1
     assert res1.name == res1c and res2.name == res2c
     new_name = utils.get_name(item)
-    print new_name
     filename = "test_new/%s.gro" % new_name
 
     try_edge_pair(item, res1, res2)
     moldata.localopt()
+    moldata.title = new_name
     moldata.write(format="gro", filename=filename, overwrite=True)
+    pdb2gmx.editconf(filename, filename, force=True)
+
+    item["nswap"] = swap
     return filename
 
 
