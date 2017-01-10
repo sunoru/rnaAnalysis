@@ -2,11 +2,13 @@
 # coding=utf-8
 import sys
 
+
 def nt(name):
     try:
         return (name[0], int(name[1:]))
     except:
         return (name, -1)
+
 
 def input_result(inputfile):
     result = []
@@ -15,13 +17,13 @@ def input_result(inputfile):
             if not line.startswith("base pair"):
                 continue
             tmp = line.split()
-            tmp[5]
             t = "%c%c%c" % (
-                'c' if tmp[6] == 'cis' else 't',
-                tmp[5][0], tmp[5][2]
+                'c' if tmp[5] == 'cis' else 't',
+                tmp[6][0], tmp[6][1]
             )
-            result.append((nt(tmp[2]), nt(tmp[4]), t))
-    
+
+            result.append((nt(tmp[2]), nt(tmp[4]), t, tmp[6][2:]))
+
     result_dssr = []
     for line in sys.stdin:
         if line == '\n':
@@ -29,26 +31,30 @@ def input_result(inputfile):
         tmp = line.split()
         result_dssr.append((
             nt(tmp[1].split('.')[1]), nt(tmp[2].split('.')[1]),
-            tmp[-2]
+            tmp[-2], ""
         ))
     return result, result_dssr
+
 
 def init_output():
     k = [0, 0, 0]
     op = []
+
     def tos(r):
         if r is None:
-            return ' ' * 16
-        return " %s%-3s- %s%-4s%-4s" % (
+            return ' ' * 18
+        return " %s%-2s - %s%-3s %-3s%-3s" % (
             r[0][0], r[0][1],
             r[1][0], r[1][1],
-            r[2]
+            r[2], r[3]
         )
+
     def impl(r1, r2, match=False):
         if r1 is not None: k[0] += 1
         if r2 is not None: k[1] += 1
         if match: k[2] += 1
         op.append("%s%s%s" % (tos(r1), " √ " if match else " | ", tos(r2)))
+
     def print_output():
         print "There are %d base pairs in our result." % k[0]
         print "There are %d base pairs in DSSR's result." % k[1]
@@ -56,10 +62,12 @@ def init_output():
             print "The two results are the same!"
         else:
             print "Only %d lines match." % k[2]
-        print "   Our result    |  DSSR's result  "
+        print "     Our result    |   DSSR's result  "
         for line in op:
             print line
+
     return impl, print_output
+
 
 def main(inputfile):
     result, result_dssr = input_result(inputfile)
@@ -103,6 +111,7 @@ def main(inputfile):
             j += 1
             continue
     print_output()
+
 
 if __name__ == "__main__":
     assert len(sys.argv) == 2

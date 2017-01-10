@@ -66,7 +66,7 @@ def get_dssr_result():
     return result
 
 def compare(pdbid):
-    if not os.path.isfile(pdbid):
+    if not os.path.exists(pdbid):
         os.mkdir(pdbid)
     cwd = os.getcwd()
     os.chdir(pdbid)

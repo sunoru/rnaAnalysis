@@ -14,8 +14,15 @@ def add_data(fo, item, coordfile, existing, num):
     rmsd = item.get("rmsd", 0.22)
 
     fo.write("MODEL%9d\n" % (num + 1))
-    fo.write("REMARK {itemname} {rmsd} {artificial}\n".format(
-        itemname=itemname,
+    fo.write("REMARK {itemname} {mtype}-{reversed_mtype} {rmsd} {artificial}\n".format(
+        itemname="%s-%s" % (item["type"], item["recs"]),
+        mtype=item["mtype"],
+        reversed_mtype=(item["mtype"][0] + ('' if len(item["mtype"]) == 1 else (
+            'a' if item["mtype"][1] == 'b' else 'b'))) if item["type"][0] == 't' else (
+            str(len(list_possible.bond_atoms[item["recs"][0]][item["type"][1]]) +
+                len(list_possible.bond_atoms[item["recs"][1]][item["type"][2]]) - 1 -
+                int(item["mtype"][0]) - 1) + ('' if len(item["mtype"]) == 1 else item["mtype"][1])
+        ),
         rmsd=rmsd,
         artificial=0 if existing else 1
     ))
