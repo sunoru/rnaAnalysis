@@ -37,8 +37,10 @@ def editconf(pdbid):
     print cmd
     os.system(cmd)
 
-def analysis(pdbid):
-    cmd = "gmx rnaAnalysis -f %s.gro -s %s.gro -g result.dat -o result.xvg > /dev/null 2>&1" % (pdbid, pdbid)
+def analysis(pdbid, hydro=True, phos=True, sugar=True):
+    cmd = "gmx rnaAnalysis -f %s.gro -s %s.gro " % (pdbid, pdbid) \
+        + "-%shydro -%sphos -%ssugar -g result.dat -o result.xvg > /dev/null 2>&1" % (
+            "" if hydro else "no", "" if phos else "no", "" if sugar else "no")
     print cmd
     os.system(cmd)
 
@@ -65,7 +67,7 @@ def get_dssr_result():
             result.append(line)
     return result
 
-def compare(pdbid):
+def compare(pdbid, options):
     if not os.path.exists(pdbid):
         os.mkdir(pdbid)
     cwd = os.getcwd()
@@ -74,7 +76,7 @@ def compare(pdbid):
     fetch_pdbfile(pdbid)
     prepare.pdb2gmx.pdb2gmx(pdbid)
     editconf(pdbid)
-    analysis(pdbid)
+    analysis(pdbid, **options)
     fetch_dssr_output(pdbid)
     dssr_result = get_dssr_result()
 
@@ -92,8 +94,21 @@ def compare(pdbid):
 
 def main():
     if len(sys.argv) > 1:
-        for each in sys.argv[1:]:
-            compare(each)
+        options = {}
+        i = 1
+        while True:
+            if sys.argv[i] == "nohydro":
+                options["hydro"] = False
+            elif sys.argv[i] == "nophos":
+                options["phos"] = False
+            elif sys.argv[i] == "nosugar":
+                options["sugar"] = False
+            else:
+                break
+            i += 1
+
+        for each in sys.argv[i:]:
+            compare(each, options)
     else:
         for line in sys.stdin:
             pdbid = each.strip()
