@@ -22,7 +22,7 @@ def input_result(inputfile):
                 tmp[6][0], tmp[6][1]
             )
 
-            result.append((nt(tmp[2]), nt(tmp[4]), t, tmp[6][2:]))
+            result.append((nt(tmp[2][1:]), nt(tmp[4][1:]), t, tmp[6][2:]))
 
     result_dssr = []
     for line in sys.stdin:
@@ -33,6 +33,7 @@ def input_result(inputfile):
             nt(tmp[1].split('.')[1]), nt(tmp[2].split('.')[1]),
             tmp[-2], ""
         ))
+
     return result, result_dssr
 
 
@@ -72,8 +73,9 @@ def init_output():
 def main(inputfile):
     result, result_dssr = input_result(inputfile)
     output, print_output = init_output()
-    i = 0
-    j = 0
+    i = j = 0
+    ri = rj = 0
+    ti = tj = False
     while i < len(result) or j < len(result_dssr):
         if i == len(result):
             output(None, result_dssr[j])
@@ -85,6 +87,22 @@ def main(inputfile):
             continue
         r1 = result[i]
         r2 = result_dssr[j]
+        if not ti and i > 0 and r1[0][1] < result[i-1][0][1]:
+            ri += 1
+            ti = True
+        if not tj and j > 0 and r2[0][1] < result_dssr[j-1][0][1]:
+            rj += 1
+            tj = True
+        if ri < rj:
+            output(r1, None)
+            i += 1
+            ti = False
+            continue
+        elif ri > rj:
+            output(None, rj)
+            j += 1
+            tj = False
+            continue
         if r1[0][1] == r2[0][1]:
             if r1[1][1] == r2[1][1]:
                 if r1[2] == r2[2]:
@@ -93,22 +111,27 @@ def main(inputfile):
                     output(r1, r2, False)
                 i += 1
                 j += 1
+                ti = tj = False
                 continue
             elif r1[1][1] < r2[1][1]:
                 output(r1, None)
                 i += 1
+                ti = False
                 continue
             else:
                 output(None, r2)
                 j += 1
+                tj = False
                 continue
-        elif r1[0][1] < r2[0][1]:
+        if r1[0][1] < r2[0][1]:
             output(r1, None)
             i += 1
+            ti = False
             continue
         else:
             output(None, r2)
             j += 1
+            tj = False
             continue
     print_output()
 
