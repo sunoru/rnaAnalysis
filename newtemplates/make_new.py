@@ -40,7 +40,8 @@ def get_plane(res):
     return result
 
 
-def get_norm((a, b, c)):
+def get_norm((a, b, c)): 
+    # z = ax + by + c
     length = np.sqrt(a ** 2 + b ** 2 + 1)
     return (-a / length, -b / length, 1 / length)
 
