@@ -1,7 +1,7 @@
 #!/usr/bin/python2.7
 import numpy as np
 from numpy import cos, sin, array, matrix, abs
-import os
+import os, sys
 import pybel
 from scipy.spatial import ConvexHull
 
@@ -40,7 +40,7 @@ def get_plane(res):
     return result
 
 
-def get_norm((a, b, c)): 
+def get_norm((a, b, c)):
     # z = ax + by + c
     length = np.sqrt(a ** 2 + b ** 2 + 1)
     return (-a / length, -b / length, 1 / length)
@@ -292,7 +292,40 @@ def try_edge_pair(item, res1, res2):
     p = -sum(atom1.coords[0] + atom2.coords[0] for atom1, atom2 in bonds) / 2 / len(bonds)
     translate(res1, (p, 0, 0))
     translate(res2, (p, 0, 0))
-    # handle_phosphate(res1, res2)
+    while len(item["bonds"]) == 2:
+        if item["bonds"][0][0] == item["bonds"][1][0]:
+            nitro = bonds[0][0]
+            res_p = res1
+            upper = True
+        elif item["bonds"][0][1] == item["bonds"][1][1]:
+            nitro = bonds[0][1]
+            res_p = res2
+            upper = False
+        else:
+            break
+        if testpdb is not None:
+            testpdb.write(format="gro", filename="1.gro", overwrite=True)
+        gamma = None
+        x, y, z = nitro.coords
+        for neighbour in utils.get_bonded_atoms(nitro):
+            if neighbour.GetAtomicNum() == 1:
+                continue
+            k = (neighbour.GetY() - y) / (neighbour.GetX() - x)
+            gamma = np.arctan(k)
+            break
+        assert gamma is not None
+        rm = get_rotation_matrix(0, 0, np.pi / 2 - gamma)
+        translate(res_p, (-x, -y, -z))
+        if testpdb is not None:
+            testpdb.write(format="gro", filename="2.gro", overwrite=True)
+        rotate(res_p, rm)
+        if testpdb is not None:
+            testpdb.write(format="gro", filename="3.gro", overwrite=True)
+        translate(res_p, (x, y, z))
+        if testpdb is not None:
+            testpdb.write(format="gro", filename="4.gro", overwrite=True)
+        translate(res_p, (0, (-0.8 if upper else 0.8), 0))
+        break
 
 
 def make_new(item):
@@ -308,8 +341,6 @@ def make_new(item):
         swap = False
     assert os.path.isfile(ori)
     moldata = pybel.readfile("gro", ori).next()
-    global testpdb
-    testpdb = moldata
     res1, res2 = moldata.residues
     if swap:
         res1, res2 = res2, res1
@@ -317,6 +348,11 @@ def make_new(item):
     new_name = utils.get_name(item)
     filename = "test_new/%s.gro" % new_name
 
+    if new_name == "cWW-CG-1.5b":
+        global testpdb
+        testpdb = moldata
+    else:
+        testpdb = None
     try_edge_pair(item, res1, res2)
     moldata.localopt()
     moldata.title = new_name
@@ -330,7 +366,7 @@ def make_new(item):
 def main(force=False):
     data_list = list_possible.list_possible()
     for item in data_list:
-        if item["existing_data"] is None and (force or not item.get("created")):
+        if item.get("existing_data") is None and (force or not item.get("created")):
             print utils.get_name(item)
             make_new(item)
             item["created"] = True
@@ -338,4 +374,8 @@ def main(force=False):
 
 
 if __name__ == "__main__":
-    main(force=True)
+    if len(sys.argv) > 1:
+        force = sys.argv[1] != "noforce"
+    else:
+        force = True
+    main(force)

@@ -6680,5 +6680,583 @@
         "nswap": false, 
         "recs": "GG", 
         "type": "tWW"
+    }, 
+    {
+        "bonds": [
+            [
+                "N6", 
+                "N3"
+            ], 
+            [
+                "N6", 
+                "O2"
+            ]
+        ], 
+        "created": true, 
+        "mtype": "0.5a", 
+        "nswap": false, 
+        "recs": "AC", 
+        "type": "cHW"
+    }, 
+    {
+        "bonds": [
+            [
+                "N6", 
+                "N3"
+            ], 
+            [
+                "N6", 
+                "O2"
+            ]
+        ], 
+        "created": true, 
+        "mtype": "0.5a", 
+        "nswap": false, 
+        "recs": "AC", 
+        "type": "cWW"
+    }, 
+    {
+        "bonds": [
+            [
+                "N6", 
+                "O2"
+            ], 
+            [
+                "N6", 
+                "N3"
+            ]
+        ], 
+        "created": true, 
+        "mtype": "1.5a", 
+        "nswap": false, 
+        "recs": "AC", 
+        "type": "tHW"
+    }, 
+    {
+        "bonds": [
+            [
+                "N6", 
+                "O2"
+            ], 
+            [
+                "N6", 
+                "N3"
+            ]
+        ], 
+        "created": true, 
+        "mtype": "1.5a", 
+        "nswap": false, 
+        "recs": "AC", 
+        "type": "tWW"
+    }, 
+    {
+        "bonds": [
+            [
+                "N6", 
+                "O6"
+            ], 
+            [
+                "N6", 
+                "N7"
+            ]
+        ], 
+        "created": true, 
+        "mtype": "1.5a", 
+        "nswap": false, 
+        "recs": "AG", 
+        "type": "cHH"
+    }, 
+    {
+        "bonds": [
+            [
+                "N6", 
+                "O6"
+            ], 
+            [
+                "N6", 
+                "N7"
+            ]
+        ], 
+        "created": true, 
+        "mtype": "1.5a", 
+        "nswap": false, 
+        "recs": "AG", 
+        "type": "cWH"
+    }, 
+    {
+        "bonds": [
+            [
+                "N6", 
+                "N7"
+            ], 
+            [
+                "N6", 
+                "O6"
+            ]
+        ], 
+        "created": true, 
+        "mtype": "0.5a", 
+        "nswap": false, 
+        "recs": "AG", 
+        "type": "tHH"
+    }, 
+    {
+        "bonds": [
+            [
+                "N6", 
+                "N7"
+            ], 
+            [
+                "N6", 
+                "O6"
+            ]
+        ], 
+        "created": true, 
+        "mtype": "0.5a", 
+        "nswap": false, 
+        "recs": "AG", 
+        "type": "tWH"
+    }, 
+    {
+        "bonds": [
+            [
+                "N4", 
+                "N3"
+            ], 
+            [
+                "N4", 
+                "O2"
+            ]
+        ], 
+        "created": true, 
+        "mtype": "0.5a", 
+        "nswap": false, 
+        "recs": "CC", 
+        "type": "cHW"
+    }, 
+    {
+        "bonds": [
+            [
+                "N4", 
+                "N3"
+            ], 
+            [
+                "N4", 
+                "O2"
+            ]
+        ], 
+        "created": true, 
+        "mtype": "0.5a", 
+        "nswap": false, 
+        "recs": "CC", 
+        "type": "cWW"
+    }, 
+    {
+        "bonds": [
+            [
+                "N3", 
+                "N4"
+            ], 
+            [
+                "O2", 
+                "N4"
+            ]
+        ], 
+        "created": true, 
+        "mtype": "3.5b", 
+        "nswap": false, 
+        "recs": "CC", 
+        "type": "cWW"
+    }, 
+    {
+        "bonds": [
+            [
+                "N4", 
+                "O2"
+            ], 
+            [
+                "N4", 
+                "N3"
+            ]
+        ], 
+        "created": true, 
+        "mtype": "1.5a", 
+        "nswap": false, 
+        "recs": "CC", 
+        "type": "tHW"
+    }, 
+    {
+        "bonds": [
+            [
+                "N4", 
+                "O2"
+            ], 
+            [
+                "N4", 
+                "N3"
+            ]
+        ], 
+        "created": true, 
+        "mtype": "1.5a", 
+        "nswap": false, 
+        "recs": "CC", 
+        "type": "tWW"
+    }, 
+    {
+        "bonds": [
+            [
+                "N3", 
+                "N4"
+            ], 
+            [
+                "O2", 
+                "N4"
+            ]
+        ], 
+        "created": true, 
+        "mtype": "1.5b", 
+        "nswap": false, 
+        "recs": "CC", 
+        "type": "tWW"
+    }, 
+    {
+        "bonds": [
+            [
+                "N3", 
+                "N3"
+            ], 
+            [
+                "O2", 
+                "N3"
+            ]
+        ], 
+        "created": true, 
+        "mtype": "2.5b", 
+        "nswap": true, 
+        "recs": "CU", 
+        "type": "cWW"
+    }, 
+    {
+        "bonds": [
+            [
+                "N3", 
+                "N3"
+            ], 
+            [
+                "O2", 
+                "N3"
+            ]
+        ], 
+        "created": true, 
+        "mtype": "2.5b", 
+        "nswap": true, 
+        "recs": "CU", 
+        "type": "tWW"
+    }, 
+    {
+        "bonds": [
+            [
+                "N4", 
+                "O6"
+            ], 
+            [
+                "N4", 
+                "N7"
+            ]
+        ], 
+        "created": true, 
+        "mtype": "1.5a", 
+        "nswap": false, 
+        "recs": "CG", 
+        "type": "cHH"
+    }, 
+    {
+        "bonds": [
+            [
+                "N4", 
+                "O6"
+            ], 
+            [
+                "N4", 
+                "N7"
+            ]
+        ], 
+        "created": true, 
+        "mtype": "1.5a", 
+        "nswap": false, 
+        "recs": "CG", 
+        "type": "cWH"
+    }, 
+    {
+        "bonds": [
+            [
+                "N3", 
+                "N2"
+            ], 
+            [
+                "O2", 
+                "N2"
+            ]
+        ], 
+        "created": true, 
+        "mtype": "3.5b", 
+        "nswap": false, 
+        "recs": "CG", 
+        "type": "cWS"
+    }, 
+    {
+        "bonds": [
+            [
+                "N3", 
+                "N1"
+            ], 
+            [
+                "O2", 
+                "N1"
+            ]
+        ], 
+        "created": true, 
+        "mtype": "2.5b", 
+        "nswap": false, 
+        "recs": "CG", 
+        "type": "cWW"
+    }, 
+    {
+        "bonds": [
+            [
+                "N3", 
+                "N2"
+            ], 
+            [
+                "O2", 
+                "N2"
+            ]
+        ], 
+        "created": true, 
+        "mtype": "1.5b", 
+        "nswap": false, 
+        "recs": "CG", 
+        "type": "cWW"
+    }, 
+    {
+        "bonds": [
+            [
+                "N4", 
+                "N7"
+            ], 
+            [
+                "N4", 
+                "O6"
+            ]
+        ], 
+        "created": true, 
+        "mtype": "0.5a", 
+        "nswap": false, 
+        "recs": "CG", 
+        "type": "tHH"
+    }, 
+    {
+        "bonds": [
+            [
+                "N4", 
+                "N7"
+            ], 
+            [
+                "N4", 
+                "O6"
+            ]
+        ], 
+        "created": true, 
+        "mtype": "0.5a", 
+        "nswap": false, 
+        "recs": "CG", 
+        "type": "tWH"
+    }, 
+    {
+        "bonds": [
+            [
+                "N3", 
+                "N2"
+            ], 
+            [
+                "O2", 
+                "N2"
+            ]
+        ], 
+        "created": true, 
+        "mtype": "1.5b", 
+        "nswap": false, 
+        "recs": "CG", 
+        "type": "tWS"
+    }, 
+    {
+        "bonds": [
+            [
+                "N3", 
+                "N2"
+            ], 
+            [
+                "O2", 
+                "N2"
+            ]
+        ], 
+        "created": true, 
+        "mtype": "3.5b", 
+        "nswap": false, 
+        "recs": "CG", 
+        "type": "tWW"
+    }, 
+    {
+        "bonds": [
+            [
+                "N3", 
+                "N1"
+            ], 
+            [
+                "O2", 
+                "N1"
+            ]
+        ], 
+        "created": true, 
+        "mtype": "2.5b", 
+        "nswap": false, 
+        "recs": "CG", 
+        "type": "tWW"
+    }, 
+    {
+        "bonds": [
+            [
+                "N3", 
+                "O6"
+            ], 
+            [
+                "N3", 
+                "N7"
+            ]
+        ], 
+        "created": true, 
+        "mtype": "2.5a", 
+        "nswap": false, 
+        "recs": "UG", 
+        "type": "cWH"
+    }, 
+    {
+        "bonds": [
+            [
+                "N3", 
+                "N7"
+            ], 
+            [
+                "N3", 
+                "O6"
+            ]
+        ], 
+        "created": true, 
+        "mtype": "1.5a", 
+        "nswap": false, 
+        "recs": "UG", 
+        "type": "tWH"
+    }, 
+    {
+        "bonds": [
+            [
+                "O6", 
+                "N2"
+            ], 
+            [
+                "N7", 
+                "N2"
+            ]
+        ], 
+        "created": true, 
+        "mtype": "2.5b", 
+        "nswap": false, 
+        "recs": "GG", 
+        "type": "cHS"
+    }, 
+    {
+        "bonds": [
+            [
+                "O6", 
+                "N1"
+            ], 
+            [
+                "N7", 
+                "N1"
+            ]
+        ], 
+        "created": true, 
+        "mtype": "1.5b", 
+        "nswap": false, 
+        "recs": "GG", 
+        "type": "cHW"
+    }, 
+    {
+        "bonds": [
+            [
+                "O6", 
+                "N2"
+            ], 
+            [
+                "N7", 
+                "N2"
+            ]
+        ], 
+        "created": true, 
+        "mtype": "0.5b", 
+        "nswap": false, 
+        "recs": "GG", 
+        "type": "cHW"
+    }, 
+    {
+        "bonds": [
+            [
+                "O6", 
+                "N2"
+            ], 
+            [
+                "N7", 
+                "N2"
+            ]
+        ], 
+        "created": true, 
+        "mtype": "0.5b", 
+        "nswap": false, 
+        "recs": "GG", 
+        "type": "tHS"
+    }, 
+    {
+        "bonds": [
+            [
+                "O6", 
+                "N2"
+            ], 
+            [
+                "N7", 
+                "N2"
+            ]
+        ], 
+        "created": true, 
+        "mtype": "2.5b", 
+        "nswap": false, 
+        "recs": "GG", 
+        "type": "tHW"
+    }, 
+    {
+        "bonds": [
+            [
+                "O6", 
+                "N1"
+            ], 
+            [
+                "N7", 
+                "N1"
+            ]
+        ], 
+        "created": true, 
+        "mtype": "1.5b", 
+        "nswap": false, 
+        "recs": "GG", 
+        "type": "tHW"
     }
 ]

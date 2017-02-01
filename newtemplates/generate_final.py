@@ -5,6 +5,11 @@ import itertools
 from newtemplates import list_possible, utils
 from prepare import make_bps
 
+def mtype_value(x):
+    x = float(x)
+    if int(x) == x:
+        return int(x)
+    return x
 
 def add_data(fo, item, coordfile, existing, num):
     itemname = utils.get_name(item)
@@ -13,16 +18,27 @@ def add_data(fo, item, coordfile, existing, num):
         lines = fi.readlines()
     rmsd = item.get("rmsd", 0.22)
 
+    st = item["mtype"][-1]
+    if item["type"][0] == 't':
+        if st in {'a', 'b'}:
+            reversed_mtype = item["mtype"][:-1] + 'a' if st == 'b' else 'b'
+        else:
+            reversed_mtype = item["mtype"]
+    else:
+        if st in {'a', 'b'}:
+            reversed_mtype = str(len(list_possible.bond_atoms[item["recs"][0]][item["type"][1]]) +
+                                 len(list_possible.bond_atoms[item["recs"][1]][item["type"][2]]) -
+                                 2 - mtype_value(item["mtype"][:-1])) + st
+        else:
+            reversed_mtype = str(len(list_possible.bond_atoms[item["recs"][0]][item["type"][1]]) +
+                                 len(list_possible.bond_atoms[item["recs"][1]][item["type"][2]]) -
+                                 2 - mtype_value(item["mtype"]))
+
     fo.write("MODEL%9d\n" % (num + 1))
     fo.write("REMARK {itemname} {mtype}-{reversed_mtype} {rmsd} {artificial}\n".format(
         itemname="%s-%s" % (item["type"], item["recs"]),
         mtype=item["mtype"],
-        reversed_mtype=(item["mtype"][0] + ('' if len(item["mtype"]) == 1 else (
-            'a' if item["mtype"][1] == 'b' else 'b'))) if item["type"][0] == 't' else (
-            str(len(list_possible.bond_atoms[item["recs"][0]][item["type"][1]]) +
-                len(list_possible.bond_atoms[item["recs"][1]][item["type"][2]]) - 1 -
-                int(item["mtype"][0]) - 1) + ('' if len(item["mtype"]) == 1 else item["mtype"][1])
-        ),
+        reversed_mtype=reversed_mtype,
         rmsd=rmsd,
         artificial=0 if existing else 1
     ))
@@ -67,7 +83,7 @@ def main():
     final_file = open("RNA-bps.pdb", 'w')
     for i, item in enumerate(data_list):
         itemname = utils.get_name(item)
-        existing = item["existing_data"] is not None
+        existing = item.get("existing_data") is not None
         if existing:
             coordfile = item["existing_data"]["coordfile"]
         else:
