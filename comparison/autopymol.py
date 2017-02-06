@@ -22,7 +22,9 @@ def get_selection(line):
         i += 1
     if i > 0:
         atomnum.extend(get_atomnum(tmp[:i]))
-    atomnum.extend(get_atomnum(tmp[i+1:]))
+    i += 1
+    if i < len(tmp):
+        atomnum.extend(get_atomnum(tmp[i:]))
     sel += '+'.join(set(atomnum))
     return sel
 

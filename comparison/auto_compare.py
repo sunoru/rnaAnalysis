@@ -8,6 +8,7 @@ import sys
 
 import requests
 
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 import prepare.pdb2gmx
 
 
@@ -93,10 +94,11 @@ def compare(pdbid, options):
     os.chdir(cwd)
 
 def main():
-    if len(sys.argv) > 1:
-        options = {}
-        i = 1
-        while True:
+    i = 1
+    l = len(sys.argv)
+    options = {}
+    if l > 1:
+        while i < l:
             if sys.argv[i] == "nohydro":
                 options["hydro"] = False
             elif sys.argv[i] == "nophos":
@@ -106,13 +108,13 @@ def main():
             else:
                 break
             i += 1
-
+    if i < l:
         for each in sys.argv[i:]:
             compare(each, options)
     else:
         for line in sys.stdin:
-            pdbid = each.strip()
+            pdbid = line.strip()
             if pdbid:
-                compare(pdbid)
+                compare(pdbid, options)
 
 main()
