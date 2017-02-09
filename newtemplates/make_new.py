@@ -137,17 +137,6 @@ def check_upper(res, atoms):
     return p > 0
 
 
-testpdb = None
-iii = 0
-testatoms = None
-
-
-def test_show():
-    global iii
-    iii += 1
-    testpdb.write("gro", "test_new/%d.gro" % iii, True)
-
-
 def get_line((x0, y0), (x1, y1)):
     return y1 - y0, x0 - x1, (y0 - y1) * x0 + (x1 - x0) * y0
 
@@ -303,8 +292,6 @@ def try_edge_pair(item, res1, res2):
             upper = False
         else:
             break
-        if testpdb is not None:
-            testpdb.write(format="gro", filename="1.gro", overwrite=True)
         gamma = None
         x, y, z = nitro.coords
         for neighbour in utils.get_bonded_atoms(nitro):
@@ -316,14 +303,8 @@ def try_edge_pair(item, res1, res2):
         assert gamma is not None
         rm = get_rotation_matrix(0, 0, np.pi / 2 - gamma)
         translate(res_p, (-x, -y, -z))
-        if testpdb is not None:
-            testpdb.write(format="gro", filename="2.gro", overwrite=True)
         rotate(res_p, rm)
-        if testpdb is not None:
-            testpdb.write(format="gro", filename="3.gro", overwrite=True)
         translate(res_p, (x, y, z))
-        if testpdb is not None:
-            testpdb.write(format="gro", filename="4.gro", overwrite=True)
         translate(res_p, (0, (-0.8 if upper else 0.8), 0))
         break
 
@@ -348,11 +329,6 @@ def make_new(item):
     new_name = utils.get_name(item)
     filename = "test_new/%s.gro" % new_name
 
-    if new_name == "cWW-CG-1.5b":
-        global testpdb
-        testpdb = moldata
-    else:
-        testpdb = None
     try_edge_pair(item, res1, res2)
     moldata.localopt()
     moldata.title = new_name

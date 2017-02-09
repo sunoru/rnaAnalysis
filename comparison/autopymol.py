@@ -37,7 +37,7 @@ def autocompare(filename=None):
     while stored.index < len(stored.results):
         line = stored.results[stored.index]
         stored.index += 1
-        if line.find("√") >= 0:
+        if line.find("√") >= 0 or line.strip() == "":
             continue
         print(line)
         sel = get_selection(line)
