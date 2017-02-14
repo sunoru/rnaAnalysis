@@ -40,7 +40,10 @@ def autocompare(filename=None):
         if line.find("√") >= 0 or line.strip() == "":
             continue
         print(line)
-        sel = get_selection(line)
+        try:
+            sel = get_selection(line)
+        except:
+            continue
         cmd.select(sel)
         cmd.hide("all")
         cmd.show("lines", sel)
