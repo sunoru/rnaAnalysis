@@ -18,7 +18,7 @@ def pdb2pdb(pdbid):
     with open(finame) as fi, open(foname, 'w') as fo:
         cchain = None
         cresnum = None
-        i = 3
+        starting = True
         for line in fi:
             if line.startswith("ENDMDL"):
                 break
@@ -29,12 +29,11 @@ def pdb2pdb(pdbid):
                 resnum = line[22:26].strip()
                 if resnum != cresnum:
                     cresnum = resnum
-                    i = 3
+                    starting = False
                 if chain != cchain:
                     cchain = chain
-                    i = 0
-                if i < 3 and line.find('P') >= 0:
-                    i += 1
+                    starting = True
+                if starting and line.find('P') >= 0:
                     continue
                 if line.find("HO2'") >= 0:
                     line = line.replace("HO2'", "HO'2")

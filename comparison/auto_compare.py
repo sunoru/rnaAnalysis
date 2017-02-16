@@ -1,5 +1,9 @@
 #!/usr/bin/python2
 # coding=utf-8
+# Usage: python2 auto_compare.py [nohydro] [nophos] [nosugar] [PDBID1] [PDBID2] ...
+# If no PDB ID is given, read a PDB ID from each line of stdin.
+# It will automatically create a directory named as the PDB ID, download the PDB,
+# analyze it with both our tool and DSSR, and finally give the comparison by running `compare.py`.
 
 import codecs
 import os
@@ -38,7 +42,7 @@ def editconf(pdbid):
     print cmd
     os.system(cmd)
 
-def analysis(pdbid, hydro=True, phos=True, sugar=True):
+def analyze(pdbid, hydro=True, phos=True, sugar=True):
     cmd = "gmx rnaAnalysis -f %s.gro -s %s.gro " % (pdbid, pdbid) \
         + "-%shydro -%sphos -%ssugar -g result.dat -o result.xvg > /dev/null 2>&1" % (
             "" if hydro else "no", "" if phos else "no", "" if sugar else "no")
@@ -77,7 +81,7 @@ def compare(pdbid, options):
     fetch_pdbfile(pdbid)
     prepare.pdb2gmx.pdb2gmx(pdbid)
     editconf(pdbid)
-    analysis(pdbid, **options)
+    analyze(pdbid, **options)
     fetch_dssr_output(pdbid)
     dssr_result = get_dssr_result()
 

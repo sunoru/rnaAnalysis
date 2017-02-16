@@ -1,4 +1,7 @@
 # This is a Python 3 script.
+# Usage: in PyMol, execute `run autopymol.py`.
+# And then use `autocompare [filename]` or `ac [filename]` (where `filename` is usually `compare.txt`)
+# to check the differences. Use the function without a `filename` to see the next difference.
 
 from pymol import cmd, stored
 

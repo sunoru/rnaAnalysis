@@ -1,5 +1,9 @@
 #!/usr/bin/python2
 # coding=utf-8
+# Usage: python2 compare.py result < dssrresult > compare.txt
+# read results from `result` (which is usually `result.dat`)
+# input dssr results from stdin (only the base pair results without any extra lines).
+# output the comparisons to stdout.
 import sys
 
 
