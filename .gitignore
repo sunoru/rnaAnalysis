@@ -6,3 +6,7 @@ __pycache__
 build/
 *.itp
 *.top
+backups/
+pdbs/
+logs/
+testfiles/
