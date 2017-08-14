@@ -61,13 +61,17 @@ def save_nrlist(nrlist_data):
     
 
 def fetch_rnas(nrlist, force=False):
+    if force or "downloaded" not in nrlist:
+        nrlist["downloaded"] = {}
+    downloaded = nrlist["downloaded"]
     for item in nrlist["nrlist"]:
-        if item.get("downloaded"):
-            continue
         rnaid = item["rnaid"]
+        if rnaid in downloaded:
+            continue
         try:
             fetch_rna(rnaid, force)
-            item["downloaded"] = True
+            downloaded[rnaid] = True
         except Exception as e:
+            downloaded[rnaid] = False
             error("Failed to download %s.pdb: %s" % (rnaid, e.message))
     save_nrlist(nrlist)

@@ -22,9 +22,9 @@ def writefile(filename):
 def readfile(filename):
     return codecs.open(filename, 'r', encoding='UTF-8')
 
-def fetch_pdbfile(pdbid):
+def fetch_pdbfile(pdbid, force=False):
     filename = "%s.pdb" % (pdbid)
-    if os.path.isfile(filename):
+    if not force and os.path.isfile(filename):
         return
     url = "https://files.rcsb.org/download/%s.pdb" % pdbid
     print "Fetching %s" % url
@@ -33,8 +33,8 @@ def fetch_pdbfile(pdbid):
     with writefile(filename) as fo:
         fo.write(raw)
 
-def editconf(pdbid):
-    if os.path.isfile("%s.gro" % pdbid):
+def editconf(pdbid, force=False):
+    if not force and os.path.isfile("%s.gro" % pdbid):
         return 1
     cmd = "gmx editconf -d 1.0 -f %s-t.gro -o %s.gro > /dev/null 2>&1" % (
         pdbid, pdbid
@@ -49,9 +49,9 @@ def analyze(pdbid, hydro=True, phos=True, sugar=True):
     print cmd
     return os.system(cmd)
 
-def fetch_dssr_output(pdbid):
+def fetch_dssr_output(pdbid, force=False):
     filename = "dssr.txt"
-    if os.path.isfile(filename):
+    if not force and os.path.isfile(filename):
         return
     print "Requesting DSSR output"
     url = "http://dssr.x3dna.org"

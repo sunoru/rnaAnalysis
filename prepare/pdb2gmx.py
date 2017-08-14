@@ -7,13 +7,13 @@ rnatypes = {"A", "U", "C", "G", "RA", "RU", "RC", "RG", "RA5", "RT5", "RU5", "RC
             "RU3", "RC3", "RG3", "RAN", "RTN", "RUN", "RCN", "RGN"}
 
 
-def pdb2pdb(pdbid):
+def pdb2pdb(pdbid, force=False):
     if pdbid.endswith(".pdb"):
         finame = pdbid
     else:
         finame = "%s.pdb" % pdbid
     foname = finame.replace(".pdb", "-t.pdb")
-    if os.path.isfile(foname):
+    if not force and os.path.isfile(foname):
         return foname
     with open(finame) as fi, open(foname, 'w') as fo:
         cchain = None
@@ -33,23 +33,22 @@ def pdb2pdb(pdbid):
                 if chain != cchain:
                     cchain = chain
                     starting = True
-                if starting and line.find('P') >= 0:
+                if starting and line[12:16].find('P') >= 0:
                     continue
-                if line.find("HO2'") >= 0:
+                if line[12:16] == "HO2'":
                     line = line.replace("HO2'", "HO'2")
                 if line.find("HN3") >= 0:
                     continue  # really weird.
-                tmp = line.split()
-                if len(tmp) > 3 and tmp[3] in rnatypes:
+                if line[17:20].strip() in rnatypes:
                     fo.write(line)
     return foname
 
 
-def pdb2gro(pdbname, print_cmd=True):
+def pdb2gro(pdbname, print_cmd=True, force=False):
     foname = pdbname[:-3] + "gro"
-    if os.path.isfile(foname):
+    if not force and os.path.isfile(foname):
         return foname, 0
-    cmd = "gmx pdb2gmx -f %s -ff amber99sb-ildn -water none -p %s -i %s -o %s >> /dev/null 2>&1" % (
+    cmd = "gmx pdb2gmx -f %s -ff amber99sb-ildn -water none -p %s -i %s -o %s -missing >> /dev/null 2>&1" % (
         pdbname, pdbname[:-3] + "top", pdbname[:-3] + "itp", foname
     )
     if print_cmd:
@@ -58,9 +57,9 @@ def pdb2gro(pdbname, print_cmd=True):
     return foname, ret
 
 
-def pdb2gmx(pdbid):
-    pdbname = pdb2pdb(pdbid)
-    return pdb2gro(pdbname)[1]
+def pdb2gmx(pdbid, force=False):
+    pdbname = pdb2pdb(pdbid, force=force)
+    return pdb2gro(pdbname, force=force)[1]
 
 
 def editconf(finame, foname, force=False, print_cmd=True):
