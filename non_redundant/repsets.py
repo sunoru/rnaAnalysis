@@ -1,6 +1,6 @@
 #!/usr/bin/python2
 
-from utils import *
+from .utils import *
 import csv
 
 def get_nrlist(version=None, force=False):
@@ -38,7 +38,7 @@ def parse_csv(csvdata_raw):
 
 
 def fetch_rna(rnaid, force=False):
-    datadir = os.path.join("testfiles", rnaid)
+    datadir = os.path.join(TEST_DIR, rnaid)
     if not os.path.isdir(datadir):
         os.mkdir(datadir)
     filename = os.path.join(datadir, "%s.pdb" % rnaid)
@@ -46,6 +46,8 @@ def fetch_rna(rnaid, force=False):
         return filename
     info("Fetching %s pdb file." % rnaid)
     data = fetch_raw("https://files.rcsb.org/download/%s.pdb" % rnaid)
+    if data is None:
+        raise Exception("no pdb data (maybe there is pdbx)")
     with open(filename, 'w') as fo:
         fo.write(data)
     return filename
@@ -64,8 +66,8 @@ def fetch_rnas(nrlist, force=False):
             continue
         rnaid = item["rnaid"]
         try:
-            fetch_rna(rnaid)
+            fetch_rna(rnaid, force)
             item["downloaded"] = True
-        except e:
-            error("Failed to download %s.pdb: %s" % (rnaid, e.msg))
+        except Exception as e:
+            error("Failed to download %s.pdb: %s" % (rnaid, e.message))
     save_nrlist(nrlist)

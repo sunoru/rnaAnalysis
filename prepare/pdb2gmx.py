@@ -48,19 +48,19 @@ def pdb2pdb(pdbid):
 def pdb2gro(pdbname, print_cmd=True):
     foname = pdbname[:-3] + "gro"
     if os.path.isfile(foname):
-        return foname
+        return foname, 0
     cmd = "gmx pdb2gmx -f %s -ff amber99sb-ildn -water none -p %s -i %s -o %s >> /dev/null 2>&1" % (
         pdbname, pdbname[:-3] + "top", pdbname[:-3] + "itp", foname
     )
     if print_cmd:
         print cmd
-    os.system(cmd)
-    return foname
+    ret = os.system(cmd)
+    return foname, ret
 
 
 def pdb2gmx(pdbid):
     pdbname = pdb2pdb(pdbid)
-    pdb2gro(pdbname)
+    return pdb2gro(pdbname)[1]
 
 
 def editconf(finame, foname, force=False, print_cmd=True):

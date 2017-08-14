@@ -9,4 +9,5 @@ build/
 backups/
 pdbs/
 logs/
-testfiles/
+/non_redundant/testfiles/
+/non_redundant/data/

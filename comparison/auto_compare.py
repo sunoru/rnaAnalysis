@@ -35,19 +35,19 @@ def fetch_pdbfile(pdbid):
 
 def editconf(pdbid):
     if os.path.isfile("%s.gro" % pdbid):
-        return
+        return 1
     cmd = "gmx editconf -d 1.0 -f %s-t.gro -o %s.gro > /dev/null 2>&1" % (
         pdbid, pdbid
     )
     print cmd
-    os.system(cmd)
+    return os.system(cmd)
 
 def analyze(pdbid, hydro=True, phos=True, sugar=True):
     cmd = "gmx rnaAnalysis -f %s.gro -s %s.gro " % (pdbid, pdbid) \
         + "-%shydro -%sphos -%ssugar -g result.dat -o result.xvg > /dev/null 2>&1" % (
             "" if hydro else "no", "" if phos else "no", "" if sugar else "no")
     print cmd
-    os.system(cmd)
+    return os.system(cmd)
 
 def fetch_dssr_output(pdbid):
     filename = "dssr.txt"
@@ -121,4 +121,5 @@ def main():
             if pdbid:
                 compare(pdbid, options)
 
-main()
+if __name__ == "__main__":
+    main()
