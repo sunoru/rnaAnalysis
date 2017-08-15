@@ -1,4 +1,4 @@
-#!/usr/bin/python2.7
+#!/usr/bin/env python2
 
 from newtemplates.list_possible import list_possible, save_data, bond_atoms, \
     make_data, nuc_names, edge_names

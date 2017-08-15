@@ -1,5 +1,4 @@
-#/usr/bin/python2
-
+#!/usr/bin/env python2
 from .utils import *
 from .repsets import get_nrlist, save_nrlist
 import os

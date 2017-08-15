@@ -1,4 +1,4 @@
-#!/usr/bin/python2
+#!/usr/bin/env python2
 # coding=utf-8
 # Usage: python2 compare.py result < dssrresult > compare.txt
 # read results from `result` (which is usually `result.dat`)

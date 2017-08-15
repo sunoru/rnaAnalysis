@@ -1,4 +1,4 @@
-#!/usr/bin/python2.7
+#!/usr/bin/env python2
 
 import os
 import sys
@@ -25,6 +25,8 @@ def pdb2pdb(pdbid, force=False):
             if line.startswith("ATOM"):
                 if line[16] == 'B':
                     continue
+                if line[17:20].strip() not in rnatypes:
+                    continue
                 chain = line[20:22].strip()
                 resnum = line[22:26].strip()
                 if resnum != cresnum:
@@ -39,8 +41,7 @@ def pdb2pdb(pdbid, force=False):
                     line = line.replace("HO2'", "HO'2")
                 if line.find("HN3") >= 0:
                     continue  # really weird.
-                if line[17:20].strip() in rnatypes:
-                    fo.write(line)
+                fo.write(line)
     return foname
 
 

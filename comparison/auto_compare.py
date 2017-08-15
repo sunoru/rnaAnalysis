@@ -1,4 +1,4 @@
-#!/usr/bin/python2
+#!/usr/bin/env python2
 # coding=utf-8
 # Usage: python2 auto_compare.py [nohydro] [nophos] [nosugar] [PDBID1] [PDBID2] ...
 # If no PDB ID is given, read a PDB ID from each line of stdin.
