@@ -1,8 +1,8 @@
 #!/usr/bin/env python2
-from .utils import *
-from .repsets import get_nrlist, save_nrlist
 import os
 import sys
+from .utils import *
+from .repsets import get_nrlist, save_nrlist
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from comparison.auto_compare import editconf, analyze
@@ -53,3 +53,7 @@ def testall(force=False):
             if cmd.upper() in ['N', 'NO']:
                 break
     os.chdir(pwd)
+
+
+if __name__ == '__main__':
+    testall(force=(len(sys.argv) == 1 && sys.argv[1] == 'force'))

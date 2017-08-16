@@ -1,7 +1,7 @@
 #!/usr/bin/env python2
-
-from .utils import *
 import csv
+from .utils import *
+
 
 def get_nrlist(version=None, force=False):
     if version is None:
