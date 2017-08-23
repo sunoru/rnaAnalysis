@@ -42,10 +42,11 @@ def editconf(pdbid, force=False):
     print cmd
     return os.system(cmd)
 
-def analyze(pdbid, hydro=True, phos=True, sugar=True):
+def analyze(pdbid, hydro=True, phos=True, sugar=True, pdbFiles=False):
     cmd = "gmx rnaAnalysis -f %s.gro -s %s.gro " % (pdbid, pdbid) \
-        + "-%shydro -%sphos -%ssugar -g result.dat -o result.xvg > /dev/null 2>&1" % (
-            "" if hydro else "no", "" if phos else "no", "" if sugar else "no")
+        + "-%shydro -%sphos -%ssugar -g result.dat -o result.xvg %s > /dev/null 2>&1" % (
+            "" if hydro else "no", "" if phos else "no", "" if sugar else "no",
+            "-pdbFiles" if pdbFiles else "")
     print cmd
     return os.system(cmd)
 

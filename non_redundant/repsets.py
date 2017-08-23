@@ -1,6 +1,6 @@
 #!/usr/bin/env python2
 import csv
-from .utils import *
+from non_redundant.utils import *
 
 
 def get_nrlist(version=None, force=False):

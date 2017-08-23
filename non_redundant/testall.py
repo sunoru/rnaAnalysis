@@ -1,12 +1,12 @@
 #!/usr/bin/env python2
 import os
 import sys
-from .utils import *
-from .repsets import get_nrlist, save_nrlist
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from comparison.auto_compare import editconf, analyze
 from prepare.pdb2gmx import pdb2gmx
+from non_redundant.utils import *
+from non_redundant.repsets import get_nrlist, save_nrlist
 
 
 def testone(pdbid, force=False):
@@ -15,7 +15,7 @@ def testone(pdbid, force=False):
     try:
         assert pdb2gmx(pdbid, force=force) == 0
         assert editconf(pdbid, force=force) == 0
-        assert analyze(pdbid) == 0
+        assert analyze(pdbid, pdbFiles=True) == 0
     except AssertionError as e:
         raise e
     finally:
@@ -56,4 +56,4 @@ def testall(force=False):
 
 
 if __name__ == '__main__':
-    testall(force=(len(sys.argv) == 1 && sys.argv[1] == 'force'))
+    testall(force=(len(sys.argv) == 2 and sys.argv[1] == 'force'))
