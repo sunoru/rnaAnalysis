@@ -1,7 +1,8 @@
 #!/usr/bin/env python2
+import glob
+import json
 import numpy as np
 import pybel
-import glob
 import sys, os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from non_redundant.utils import *
@@ -163,6 +164,7 @@ def readpdbfile(pdbfile):
                     line = line[:25] + chain + line[26:]
             tmpstr.append(line)
 
+
 def mean_pdb(pdbfile, template):
     sumup = [[np.zeros(3), 0] for atom in template['mol'].atoms]
     tempmol = template['mol']
@@ -244,7 +246,7 @@ def writepdb(fo, dbitem, coords, num=[0]):
         ))
     for each in dbitem['connect']:
         fo.write(each)
-    fo.write('ENDMOL\n')
+    fo.write('ENDMDL\n')
 
 
 
@@ -278,6 +280,8 @@ def mean_all(force=False):
                 coords = [atom[0] / atom[1] for atom in tmpdb[name]]
                 writepdb(fo, dbdata[name], coords)
     info('Completed writing new database')
+    with open(data_file('tmpdb.json'), 'w') as fo:
+        json.dump(tmpdb, fo)
 
 
 if __name__ == '__main__':
