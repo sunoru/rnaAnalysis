@@ -1,16 +1,16 @@
 #!/usr/bin/env python2
 import os
-
 import itertools
-
 from newtemplates import list_possible, utils
 from prepare import make_bps
+
 
 def mtype_value(x):
     x = float(x)
     if int(x) == x:
         return int(x)
     return x
+
 
 def add_data(fo, item, coordfile, existing, num):
     itemname = utils.get_name(item)
@@ -22,7 +22,7 @@ def add_data(fo, item, coordfile, existing, num):
     st = item["mtype"][-1]
     if item["type"][0] == 't':
         if st in {'a', 'b'}:
-            reversed_mtype = item["mtype"][:-1] + 'a' if st == 'b' else 'b'
+            reversed_mtype = item["mtype"][:-1] + ('a' if st == 'b' else 'b')
         else:
             reversed_mtype = item["mtype"]
     else:
