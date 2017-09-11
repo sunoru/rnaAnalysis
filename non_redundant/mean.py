@@ -238,16 +238,16 @@ def writepdb(fo, dbitem, coords, num=[0]):
     ))
     fo.write('CRYST1   35.000   35.000   25.000  90.00  90.00  90.00 P 1           1\n')
     for i, (x, y, z) in enumerate(coords):
-        fo.write('ATOM  %5d  %4s  %c     2    %8.3f%8.3f%8.3f  1.00  0.00\n' % (
+        fo.write('ATOM  %5d  %4s  %c     %d    %8.3f%8.3f%8.3f  1.00  0.00\n' % (
             i + 1,
             dbitem['atomnames'][i],
-            'A' if mol.atoms[i].residue.idx == 0 else 'B',
+            mol.atoms[i].residue.name,
+            mol.atoms[i].residue.idx,
             x, y, z
         ))
     for each in dbitem['connect']:
         fo.write(each)
     fo.write('ENDMDL\n')
-
 
 
 def mean_all(force=False):
@@ -280,8 +280,8 @@ def mean_all(force=False):
                 coords = [atom[0] / atom[1] for atom in tmpdb[name]]
                 writepdb(fo, dbdata[name], coords)
     info('Completed writing new database')
-    with open(data_file('tmpdb.json'), 'w') as fo:
-        json.dump(tmpdb, fo)
+#    with open(data_file('tmpdb.json'), 'w') as fo:
+#        json.dump(tmpdb, fo)
 
 
 if __name__ == '__main__':
